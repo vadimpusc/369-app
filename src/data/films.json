@@ -9,8 +9,8 @@
     "genres": ["Romance"],
     "durationMinutes": 69,
     "logline": "When his vanished first love reappears, a man on the brink of commitment is torn between memory and loyalty in a tender drama of love lost and love chosen.",
-    "poster": "/assets/posters/chance.jpg",
-    "heroImage": "/assets/heroes/chance.jpg",
+    "poster": "assets/posters/chance.jpg",
+    "heroImage": "assets/heroes/chance.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
