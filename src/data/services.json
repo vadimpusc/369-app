@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "poster-design",
+    "title": "Poster Design",
+    "category": "Design",
+    "tagline": "Custom movie posters tailored to your film's tone, genre, and style.",
+    "description": "We focus on creating visuals that not only look stunning but also sell your story, grab attention in crowded marketplaces, and give your project the competitive edge it deserves.",
+    "image": "/assets/services/369.png",
+    "ctaLabel": "Order Poster",
+    "orderUrl": "#",
+    "featured": true,
+    "qa": [
+      {
+        "question": "In what format will I receive the files?",
+        "answer": "JPG format is included in all packages.Layered, editable source files (e.g. PSD) are included in Premium or can be added on for Standard or Basic."
+      },
+      {
+        "question": "How long does it take to complete my order?",
+        "answer": "Basic: approx 7-10 days after receiving your design brief and all required assets. Standard: approx 5-7 days. Premium: faster delivery (e.g. 3-5 days) plus express/rush option for tighter deadlines (48-hour turnarounds) at extra cost."
+      },
+          {
+        "question": "How many revisions are included?",
+        "answer": "Basic: 1 revision (of the chosen concept). Standard: up to 3 revisions. Premium: up to 5 revisions + minor tweaks beyond that are possible for a small extra charge"
+      },
+      {
+        "question": "Are source or editable files included?",
+        "answer": "Only Premium automatically includes source/editable files. For Standard or Basic, source files are available as an add-on."
+      },
+        {
+        "question": "Usage & rights",
+        "answer": "Once the design is finalized and full payment is received, you get full usage rights for the final design as per the chosen package (for print, festivals, web, social media, etc.). Any licensed assets or stock images will have their license terms respected. Having the source file allows you to make edits, but the design rights are non-transferable/resalable unless otherwise agreed."
+      },
+        {
+        "question": "What happens to design materials after order completion?",
+        "answer": "All working files, drafts, and unused mockups are deleted within 7 days of project completion. Final files that you purchased remain yours."
+      },
+        {
+        "question": "How do I place an order and what do you need from me?",
+        "answer": "To get started, please provide: Your chosen package (Basic, Standard, or Premium) + any extras (source file, extra revisions, rush delivery). A design brief: film title, genre, tone, audience, reference images or designs you like (and dislike), any logos or tagline text, and necessary credits. Any assets (logos, images, fonts) you want included. Sizes if known, deadlines."
+      },
+        {
+        "question": "Payment, cancellation & refunds",
+        "answer": "Full payment is required prior to starting any work. If you cancel before concepts are delivered, partial refund may apply (depending on how much work has been done). If you are not happy with initial concepts, we will work within your revision allowance to get things right. Extra revisions or changes outside the chosen package are billed separately."
+      },
+        {
+        "question": "I have a question, who do I contact?",
+        "answer": "If you have a question or you are not sure what package you need please contact us at newbusiness@sanrokuku.com"
+      }
+    ]
+  }
+]
