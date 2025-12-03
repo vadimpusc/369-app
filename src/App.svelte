@@ -24,6 +24,9 @@
   import Service from "./pages/Service.svelte";
   import ServiceDetail from "./pages/ServiceDetail.svelte";
 
+  // base path for assets (important for GitHub Pages)
+  const base = import.meta.env.BASE_URL;
+
   const routeInfo = derived(currentPath, ($path) => {
     if ($path === "/") return { page: "home" };
 
@@ -73,7 +76,12 @@
 <header class="srk-nav">
   <div class="container nav-inner">
     <button class="nav-left-btn" on:click={() => go("/")}>
-      <img src="/assets/logos/369.png" alt="San Roku Ku" class="nav-logo" />
+      <!-- logo uses base so it works under /369-app/ -->
+      <img
+        src={`${base}assets/logos/369.png`}
+        alt="San Roku Ku"
+        class="nav-logo"
+      />
     </button>
     <nav class="nav-links">
       <button on:click={() => go("/films")}>Films</button>
