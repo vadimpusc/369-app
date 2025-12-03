@@ -61,7 +61,7 @@
   <section class="founder">
     <div class="founder-inner">
       <div class="avatar-wrap">
-        <img src="/assets/stills/hank-orion.jpg" alt="Hank Orion" />
+        <img src="assets/stills/hank-orion.jpg" alt="Hank Orion" />
       </div>
       <div>
         <h2>Hank Orion</h2>

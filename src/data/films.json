@@ -24,67 +24,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt37719261"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/qaBakhha1tw"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": ""
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -99,8 +99,8 @@
     "genres": ["Horror", "Mystery"],
     "durationMinutes": 61,
     "logline": "A photographer haunted by a mysterious figure in her images must face a deadly demon in a battle between worlds before it consumes her life and those she loves.",
-    "poster": "/assets/posters/exposure.jpg",
-    "heroImage": "/assets/heroes/exposure.png",
+    "poster": "assets/posters/exposure.jpg",
+    "heroImage": "assets/heroes/exposure.png",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -113,67 +113,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt37021139"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/i1CDb4X8MY0"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": ""
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -188,8 +188,8 @@
     "genres": ["Thriller"],
     "durationMinutes": 78,
     "logline": "A meticulous history professor channels his obsession with Napoleon into a chilling dinner party, where secrets are weapons, and trust is a deadly gamble.",
-    "poster": "/assets/posters/napoleon.jpg",
-    "heroImage": "/assets/heroes/napoleon.jpg",
+    "poster": "assets/posters/napoleon.jpg",
+    "heroImage": "assets/heroes/napoleon.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -205,67 +205,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt36132636"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJUdWJpIFRWIiwibW9uZXRpemF0aW9uVHlwZSI6ImFkcyIsInByZXNlbnRhdGlvblR5cGUiOiJzZCIsImN1cnJlbmN5IjoiVVNEIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjo3MywiY2xpY2tvdXRUeXBlIjoianctY29udGVudC1wYXJ0bmVyLWFwaSJ9fSx7InNjaGVtYSI6ImlnbHU6Y29tLmp1c3R3YXRjaC90aXRsZV9jb250ZXh0L2pzb25zY2hlbWEvMS0zLTAiLCJkYXRhIjp7InRpdGxlSWQiOjE2MjU5NjksIm9iamVjdFR5cGUiOiJtb3ZpZSIsImp3RW50aXR5SWQiOiJ0bTE2MjU5NjkifX1dfQ&r=https%3A%2F%2Ftubitv.com%2Fmovies%2F100046152&uct_country=us"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/XmoNxIbTZ6c"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjIuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxNjI1OTY5LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xNjI1OTY5In19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.48cbda55-b3c1-4542-82c4-e0fe50e63c81&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJGYXdlc29tZSIsIm1vbmV0aXphdGlvblR5cGUiOiJmcmVlIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyNDA5LCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6MTYyNTk2OSwib2JqZWN0VHlwZSI6Im1vdmllIiwiandFbnRpdHlJZCI6InRtMTYyNTk2OSJ9fV19&r=https%3A%2F%2Ffawesome.tv%2Fmovies%2F10733795%2Fnapoleons-table&uct_country=us"
     }
     ]
@@ -280,8 +280,8 @@
     "genres": ["Thriller"],
     "durationMinutes": 61,
     "logline": "A perfect weekend becomes a nightmare as a couple departs onto a journey to the remote forest in England.",
-    "poster": "/assets/posters/outsiders.jpg",
-    "heroImage": "/assets/heroes/outsiders.jpg",
+    "poster": "assets/posters/outsiders.jpg",
+    "heroImage": "assets/heroes/outsiders.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -293,67 +293,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt32366671"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/1B3T4pGHx0c"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjIuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxNDk1MDcwLCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xNDk1MDcwIn19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.9ab44b3d-1e23-4118-9292-e9a8a111c482&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -368,8 +368,8 @@
     "genres": ["Drama", "Sci-Fi"],
     "durationMinutes": 16,
     "logline": "An enigmatic celestial being must decide the fate of humanity after centuries of observation, exploring the triumphs, tragedies, and contradictions that define the human race in a heart-wrenching battle between hope and destruction.",
-    "poster": "/assets/posters/cosmos.jpg",
-    "heroImage": "/assets/heroes/cosmos.jpg",
+    "poster": "assets/posters/cosmos.jpg",
+    "heroImage": "assets/heroes/cosmos.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -380,67 +380,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt32365627"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/hCMTU-tuvCs"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": ""
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -455,8 +455,8 @@
     "genres": ["Drama", "Mystery"],
     "durationMinutes": 64,
     "logline": "The man who has nothing to lose anymore and sees no future ahead by chance meets a stranger that changes his mind.",
-    "poster": "/assets/posters/man.png",
-    "heroImage": "/assets/heroes/man.jpg",
+    "poster": "assets/posters/man.png",
+    "heroImage": "assets/heroes/man.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -468,67 +468,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt25394858"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/HSv8j2SYinI"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMjk3ODc3LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMjk3ODc3In19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.0cb0ceb0-fc0e-4a98-be27-692456ac6237&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJGYXdlc29tZSIsIm1vbmV0aXphdGlvblR5cGUiOiJmcmVlIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyNDA5LCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6MTI5Nzg3Nywib2JqZWN0VHlwZSI6Im1vdmllIiwiandFbnRpdHlJZCI6InRtMTI5Nzg3NyJ9fV19&r=https%3A%2F%2Ffawesome.tv%2Fmovies%2F10650208%2Fthe-man&uct_country=us"
     }
     ]
@@ -543,8 +543,8 @@
     "genres": ["Thriller"],
     "durationMinutes": 50,
     "logline": "When amateur photographer Anna decided to go for a walk and bring her camera along little did she know that her day would turn into a dark and twisted game.",
-    "poster": "/assets/posters/following.jpg",
-    "heroImage": "/assets/heroes/following.jpg",
+    "poster": "assets/posters/following.jpg",
+    "heroImage": "assets/heroes/following.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -556,67 +556,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt23809464"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/etAHudGroI0"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMjg4OTcxLCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMjg4OTcxIn19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.07566fbd-192f-4b18-b504-61e80616d389&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": "https://fawesome.tv/movies/10634741/following"
     }
     ]
@@ -631,8 +631,8 @@
     "genres": ["Drama", "Japanese"],
     "durationMinutes": 52,
     "logline": "A lonely Japanese girl living in London grapples with a profound sense of disconnection. She embarks on a journey of self-discovery determined to find her way out of the metaphorical maze.",
-    "poster": "/assets/posters/osaka.jpg",
-    "heroImage": "/assets/heroes/osaka.jpg",
+    "poster": "assets/posters/osaka.jpg",
+    "heroImage": "assets/heroes/osaka.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -643,67 +643,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt18765996/"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/-cqdKLQoajA"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMTgzNDQ1LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMTgzNDQ1In19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.fe0cac8c-1c49-4d6a-a21b-8b60d70800ca&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJGYXdlc29tZSIsIm1vbmV0aXphdGlvblR5cGUiOiJmcmVlIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyNDA5LCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6MTE4MzQ0NSwib2JqZWN0VHlwZSI6Im1vdmllIiwiandFbnRpdHlJZCI6InRtMTE4MzQ0NSJ9fV19&r=https%3A%2F%2Ffawesome.tv%2Fmovies%2F10608779%2Fosaka&uct_country=us"
     }
     ]
@@ -718,8 +718,8 @@
     "genres": ["Drama"],
     "durationMinutes": 65,
     "logline": "When old friends and loved ones resurface just as a filmmaker is set to debut his film at a renowned European film festival, he must confront the true value of his past relationships and determine what he values most.",
-    "poster": "/assets/posters/spooked.jpg",
-    "heroImage": "/assets/heroes/spooked.jpg",
+    "poster": "assets/posters/spooked.jpg",
+    "heroImage": "assets/heroes/spooked.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -730,67 +730,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt22499822"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://link.tubi.tv/BDpdVIgO8Kb"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/LA2FNeuxkIA"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": ""
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJDaW5ldmVyc2UiLCJtb25ldGl6YXRpb25UeXBlIjoiYWRzIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwiY3VycmVuY3kiOiJVU0QiLCJwYXJ0bmVySWQiOjE4MTYsInByb3ZpZGVySWQiOjE5NTcsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMjczMjcwLCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMjczMjcwIn19XX0&r=https%3A%2F%2Fwww.cineverse.com%2Fdetails%2F66847619e6eab16f5550b5aa%2Fspooked&uct_country=us"
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJGYXdlc29tZSIsIm1vbmV0aXphdGlvblR5cGUiOiJmcmVlIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyNDA5LCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6MTI3MzI3MCwib2JqZWN0VHlwZSI6Im1vdmllIiwiandFbnRpdHlJZCI6InRtMTI3MzI3MCJ9fV19&r=https%3A%2F%2Ffawesome.tv%2Fmovies%2F10554771%2Fspooked&uct_country=us"
     }
     ]
@@ -805,8 +805,8 @@
     "genres": ["Romance"],
     "durationMinutes": 57,
     "logline": "Two polar opposites, brought together on a chaotic blind date in the heart of London, unexpectedly fall for each other despite their differences.",
-    "poster": "/assets/posters/love.jpg",
-    "heroImage": "/assets/heroes/love.jpg",
+    "poster": "assets/posters/love.jpg",
+    "heroImage": "assets/heroes/love.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -818,67 +818,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt21375000"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJUdWJpIFRWIiwibW9uZXRpemF0aW9uVHlwZSI6ImFkcyIsInByZXNlbnRhdGlvblR5cGUiOiJzZCIsImN1cnJlbmN5IjoiVVNEIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjo3MywiY2xpY2tvdXRUeXBlIjoianctY29udGVudC1wYXJ0bmVyLWFwaSJ9fSx7InNjaGVtYSI6ImlnbHU6Y29tLmp1c3R3YXRjaC90aXRsZV9jb250ZXh0L2pzb25zY2hlbWEvMS0zLTAiLCJkYXRhIjp7InRpdGxlSWQiOjEyMzk3MDksIm9iamVjdFR5cGUiOiJtb3ZpZSIsImp3RW50aXR5SWQiOiJ0bTEyMzk3MDkifX1dfQ&r=https%3A%2F%2Ftubitv.com%2Fmovies%2F698004&uct_country=us"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/WvC5IPiQkG0"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMjM5NzA5LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMjM5NzA5In19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.cfffea6a-5535-4716-a524-713ed6bc51e3&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJDaW5ldmVyc2UiLCJtb25ldGl6YXRpb25UeXBlIjoiYWRzIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwiY3VycmVuY3kiOiJVU0QiLCJwYXJ0bmVySWQiOjE4MTYsInByb3ZpZGVySWQiOjE5NTcsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMjM5NzA5LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMjM5NzA5In19XX0&r=https%3A%2F%2Fwww.cineverse.com%2Fdetails%2F65134d68e6eab12dfb07c7a8%2Flove-in-the-city&uct_country=us"
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJGYXdlc29tZSIsIm1vbmV0aXphdGlvblR5cGUiOiJmcmVlIiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyNDA5LCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6MTIzOTcwOSwib2JqZWN0VHlwZSI6Im1vdmllIiwiandFbnRpdHlJZCI6InRtMTIzOTcwOSJ9fV19&r=https%3A%2F%2Ffawesome.tv%2Fmovies%2F10556297%2Flove-in-the-city&uct_country=us"
     }
     ]
@@ -893,8 +893,8 @@
     "genres": ["Drama", "Mystery"],
     "durationMinutes": 101,
     "logline": "A former patient at a State Psychiatric Hospital Elyah fighting depression and nightmares which cause him to lose contact with the real world. He decides to confront his problems by performing a Ritual practiced by Ancient Mayans.",
-    "poster": "/assets/posters/darkness.jpg",
-    "heroImage": "/assets/heroes/darkness.jpg",
+    "poster": "assets/posters/darkness.jpg",
+    "heroImage": "assets/heroes/darkness.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Myrat Bayram",
@@ -907,67 +907,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt13588604"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": ""
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": ""
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": ""
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -982,8 +982,8 @@
     "genres": ["Comedy"],
     "durationMinutes": 86,
     "logline": "Jack, a young actor facing a tough luck in his acting career decides to sell his soul to the devil in exchange for fame and success.",
-    "poster": "/assets/posters/ritual.jpg",
-    "heroImage": "/assets/heroes/ritual.jpg",
+    "poster": "assets/posters/ritual.jpg",
+    "heroImage": "assets/heroes/ritual.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -996,67 +996,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt13141604"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://link.tubi.tv/UrFyzkiO8Kb"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": "https://youtu.be/QcSzzsk9XK0"
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": ""
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": ""
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -1071,8 +1071,8 @@
     "genres": ["Comedy"],
     "durationMinutes": 86,
     "logline": "Steve, who is stuck in a corporate loophole, while a business trip he meets Amanda, an escort worker that has more to her than just the look, the drive and the sexuality.",
-    "poster": "/assets/posters/honey.jpg",
-    "heroImage": "/assets/heroes/honey.jpg",
+    "poster": "assets/posters/honey.jpg",
+    "heroImage": "assets/heroes/honey.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -1086,67 +1086,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt9193890"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJUdWJpIFRWIiwibW9uZXRpemF0aW9uVHlwZSI6ImFkcyIsInByZXNlbnRhdGlvblR5cGUiOiJzZCIsImN1cnJlbmN5IjoiVVNEIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjo3MywiY2xpY2tvdXRUeXBlIjoianctY29udGVudC1wYXJ0bmVyLWFwaSJ9fSx7InNjaGVtYSI6ImlnbHU6Y29tLmp1c3R3YXRjaC90aXRsZV9jb250ZXh0L2pzb25zY2hlbWEvMS0zLTAiLCJkYXRhIjp7InRpdGxlSWQiOjEwMjE5MTgsIm9iamVjdFR5cGUiOiJtb3ZpZSIsImp3RW50aXR5SWQiOiJ0bTEwMjE5MTgifX1dfQ&r=https%3A%2F%2Ftubitv.com%2Fmovies%2F585941&uct_country=us"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": ""
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjoxMDIxOTE4LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0xMDIxOTE4In19XX0&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.7ebbfc7b-6874-41a3-a3ec-885dba0e559e&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": "https://tv.apple.com/us/movie/honey--wine/umc.cmc.4urn6i0v1tmysk914vsszwl5c"
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -1161,8 +1161,8 @@
     "genres": ["Crime", "Thriller"],
     "durationMinutes": 81,
     "logline": "When five robbers robbed a bank, they thought that the robbery itself was the hardest part of the job, but soon they came to realize that one of them decided to be smart and play a double game.",
-    "poster": "/assets/posters/job.jpg",
-    "heroImage": "/assets/heroes/job.jpg",
+    "poster": "assets/posters/job.jpg",
+    "heroImage": "assets/heroes/job.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -1177,67 +1177,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt5374002"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJUdWJpIFRWIiwibW9uZXRpemF0aW9uVHlwZSI6ImFkcyIsInByZXNlbnRhdGlvblR5cGUiOiJzZCIsImN1cnJlbmN5IjoiVVNEIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjo3MywiY2xpY2tvdXRUeXBlIjoianctY29udGVudC1wYXJ0bmVyLWFwaSJ9fSx7InNjaGVtYSI6ImlnbHU6Y29tLmp1c3R3YXRjaC90aXRsZV9jb250ZXh0L2pzb25zY2hlbWEvMS0zLTAiLCJkYXRhIjp7InRpdGxlSWQiOjM2Njg3Nywib2JqZWN0VHlwZSI6Im1vdmllIiwiandFbnRpdHlJZCI6InRtMzY2ODc3In19XX0&r=https%3A%2F%2Ftubitv.com%2Fmovies%2F677728&uct_country=us"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": ""
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjozNjY4NzcsIm9iamVjdFR5cGUiOiJtb3ZpZSIsImp3RW50aXR5SWQiOiJ0bTM2Njg3NyJ9fV19&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.becaf072-2303-4e60-a00b-d6dd3b86ff8d&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBcHBsZSBUViIsIm1vbmV0aXphdGlvblR5cGUiOiJyZW50IiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwiY3VycmVuY3kiOiJVU0QiLCJwcmljZSI6My45OSwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyLCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6MzY2ODc3LCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG0zNjY4NzcifX1dfQ&r=https%3A%2F%2Ftv.apple.com%2Fus%2Fmovie%2Fthe-job%2Fumc.cmc.np2x4utbx7giw5kuzzyp9v5y%3Fat%3D1000l3V2%26ct%3Dapp_tv%26itscg%3D30200%26itsct%3Djustwatch_tv_12%26playableId%3Dtvs.sbd.9001%253A1645162108&uct_country=us"
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": ""
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]
@@ -1252,8 +1252,8 @@
     "genres": ["Drama", "Thriller"],
     "durationMinutes": 94,
     "logline": "After Jack and Lucy rescue a woman from freezing cold in the Scottish mountains, they gradually realise that she is not who she says she is and her intentions are unclear.",
-    "poster": "/assets/posters/despair.jpg",
-    "heroImage": "/assets/heroes/despair.jpg",
+    "poster": "assets/posters/despair.jpg",
+    "heroImage": "assets/heroes/despair.jpg",
     "credits": {
       "director": "Hank Orion",
       "producer": "Vadim Pusceddu",
@@ -1266,67 +1266,67 @@
     "platforms": [
       {
         "label": "IMDb",
-        "logo": "/assets/platforms/imdb.png",
+        "logo": "assets/platforms/imdb.png",
         "url": "https://www.imdb.com/title/tt5238824"
       },
       {
         "label": "Tubi",
-        "logo": "/assets/platforms/tubi.jpeg",
+        "logo": "assets/platforms/tubi.jpeg",
         "url": "https://link.tubi.tv/KyEltHaO8Kb"
       },
           {
       "label": "YouTube",
-      "logo": "/assets/platforms/youtube.png",
+      "logo": "assets/platforms/youtube.png",
       "url": ""
     },
         {
       "label": "Amazon Video",
-      "logo": "/assets/platforms/amazon.jpeg",
+      "logo": "assets/platforms/amazon.jpeg",
       "url": ""
     },
         {
       "label": "Prime Video",
-      "logo": "/assets/platforms/prime.jpeg",
+      "logo": "assets/platforms/prime.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBbWF6b24gVmlkZW8iLCJtb25ldGl6YXRpb25UeXBlIjoicmVudCIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicHJpY2UiOjEuOTksInBhcnRuZXJJZCI6MTgxNiwicHJvdmlkZXJJZCI6MTAsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjo0MTU3MzEsIm9iamVjdFR5cGUiOiJtb3ZpZSIsImp3RW50aXR5SWQiOiJ0bTQxNTczMSJ9fV19&r=https%3A%2F%2Fwatch.amazon.com%2Fdetail%3Fgti%3Damzn1.dv.gti.526449da-47d9-4dca-814d-7140c1465767&uct_country=us"
     },
         {
       "label": "Apple TV",
-      "logo": "/assets/platforms/appletv.jpeg",
+      "logo": "assets/platforms/appletv.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJBcHBsZSBUViIsIm1vbmV0aXphdGlvblR5cGUiOiJyZW50IiwicHJlc2VudGF0aW9uVHlwZSI6ImhkIiwiY3VycmVuY3kiOiJVU0QiLCJwcmljZSI6My45OSwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyLCJjbGlja291dFR5cGUiOiJqdy1jb250ZW50LXBhcnRuZXItYXBpIn19LHsic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL3RpdGxlX2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMCIsImRhdGEiOnsidGl0bGVJZCI6NDE1NzMxLCJvYmplY3RUeXBlIjoibW92aWUiLCJqd0VudGl0eUlkIjoidG00MTU3MzEifX1dfQ&r=https%3A%2F%2Ftv.apple.com%2Fus%2Fmovie%2Fdespair%2Fumc.cmc.59ep63hozcw0mnt92t5mb3qke%3Fat%3D1000l3V2%26ct%3Dapp_tv%26itscg%3D30200%26itsct%3Djustwatch_tv_12%26playableId%3Dtvs.sbd.9001%253A1643197547&uct_country=us"
     },
         {
       "label": "JustWatch",
-      "logo": "/assets/platforms/justwatch.jpeg",
+      "logo": "assets/platforms/justwatch.jpeg",
       "url": ""
     },
     {
       "label": "Cineverse",
-      "logo": "/assets/platforms/cineverse.jpeg",
+      "logo": "assets/platforms/cineverse.jpeg",
       "url": ""
     },
     {
       "label": "Reveel",
-      "logo": "/assets/platforms/reveel.jpeg",
+      "logo": "assets/platforms/reveel.jpeg",
       "url": ""
     },
     {
       "label": "Hoopla",
-      "logo": "/assets/platforms/hoopla.jpeg",
+      "logo": "assets/platforms/hoopla.jpeg",
       "url": ""
     },
     {
       "label": "Roku Channel",
-      "logo": "/assets/platforms/roku.jpeg",
+      "logo": "assets/platforms/roku.jpeg",
       "url": "https://click.justwatch.com/a?cx=eyJzY2hlbWEiOiJpZ2x1OmNvbS5zbm93cGxvd2FuYWx5dGljcy5zbm93cGxvdy9jb250ZXh0cy9qc29uc2NoZW1hLzEtMC0wIiwiZGF0YSI6W3sic2NoZW1hIjoiaWdsdTpjb20uanVzdHdhdGNoL2NsaWNrb3V0X2NvbnRleHQvanNvbnNjaGVtYS8xLTMtMiIsImRhdGEiOnsicHJvdmlkZXIiOiJUaGUgUm9rdSBDaGFubmVsIiwibW9uZXRpemF0aW9uVHlwZSI6ImFkcyIsInByZXNlbnRhdGlvblR5cGUiOiJoZCIsImN1cnJlbmN5IjoiVVNEIiwicGFydG5lcklkIjoxODE2LCJwcm92aWRlcklkIjoyMDcsImNsaWNrb3V0VHlwZSI6Imp3LWNvbnRlbnQtcGFydG5lci1hcGkifX0seyJzY2hlbWEiOiJpZ2x1OmNvbS5qdXN0d2F0Y2gvdGl0bGVfY29udGV4dC9qc29uc2NoZW1hLzEtMy0wIiwiZGF0YSI6eyJ0aXRsZUlkIjo0MTU3MzEsIm9iamVjdFR5cGUiOiJtb3ZpZSIsImp3RW50aXR5SWQiOiJ0bTQxNTczMSJ9fV19&r=https%3A%2F%2Ftherokuchannel.roku.com%2Fdetails%2Ff4f644f17cc65cfab0c449204b59f572%2Fdespair%3Fsource%3Dbing&uct_country=us"
     },
     {
       "label": "Fubo TV",
-      "logo": "/assets/platforms/fubo.jpeg",
+      "logo": "assets/platforms/fubo.jpeg",
       "url": ""
     },
     {
       "label": "Fawesome",
-      "logo": "/assets/platforms/fawesome.jpeg",
+      "logo": "assets/platforms/fawesome.jpeg",
       "url": ""
     }
     ]

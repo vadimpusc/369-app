@@ -5,7 +5,7 @@
     "category": "Design",
     "tagline": "Custom movie posters tailored to your film's tone, genre, and style.",
     "description": "We focus on creating visuals that not only look stunning but also sell your story, grab attention in crowded marketplaces, and give your project the competitive edge it deserves.",
-    "image": "/assets/services/369.png",
+    "image": "assets/services/369.png",
     "ctaLabel": "Order Poster",
     "orderUrl": "#",
     "featured": true,
