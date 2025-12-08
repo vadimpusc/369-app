@@ -47,5 +47,67 @@
         "answer": "If you have a question or you are not sure what package you need please contact us at newbusiness@sanrokuku.com"
       }
     ]
-  }
+  },
+  {
+  "slug": "filmhub-graphics-design",
+  "title": "Filmhub Graphics Design",
+  "category": "Design",
+  "tagline": "Properly formatted Filmhub and streaming platform graphics made for compliance, visibility, and sales.",
+  "description": "Filmhub and digital streaming platforms require multiple graphics with different ratios, sizes, and compositions. Incorrect sizing leads to rejection, delays, or poor catalog placement. We resize, optimize, and create additional artwork variants aligned with platform expectations to help your film present professionally and stand out.",
+  "image": "/assets/services/369.png",
+  "ctaLabel": "Order Filmhub Graphics",
+  "orderUrl": "https://tally.so/r/81qkVl",
+  "featured": true,
+  "qa": [
+    {
+      "question": "What is included in the Filmhub Graphics service?",
+      "answer": "We resize and format your existing poster art for Filmhub compliant dimensions and modern marketplace use. Depending on your chosen package, this may include multiple variants for vertical key art, wide banners, square crops, platform thumbnails, and sales-focused compositions."
+    },
+    {
+      "question": "In what format will I receive the files?",
+      "answer": "Final files are delivered in JPG and web-optimized formats. Layered, editable source files (such as PSD) are included in Premium or available as an add-on for Standard or Basic."
+    },
+    {
+      "question": "How long does it take to complete my order?",
+      "answer": "Basic: approx 3–5 days after receiving your assets and brief. Standard: approx 3–5 days. Premium: approx 2–3 days with optional express delivery for urgent deadlines (48-hour turnaround available for an additional fee)."
+    },
+    {
+      "question": "How many revisions are included?",
+      "answer": "Basic: 1 revision. Standard: up to 2 revisions. Premium: up to 5 revisions with minor tweaks beyond that available for a small additional charge."
+    },
+    {
+      "question": "Do you design a poster from scratch?",
+      "answer": "Poster design from scratch is not included in the Basic or Standard Filmhub Graphics packages. The Premium tier covers full poster artwork creation if you do not already have a poster."
+    },
+    {
+      "question": "Are source or editable files included?",
+      "answer": "Premium automatically includes the editable layered files. Basic and Standard can receive source files as an optional paid add-on."
+    },
+    {
+      "question": "Usage & rights",
+      "answer": "Once final files are approved and paid in full, you receive usage rights for distribution platforms, marketing, web, and social. The original layered design structure remains non-transferable for resale or redistribution unless otherwise licensed."
+    },
+    {
+      "question": "Will you add cast names, credits, or billing block?",
+      "answer": "To comply with Filmhub regulations, we do not add a billing block or list cast and crew details. Placement, size, and visibility rules must align with marketplace requirements."
+    },
+    {
+      "question": "What happens to drafts and artwork after completion?",
+      "answer": "All unused mockups, layouts, and working files are deleted within 7 days of project completion. You retain only the final deliverables included in your chosen package."
+    },
+    {
+      "question": "How do I place an order and what do you need from me?",
+      "answer": "Please submit: your chosen package (Basic, Standard, Premium), any extras (source files, express delivery), your poster or artwork files, and any marketplace-specific notes or restrictions."
+    },
+    {
+      "question": "Payment, cancellation & refunds",
+      "answer": "Full payment is required before work begins. If cancellation occurs before delivery of first concepts, a partial refund may be possible depending on progress made. Requests beyond included revisions are billed separately."
+    },
+    {
+      "question": "I have questions, who do I contact?",
+      "answer": "If you are unsure which package fits your needs, contact us at newbusiness@sanrokuku.com"
+    }
+  ]
+}
+
 ]
