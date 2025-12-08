@@ -5,10 +5,10 @@
       Whether you are developing a new project or looking for production support, we are happy
       to talk about how San Roku Ku can help.
     </p>
-
+<p style="text-align: center; color: white; font-size: 18px; font-weight: 600; margin-top: 20px;">
+  info@sanrokuku.com
+</p>
   </header>
-
-
 
   <p class="note">
     Please do not send unsolicited scripts or materials. Unrequested submissions cannot be
