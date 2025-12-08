@@ -12,21 +12,21 @@
     <div class="card">
       <h2>What We Are Looking For</h2>
       <ul>
-        <li>Feature films of 90 minutes or longer.</li>
-        <li>Documentaries of 40 minutes or longer.</li>
-        <li>TV or web series with episodes around 20 minutes or longer.</li>
+        <li>Feature films of 80 minutes or longe</li>
+        <li>Documentaries of 40 minutes or longer</li>
+        <li>TV or web series with episodes around 20 minutes or longer</li>
       </ul>
     </div>
     <div class="card">
       <h2>We Are Not Able To Accept</h2>
       <ul>
-        <li>Short films.</li>
-        <li>Films already widely released or sold in key territories.</li>
-        <li>Screenplay submissions or pitches without a completed film.</li>
+        <li>Short films</li>
+        <li>Films already widely released or sold in key territories</li>
+        <li>Screenplay submissions or pitches without a completed film</li>
       </ul>
     </div>
+    
   </section>
-
  
   <p class="note">
    If you do not hear from us within seven business days, please assume that your film was
@@ -34,7 +34,40 @@
   </p>
 </section>
 
+<div class="submit-btn-container">
+  <a href="https://tally.so/r/81NdJ5" target="_blank" class="srk-btn">Submit Your Film</a>
+</div>
+
+
+
 <style>
+.submit-btn-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.srk-btn {
+  display: inline-block;
+  padding: 12px 36px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.srk-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+
   .submit-page {
     padding: 3.5rem 0 4rem;
   }
