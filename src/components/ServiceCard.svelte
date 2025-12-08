@@ -13,15 +13,15 @@
   }
 </script>
 
-<article class={`service-card service-card--${layout}`}>
-  <button
-    type="button"
-    class="service-card-media"
-    on:click={handleClick}
-    aria-label={service.title}
-  >
+<article
+  class={`service-card service-card--${layout}`}
+  on:click={handleClick}
+  role="button"
+  tabindex="0"
+>
+  <div class="service-card-media">
     <img src={service.image} alt={service.title} loading="lazy" />
-  </button>
+  </div>
 
   <div class="service-card-body">
     {#if service.category}
@@ -33,38 +33,27 @@
     {#if service.tagline}
       <p class="service-tagline">{service.tagline}</p>
     {/if}
-
-
-
-    <div class="service-actions">
-      <button type="button" class="btn-primary" on:click={handleClick}>
-        {service.ctaLabel || "Get Started"}
-      </button>
-
-      {#if linkType === "detail"}
-      {/if}
-    </div>
   </div>
 </article>
 
 <style>
   .service-card {
-  background: radial-gradient(circle at top left, #16233b, #060912);
-  border-radius: var(--radius-xl);
-  padding: 1.8rem;
-  box-shadow: var(--shadow-soft);
+    background: radial-gradient(circle at top left, #16233b, #060912);
+    border-radius: var(--radius-xl);
+    padding: 1.8rem;
+    box-shadow: var(--shadow-soft);
 
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 
-
-  .service-card-media {
-    border: 0;
-    padding: 0;
-    background: transparent;
     cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
   }
 
   .service-card-media img {
@@ -94,22 +83,7 @@
     margin-bottom: 1rem;
   }
 
-  .service-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  .service-actions {
-  display: flex;
-  justify-content: left;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-
-  /* row layout for featured blocks if needed */
+  /* row layout if ever used */
   .service-card--row {
     flex-direction: column;
   }

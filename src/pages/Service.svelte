@@ -49,21 +49,20 @@
      SERVICES GRID (300px columns on desktop)
      ------------------------------------------ */
 
-  .services-grid {
-    margin-top: 2.6rem;
+.services-grid {
+  margin-top: 2.6rem;
 
-    display: grid;
-    justify-content: center; /* center even with 1 service */
-    gap: 2rem;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
 
-    /* 5 columns, each ~300px wide */
-    grid-template-columns: repeat(5, minmax(300px, 1fr));
+  /* keep the card size fixed */
+  grid-template-columns: repeat(auto-fit, 300px);
 
-    /* controls total maximum width */
-    max-width: 1700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   @media (max-width: 1600px) {
     .services-grid {
