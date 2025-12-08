@@ -35,6 +35,12 @@
     </div>
   </div>
 </section>
+<div style="max-width: 800px; margin: 40px auto 0; text-align: center; font-weight: 600; font-size: 1.1rem;">
+  We are actively developing new series. If you are a filmmaker or production company with a series to submit for distribution,
+  <a href="https://sanrokuku.com/submit-your-film" style="text-decoration: underline;">
+    click here to submit
+  </a>.
+</div>
 
 <style>
   .titles-page {

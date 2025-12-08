@@ -36,6 +36,13 @@
   </div>
 </section>
 
+<div style="max-width: 800px; margin: 40px auto 0; text-align: center; font-weight: 600; font-size: 1.1rem;">
+  We are actively developing new documentaries. If you are a filmmaker or production company with a documentary to submit for distribution,
+  <a href="https://sanrokuku.com/submit-your-film" style="text-decoration: underline;">
+    click here to submit
+  </a>.
+</div>
+
 <style>
   .titles-page {
     padding: 3.5rem 0 4rem;
