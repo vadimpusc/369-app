@@ -1,5 +1,93 @@
 [
   {
+    "slug": "across-two-skies",
+    "title": "Across Two Skies",
+    "trailer": "",
+    "type": "film",
+    "year": 2025,
+    "countries": ["United Kingdom", "USA"],
+    "genres": ["Romance"],
+    "durationMinutes": 93,
+    "logline": "Two lonely expats working late on a Friday night become accidentally locked out on their office fire escape. Stranded until morning, they share cigarettes, secrets, and stories, finding unexpected intimacy in the heart of a sleepless city.",
+    "poster": "/assets/posters/across.jpg",
+    "heroImage": "/assets/heroes/across.jpg",
+    "credits": {
+      "director": "Hank Orion",
+      "producer": "Vadim Pusceddu",
+      "starring": [
+      " Jack Hyde", 
+      "Sophia Carroll"
+      ]
+    },
+    "platforms": [
+      {
+        "label": "IMDb",
+        "logo": "/assets/platforms/imdb.png",
+        "url": "https://www.imdb.com/title/tt36555390"
+      },
+      {
+        "label": "Tubi",
+        "logo": "/assets/platforms/tubi.jpeg",
+        "url": ""
+      },
+          {
+      "label": "YouTube",
+      "logo": "/assets/platforms/youtube.png",
+      "url": "https://youtu.be/hW_SCrpSeTE"
+    },
+        {
+      "label": "Amazon Video",
+      "logo": "/assets/platforms/amazon.jpeg",
+      "url": ""
+    },
+        {
+      "label": "Prime Video",
+      "logo": "/assets/platforms/prime.jpeg",
+      "url": ""
+    },
+        {
+      "label": "Apple TV",
+      "logo": "/assets/platforms/appletv.jpeg",
+      "url": ""
+    },
+        {
+      "label": "JustWatch",
+      "logo": "/assets/platforms/justwatch.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Cineverse",
+      "logo": "/assets/platforms/cineverse.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Reveel",
+      "logo": "/assets/platforms/reveel.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Hoopla",
+      "logo": "/assets/platforms/hoopla.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Roku Channel",
+      "logo": "/assets/platforms/roku.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Fubo TV",
+      "logo": "/assets/platforms/fubo.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Fawesome",
+      "logo": "/assets/platforms/fawesome.jpeg",
+      "url": ""
+    }
+    ]
+  },
+  {
     "slug": "love-by-chance",
     "title": "Love by Chance, Again",
     "trailer": "https://youtu.be/pEroSVbGGMs",
