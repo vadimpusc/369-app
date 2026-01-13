@@ -84,9 +84,11 @@
       />
     </button>
     <nav class="nav-links">
+          <button on:click={() => go("/about")}>About Us</button>
       <button on:click={() => go("/films")}>Films</button>
       <button on:click={() => go("/documentaries")}>Documentaries</button>
       <button on:click={() => go("/series")}>Series</button>
+      <button on:click={() => go("/services")}>Services</button>
     </nav>
     <div class="nav-right">
       <button class="btn-primary" on:click={() => go("/contact")}>

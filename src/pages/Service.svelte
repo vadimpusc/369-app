@@ -5,7 +5,7 @@
 
 <section class="container services-page">
   <header class="services-header">
-    <h1>Creative Services for Filmmakers</h1>
+    <h1>Our Online Services</h1>
     <p>
       Order poster design, Filmhub graphics, and trailer editing directly online.
       Upload your materials and receive delivery within a few days.

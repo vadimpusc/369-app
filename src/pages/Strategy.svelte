@@ -1,8 +1,8 @@
 <section class="container contact-page">
   <header class="contact-header">
-    <h1>15-MINUTE STRATEGY CALL</h1>
+    <h1>Schedule a 15-Minute Call to Discuss Your Film Needs</h1>
     <p>
-    Every project is unique, and we take the time to understand your vision before building the right production package. Schedule a free 15-minute consultation to discuss your ideas, explore options, and see how we can bring your story to life.
+    Every project is unique, and we take the time to understand your vision before building the right production package. Schedule a quick 15-minute consultation to discuss your ideas, explore options, and see how we can bring your story to life.
     </p>
 
   </header>

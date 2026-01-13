@@ -90,11 +90,9 @@
 </section>
 
 <section class="container section centered-section">
-  <h2 class="section-title">Your Global Production Partner</h2>
+  <h2 class="section-title">Your Production Partner in Europe, US and Japan</h2>
   <p class="section-subtitle">
-    San Roku Ku is your production and post production partner for projects in the
-    United Kingdom, across Europe, and in Japan. We combine bold storytelling with
-    studio level technical precision to support every stage of your film.
+    San Roku Ku is your production and post production partner for projects across Europe, US and in Japan. We produce original films and help international productions navigate the unique challenges of shooting in Japan. We focus on making cross-cultural filmmaking seamless.
   </p>
   <button class="btn-primary" on:click={() => navigate("/services")}>
     Learn More
@@ -102,9 +100,9 @@
 </section>
 
 <section class="container section">
-  <h2 class="section-title">Featured Titles</h2>
+  <h2 class="section-title">Latest Releases</h2>
   <p class="section-subtitle">
-    A curated selection from our slate of independent and studio level films.
+   Discover our newest films, from our slate of independent and studio productions.
   </p>
 
   <div class="film-strip">
