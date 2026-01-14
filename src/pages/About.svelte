@@ -3,83 +3,87 @@
   <!-- Header -->
   <header class="about-header">
     <h1>San Roku Ku</h1>
-    <p>
-      San Roku Ku is an international film production company specializing in bold, cinematic storytelling across Europe, Japan and the United States. 
-      We produce original films and help international productions navigate the unique challenges of shooting abroad. 
-      We believe that bridging cultures leads to richer stories and unforgettable cinema. 
-      Whether you’re an indie filmmaker or a studio, we’re here to bring your vision to life.
-    </p>
+<p>
+  San Roku Ku is a production company focused on bold, cinematic storytelling. 
+  We produce original films and support international productions filming abroad, with a deep understanding of the creative, logistical, and cultural realities of shooting in Japan and the US. 
+  We believe that strong cross cultural collaboration leads to more honest and memorable cinema. 
+  From independent filmmakers to established studios, we help bring visions to the screen.
+</p>
+
+
   </header>
 
-  <!-- Services Grid -->
-  <section class="grid">
-    <article class="card">
-      <h2>Local Knowledge in Europe, Japan and the US</h2>
-      <p>
-        We know the ins and outs of filming abroad, from permits to cultural nuances. 
-        Whether you’re navigating Tokyo streets or US studio logistics, we make your shoot efficient and hassle-free.
-      </p>
-    </article>
+<!-- Services Grid -->
+<section class="grid">
+  <article class="card">
+    <h2>Local Knowledge</h2>
+    <p>
+      We understand the realities of filming across borders, from permits and unions to local customs and workflows. 
+      Whether you are navigating Tokyo locations or US based production systems, we help keep your shoot efficient and focused.
+    </p>
+  </article>
 
-    <article class="card">
-      <h2>A Bridge Between Cultures</h2>
-      <p>
-        Language and cultural barriers can slow down any production. We speak both Japanese and English fluently and specialize in connecting international filmmakers with local talent, crews, and locations.
-      </p>
-    </article>
+  <article class="card">
+    <h2>A Bridge Between Cultures</h2>
+    <p>
+      Language and cultural gaps can slow down productions. We work fluently in both Japanese and English and specialize in connecting international filmmakers with local crews, talent, and locations in Japan and the US.
+    </p>
+  </article>
 
-    <article class="card">
-      <h2>Full Production Support</h2>
-      <p>
-        From concept development to post-production, we handle the complex details so you can focus on creativity. Our team ensures every phase of production is organized, efficient, and on schedule.
-      </p>
-    </article>
+  <article class="card">
+    <h2>End to End Production Support</h2>
+    <p>
+      From early development through post production, we manage the practical details so you can concentrate on storytelling. 
+      Our approach keeps productions organized, transparent, and creatively aligned from start to finish.
+    </p>
+  </article>
 
-    <article class="card">
-      <h2>Trusted Network of Professionals</h2>
-      <p>
-        Years of experience have built a reliable network of local crews and vendors in Europe, Japan and the US. 
-        When you work with us, you gain access to trusted professionals who can execute your vision flawlessly.
-      </p>
-    </article>
+  <article class="card">
+    <h2>Trusted Local Networks</h2>
+    <p>
+      Through years of on the ground experience, we have built reliable relationships with crews, vendors, and partners in Japan and the US. 
+      Working with us gives you direct access to professionals who understand both local expectations and international standards.
+    </p>
+  </article>
 
-    <article class="card">
-      <h2>Efficient Problem Solving</h2>
-      <p>
-        Unexpected challenges are part of filmmaking. Our team thrives under pressure and knows how to find practical solutions quickly, keeping your production on track.
-      </p>
-    </article>
+  <article class="card">
+    <h2>Clear and Practical Problem Solving</h2>
+    <p>
+      Challenges are inevitable in filmmaking. We stay calm under pressure and focus on practical solutions that keep productions moving forward without compromising creative intent.
+    </p>
+  </article>
 
-    <article class="card">
-      <h2>Quality and Vision-Driven</h2>
-      <p>
-        We care about making films that resonate internationally. Every project is approached with attention to detail and a commitment to cinematic excellence.
-      </p>
-    </article>
-  </section>
+  <article class="card">
+    <h2>Vision Driven and Film Focused</h2>
+    <p>
+      Every project is approached with care for story, craft, and long term value. We focus on making films that travel well internationally while staying grounded in strong cinematic vision.
+    </p>
+  </article>
+</section>
 
-  <!-- Founder Section -->
-  <section class="founder">
-    <div class="founder-inner">
-      <div class="avatar-wrap">
-        <img src="assets/stills/hank-orion.jpg" alt="Hank Orion" />
-      </div>
-      <div>
-        <h2>Hank Orion</h2>
-        <p class="role">Founder, Director, Producer, Screenwriter</p>
-        <p>
-          Founded by filmmaker Hank Orion, San Roku Ku was born from a passion for telling stories that transcend borders. 
-          With years of experience producing films in Japan, Europe and the US, Hank understands the challenges of international productions - from local regulations to finding the right crew and is dedicated to making every project run smoothly while maintaining its creative vision.
-        </p>
-      </div>
+<!-- Founder Section -->
+<section class="founder">
+  <div class="founder-inner">
+    <div class="avatar-wrap">
+      <img src="assets/stills/hank-orion.jpg" alt="Hank Orion" />
     </div>
-  </section>
+    <div>
+      <h2>Hank Orion</h2>
+      <p class="role">Founder, Director, Producer, Screenwriter</p>
+   <p>
+  Founded by filmmaker Hank Orion, San Roku Ku brings years of experience producing films in Europe, UK, Japan and the United States. 
+</p>
+
+    </div>
+  </div>
+</section>
 
   <!-- Call to Action -->
   <div class="cta">
-    <p class="services-note">
-      Get in touch and let’s create something extraordinary together.
-    </p>
+ <p class="services-note">
+  Have questions or want to say hello? Get in touch with us - we’d love to hear from you.
+</p>
+
     <a href="mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Inquiry" class="btn-primary">Contact Us</a>
   </div>
 
@@ -108,29 +112,37 @@
 
 /* Grid cards */
 .grid {
+  display: flex;
+  flex-wrap: wrap;         /* allow multiple rows */
+  gap: 1.6rem;             /* space between cards */
+  justify-content: center;  /* centers the whole cards in each row, including last row */
   margin-top: 2.6rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.6rem;
 }
+
 .card {
+  flex: 0 1 430px;         /* base width 230px, can shrink if needed */
+  max-width: 340px;        /* prevents cards from stretching too much */
   background: radial-gradient(circle at top left, #16233b, #060912);
   border-radius: var(--radius-xl);
   padding: 1.6rem 1.8rem;
   box-shadow: var(--shadow-soft);
 }
+
 .card h2 {
   font-size: 1rem;
+  text-align: center;
   margin: 0 0 0.5rem;
 }
 .card p {
   margin: 0;
+  line-height: 1.5;
   font-size: 0.92rem;
 }
 
 /* Founder */
 .founder {
   margin-top: 3.2rem;
+  line-height: 1.5;
 }
 .founder-inner {
   display: grid;
@@ -176,5 +188,7 @@
   margin: 0 auto 1rem;
   text-align: center;
   font-size: 0.95rem;
+  padding: 20px;
+  line-height: 1.5;
 }
 </style>

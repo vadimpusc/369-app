@@ -3,9 +3,10 @@
   <!-- Day-Rate Video Shoots -->
   <section class="services-section">
     <header class="services-header">
-      <h1>Day-Rate Video Shoots</h1>
+      <h1>Day-Rate Video Shoots (Japan Only)</h1>
       <p>
-        Perfect for small projects, promotional videos, interviews, and social media content. Every shoot is tailored to your needs.
+        Perfect for small projects, promotional videos, interviews, and social media content. Every shoot is tailored to your needs. If your project is outside Japan, please contact us, and we will do our best to accommodate your shoot.
+
       </p>
     </header>
 
@@ -23,14 +24,14 @@
           <tr>
             <td>Half-Day Shoot</td>
             <td>up to 4 hours</td>
-            <td>¥120,000〜 / $900〜</td>
-            <td>Filming only, basic crew (camera + assistant), standard equipment (camera + lighting), standard location coordination</td>
+            <td>¥120,000〜</td>
+            <td>Filming only, basic crew (camera + assistant), standard equipment (camera + lighting)</td>
           </tr>
           <tr>
             <td>Full-Day Shoot</td>
             <td>up to 8 hours</td>
-            <td>¥200,000〜 / $1,500〜</td>
-            <td>Filming + director/producer support, basic crew (camera + assistant + lighting), standard location coordination, permits support</td>
+            <td>¥200,000〜</td>
+            <td>Filming + director/producer support, basic crew (camera + assistant + lighting), standard location coordination</td>
           </tr>
         </tbody>
       </table>
@@ -44,12 +45,11 @@
         <div class="addon">Transport & logistics</div>
         <div class="addon">Drone / specialty camera equipment</div>
         <div class="addon">On-set translator / production assistant</div>
-        <div class="addon">Custom requests</div>
       </div>
 
       <div class="cta">
         <a href="mailto:newbusiness@sanrokuku.com?subject=Day-Rate%20Video%20Shoot" class="btn-primary">
-          Email to Get Estimate
+          Get an Estimate
         </a>
       </div>
     </div>
@@ -77,10 +77,12 @@
   <!-- Our Film Production Services -->
   <section class="services-section">
     <header class="services-header">
-      <h1>Our Film Production Services</h1>
-      <p>
-        San Roku Ku is an international film production company specializing in bold, cinematic storytelling across Europe, Japan and the United States.
-      </p>
+<h1>Our Film Production Services</h1>
+<p>
+  San Roku Ku provides full-service production support for projects in Japan and the United States. 
+  From development and on-set management to post-production, we help filmmakers and studios bring their stories to life with efficiency and creative precision.
+</p>
+
     </header>
 
     <section class="grid">
@@ -147,13 +149,11 @@
     </p>
 
     <div class="cta">
-      <a href="/strategy" class="btn-primary">Book a 15-Minute Call for Your Personalized Estimate</a>
-    </div>
-    <div class="cta">
-      <p style="margin: 1rem 0; color: var(--text-muted); text-align: center;">Or</p>
-      <a href="mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Services" class="btn-primary">
-        Email to Get Estimate
+        <a href="mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Services" class="btn-primary">
+        Get an Estimate
       </a>
+         <p>Or</p>
+      <a href="/strategy" class="btn-primary">Book Your Call</a>
     </div>
   </section>
 
@@ -162,6 +162,7 @@
 <style>
 .services-page {
   padding: 3.5rem 0 4rem;
+  
 }
 
 /* Subtle section wrapper */
@@ -170,6 +171,7 @@
   margin-bottom: 3rem;
   border-radius: var(--radius-xl);
   background: transparent;
+  
 }
 
 /* Very faint divider line */
@@ -178,41 +180,50 @@
   background: rgba(255,255,255,0.03);
   margin: 3rem 0;
   width: 100%;
+  
 }
 
 .services-header h1 {
   font-size: 2.1rem;
   margin-bottom: 0.4rem;
   text-align: center;
+    line-height: 1.5;
+  
 }
 .services-header p {
   color: var(--text-muted);
   max-width: 640px;
   margin: 0.2rem auto 0;
   text-align: center;
+    line-height: 1.5;
 }
 
 /* Grid for cards */
 .grid {
-  margin-top: 2.4rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;         /* allow multiple rows */
+  gap: 1.6rem;             /* space between cards */
+  justify-content: center;  /* centers the whole cards in each row, including last row */
+  margin-top: 2.6rem;
 }
 
-/* Card style */
 .card {
+  flex: 0 1 430px;         /* base width 230px, can shrink if needed */
+  max-width: 340px;        /* prevents cards from stretching too much */
   background: radial-gradient(circle at top left, #16233b, #060912);
   border-radius: var(--radius-xl);
-  padding: 1.8rem 1.9rem;
+  padding: 1.6rem 1.8rem;
   box-shadow: var(--shadow-soft);
 }
+
 .card h2 {
   font-size: 1rem;
+  text-align: center;
   margin: 0 0 0.5rem;
 }
 .card p {
-  margin: 0 0 1.1rem;
+  margin: 0;
+  line-height: 1.5;
   font-size: 0.92rem;
 }
 
@@ -222,6 +233,7 @@
   border-collapse: collapse;
   margin: 2rem 0;
   font-size: 0.92rem;
+  line-height: 1.5;
 }
 .shoots-table th, .shoots-table td {
   border: 1px solid #444;
@@ -238,10 +250,12 @@
 
 /* Optional Add-Ons */
 .addons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 1.2rem 0 2rem 0;
+    display: flex;
+  flex-wrap: wrap;        
+  gap: 1.6rem;             /* space between cards */
+  justify-content: center;  /* centers the whole cards in each row, including last row */
+  margin-top: 2.6rem;
+    line-height: 1.5;
 }
 .addon {
   background: radial-gradient(circle at top left, #1b2a4b, #0a0f1d);
@@ -262,6 +276,7 @@
   text-align: center;
   margin-top: 2rem;
   font-size: 1.1rem;
+  
 }
 
 /* Buttons */
@@ -271,10 +286,12 @@
 }
 .block {
   margin-top: 3.5rem;
+  
 }
 .cta {
   text-align: center;
   margin-top: 2.6rem;
+  
 }
 
 /* Services note paragraph */
@@ -284,5 +301,6 @@
   margin: 2rem auto 0;
   text-align: center;
   font-size: 0.95rem;
+  
 }
 </style>
