@@ -1,48 +1,52 @@
 <section class="container submit-page">
   <header class="submit-header">
-    <h1>Submit Your Film</h1>
-    <p>
-      We work with distributors worldwide to help independent films reach audiences and travel
-      across territories. If you have a completed feature or series, you can submit it for
-      consideration below.
-    </p>
+    <h1>Distribute Your Films, Series, or Documentaries</h1>
+<p>
+  San Roku Ku helps independent filmmakers bring their stories to audiences worldwide. 
+  Beyond traditional distribution, we also accept films for our YouTube channel, a fast-growing platform where you can build an audience, increase visibility, and monetize your work, all while keeping full creative control.
+</p>
+
   </header>
 
   <section class="criteria">
     <div class="card">
       <h2>What We Are Looking For</h2>
-      <ul>
-        <li>Feature films of 80 minutes or longe</li>
-        <li>Documentaries of 40 minutes or longer</li>
-        <li>TV or web series with episodes around 20 minutes or longer</li>
-      </ul>
+ <ul>
+  <li>Feature films of 80 minutes or longer</li>
+  <li>Works in English or Japanese</li>
+  <li>Documentaries of 40 minutes or longer</li>
+  <li>TV or web series with episodes of 20 minutes or longer</li>
+</ul>
+
     </div>
     <div class="card">
       <h2>We Are Not Able To Accept</h2>
-      <ul>
-        <li>Short films</li>
-        <li>Films already widely released or sold in key territories</li>
-        <li>Screenplay submissions or pitches without a completed film</li>
-      </ul>
+  <ul>
+  <li>Short films</li>
+  <li>Works in languages other than English or Japanese</li>
+  <li>Films already widely released or sold in major territories</li>
+  <li>Screenplays or project pitches without a completed film</li>
+</ul>
+
     </div>
     
   </section>
  
-  <p class="note">
-   If you do not hear from us within seven business days, please assume that your film was
-    not selected at this time. Thank you for your understanding.
-  </p>
+<p class="note">
+  If you do not hear from us within 14 business days, please understand that your film was not selected at this time. Thank you for your submission.
+</p>
+
+
 </section>
 
 <div class="submit-btn-container">
-  <a href="https://tally.so/r/81NdJ5" target="_blank" class="srk-btn">Submit Your Film</a>
+  <a href="https://tally.so/r/81NdJ5" target="_blank" class="srk-btn">Submit for Distribution</a>
 </div>
 
 
 
 <style>
 .submit-btn-container {
-  margin-top: 3rem;
   text-align: center;
 }
 
@@ -73,7 +77,7 @@
   }
 .submit-header {
   text-align: center;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 60px 20px;
 }
@@ -85,10 +89,9 @@
 
 .submit-header p {
   font-size: 1.1rem;
-  line-height: 1.65;
-  color: var(--text-muted);
+  line-height: 1.5;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 900px;
 }
 
   .criteria {
@@ -102,6 +105,7 @@
     border-radius: var(--radius-xl);
     padding: 1.6rem 1.8rem;
     box-shadow: var(--shadow-soft);
+    line-height: 1.5;
   }
   .card h2 {
     font-size: 1.3rem;

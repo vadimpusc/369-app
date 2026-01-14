@@ -20,40 +20,26 @@
   import SubmitYourFilm from "./pages/SubmitYourFilm.svelte";
   import Strategy from "./pages/Strategy.svelte";
 
-  // new JSON-driven services pages
   import Service from "./pages/Service.svelte";
   import ServiceDetail from "./pages/ServiceDetail.svelte";
 
-  // base path for assets (important for GitHub Pages)
   const base = import.meta.env.BASE_URL;
+
+  let mobileOpen = false; // mobile menu toggle
 
   const routeInfo = derived(currentPath, ($path) => {
     if ($path === "/") return { page: "home" };
-
     if ($path === "/films") return { page: "films" };
-    if ($path.startsWith("/films/"))
-      return { page: "film", slug: $path.replace("/films/", "") };
-
+    if ($path.startsWith("/films/")) return { page: "film", slug: $path.replace("/films/", "") };
     if ($path === "/series") return { page: "series" };
-    if ($path.startsWith("/series/"))
-      return { page: "seriesDetail", slug: $path.replace("/series/", "") };
-
+    if ($path.startsWith("/series/")) return { page: "seriesDetail", slug: $path.replace("/series/", "") };
     if ($path === "/documentaries") return { page: "documentaries" };
-    if ($path.startsWith("/documentaries/"))
-      return { page: "docDetail", slug: $path.replace("/documentaries/", "") };
-
+    if ($path.startsWith("/documentaries/")) return { page: "docDetail", slug: $path.replace("/documentaries/", "") };
     if ($path === "/jobs") return { page: "jobs" };
-    if ($path.startsWith("/jobs/"))
-      return { page: "jobDetail", slug: $path.replace("/jobs/", "") };
-
-    // existing Services page (for producers)
+    if ($path.startsWith("/jobs/")) return { page: "jobDetail", slug: $path.replace("/jobs/", "") };
     if ($path === "/services") return { page: "services" };
-
-    // new JSON-based service system
     if ($path === "/service") return { page: "service" };
-    if ($path.startsWith("/service/"))
-      return { page: "serviceDetail", slug: $path.replace("/service/", "") };
-
+    if ($path.startsWith("/service/")) return { page: "serviceDetail", slug: $path.replace("/service/", "") };
     if ($path === "/about") return { page: "about" };
     if ($path === "/contact") return { page: "contact" };
     if ($path === "/privacy-policy") return { page: "privacy" };
@@ -61,40 +47,64 @@
     if ($path === "/refund-policy") return { page: "refund" };
     if ($path === "/submit-your-film") return { page: "submit" };
     if ($path === "/strategy") return { page: "strategy" };
-
     return { page: "404" };
   });
 
-  // subscribe to the derived store
   $: r = $routeInfo;
 
   function go(path) {
+    mobileOpen = false; // close mobile menu
     navigate(path);
   }
 </script>
 
 <header class="srk-nav">
   <div class="container nav-inner">
-    <button class="nav-left-btn" on:click={() => go("/")}>
-      <!-- logo uses base so it works under /369-app/ -->
-      <img
-        src={`${base}assets/logos/369.png`}
-        alt="San Roku Ku"
-        class="nav-logo"
-      />
+    <!-- Hamburger -->
+    <button class="nav-left-btn" on:click={() => (mobileOpen = true)}>
+      &#9776;
     </button>
-    <nav class="nav-links">
-          <button on:click={() => go("/about")}>About Us</button>
+
+    <!-- Desktop logo -->
+    <img
+      src={`${base}assets/logos/369.png`}
+      alt="San Roku Ku"
+      class="nav-logo desktop-logo"
+      on:click={() => go("/")}
+    />
+
+    <!-- Desktop links -->
+    <nav class="nav-links desktop">
+      <button on:click={() => go("/about")}>About Us</button>
       <button on:click={() => go("/films")}>Films</button>
       <button on:click={() => go("/documentaries")}>Documentaries</button>
       <button on:click={() => go("/series")}>Series</button>
       <button on:click={() => go("/services")}>Services</button>
     </nav>
-    <div class="nav-right">
-      <button class="btn-primary" on:click={() => go("/contact")}>
-        Contact Us
-      </button>
+
+    <!-- Desktop contact -->
+    <div class="nav-right desktop">
+      <button class="btn-primary" on:click={() => go("/contact")}>Contact Us</button>
     </div>
+  </div>
+
+  <!-- Mobile menu overlay -->
+  <div class="mobile-overlay" class:open={mobileOpen}>
+    <button class="close-btn" on:click={() => (mobileOpen = false)}>×</button>
+    <img
+      src={`${base}assets/logos/369.png`}
+      class="nav-logo mobile-logo"
+      alt="San Roku Ku"
+      on:click={() => go("/")}
+    />
+    <nav class="mobile-links">
+      <button on:click={() => go("/about")}>About Us</button>
+      <button on:click={() => go("/films")}>Films</button>
+      <button on:click={() => go("/documentaries")}>Documentaries</button>
+      <button on:click={() => go("/series")}>Series</button>
+      <button on:click={() => go("/services")}>Services</button>
+    </nav>
+    <button class="contact-btn" on:click={() => go("/contact")}>Contact Us</button>
   </div>
 </header>
 
@@ -117,16 +127,12 @@
     <Jobs />
   {:else if r.page === "jobDetail"}
     <JobDetail slug={r.slug} />
-
   {:else if r.page === "services"}
     <Services />
-
-  <!-- new JSON-driven services list and detail -->
   {:else if r.page === "service"}
     <Service />
   {:else if r.page === "serviceDetail"}
     <ServiceDetail slug={r.slug} />
-
   {:else if r.page === "about"}
     <About />
   {:else if r.page === "contact"}
@@ -154,61 +160,23 @@
     <div class="footer-columns">
       <div class="footer-col">
         <h4>Catalogue</h4>
-        <a
-          href="/films"
-          on:click|preventDefault={() => go("/films")}
-          >Film Catalogue</a
-        >
-        <a
-          href="/series"
-          on:click|preventDefault={() => go("/series")}
-          >Series Catalogue</a
-        >
-        <a
-          href="/documentaries"
-          on:click|preventDefault={() => go("/documentaries")}
-          >Documentary Catalogue</a
-        >
-        <a
-          href="/submit-your-film"
-          on:click|preventDefault={() => go("/submit-your-film")}
-          >Submit Your Film</a
-        >
+        <a href="/films" on:click|preventDefault={() => go("/films")}>Film Catalogue</a>
+        <a href="/series" on:click|preventDefault={() => go("/series")}>Series Catalogue</a>
+        <a href="/documentaries" on:click|preventDefault={() => go("/documentaries")}>Documentary Catalogue</a>
+        <a href="/submit-your-film" on:click|preventDefault={() => go("/submit-your-film")}>Submit for Distribution</a>
       </div>
       <div class="footer-col">
         <h4>Studio</h4>
-        <a href="/about" on:click|preventDefault={() => go("/about")}
-          >About Us</a
-        >
-        <a
-          href="/services"
-          on:click|preventDefault={() => go("/services")}
-          >Services For Producers</a
-        >
-        <a href="/jobs" on:click|preventDefault={() => go("/jobs")}
-          >Work Opportunities</a
-        >
-        <a href="/contact" on:click|preventDefault={() => go("/contact")}
-          >Contact Us</a
-        >
+        <a href="/about" on:click|preventDefault={() => go("/about")}>About Us</a>
+        <a href="/services" on:click|preventDefault={() => go("/services")}>Services For Producers</a>
+        <a href="/jobs" on:click|preventDefault={() => go("/jobs")}>Work Opportunities</a>
+        <a href="/contact" on:click|preventDefault={() => go("/contact")}>Contact Us</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
-        <a
-          href="/terms-and-conditions"
-          on:click|preventDefault={() => go("/terms-and-conditions")}
-          >Terms and Conditions</a
-        >
-        <a
-          href="/refund-policy"
-          on:click|preventDefault={() => go("/refund-policy")}
-          >Refund Policy</a
-        >
-        <a
-          href="/privacy-policy"
-          on:click|preventDefault={() => go("/privacy-policy")}
-          >Privacy Policy</a
-        >
+        <a href="/terms-and-conditions" on:click|preventDefault={() => go("/terms-and-conditions")}>Terms and Conditions</a>
+        <a href="/refund-policy" on:click|preventDefault={() => go("/refund-policy")}>Refund Policy</a>
+        <a href="/privacy-policy" on:click|preventDefault={() => go("/privacy-policy")}>Privacy Policy</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -218,92 +186,193 @@
 </footer>
 
 <style>
-  .srk-nav {
-    position: sticky;
-    top: 0;
-    z-index: 40;
-    backdrop-filter: blur(18px);
-    background: radial-gradient(
-      circle at top,
-      rgba(16, 19, 32, 0.96),
-      rgba(5, 6, 10, 0.98)
-    );
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  }
-  .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-  }
+/* ---------- NAVBAR ---------- */
+.srk-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(18px);
+  background: radial-gradient(circle at top, rgba(16,19,32,0.96), rgba(5,6,10,0.98));
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 10px;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-left-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: var(--text-main);
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  position: relative;
+}
+
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #46d5ff, var(--accent));
+  transition: width 160ms ease;
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+
+.nav-right .btn-primary {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
   .nav-left-btn {
-    padding: 0;
-    border: none;
-    background: none;
-    cursor: pointer;
+    display: block;
   }
-  .nav-logo {
-    height: 40px;
+
+  .nav-links,
+  .nav-right,
+  .desktop-logo {
+    display: none;
   }
-  .nav-links {
+
+  .mobile-overlay {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background: #000;
+    padding: 2rem 1rem;
+    z-index: 50;
+  }
+
+  .mobile-overlay.open {
     display: flex;
-    gap: 1.8rem;
+    background: black;
+    height: 100vh;
   }
-  .nav-links button {
+
+  .close-btn {
+    font-size: 2rem !important;
+    color: #fff;
     background: none;
     border: none;
-    color: var(--text-main);
-    font-weight: 500;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    position: relative;
-  }
-  .nav-links button::after {
-    content: "";
     position: absolute;
-    left: 0;
-    bottom: -0.4rem;
-    width: 0;
-    height: 2px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #46d5ff, var(--accent));
-    transition: width 160ms ease;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
   }
-  .nav-links button:hover::after {
-    width: 100%;
+
+  .mobile-overlay .mobile-logo {
+    height: 50px;
+    margin-top: 3rem;
   }
-  .srk-footer {
-    padding: 3rem 0 2rem;
-    background: radial-gradient(circle at top, #050711, #010208);
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    margin-top: 4rem;
-  }
-  .footer-inner {
+
+  .mobile-links {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    gap: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
+    
   }
-  .footer-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.8rem;
-  }
-  .footer-col h4 {
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-    color: var(--text-main);
-  }
-  .footer-col a {
-    display: block;
-    margin-bottom: 0.2rem;
+
+  .mobile-overlay button {
+    font-size: 1.2rem;
+    color: #fff;
+    background: none;
+    border: none;
     cursor: pointer;
   }
-  .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    padding-top: 1rem;
+
+  .mobile-overlay .contact-btn {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    margin-bottom: 2rem;
   }
+}
+
+/* ---------- FOOTER ---------- */
+.srk-footer {
+  padding: 3rem 0 2rem;
+  background: radial-gradient(circle at top, #050711, #010208);
+  border-top: 1px solid rgba(255,255,255,0.04);
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.8rem;
+}
+
+.footer-col h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-main);
+}
+
+.footer-col a {
+  display: block;
+  margin-bottom: 0.2rem;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.04);
+  padding-top: 1rem;
+}
+
+/* Desktop - hide mobile overlay */
+@media (min-width: 769px) {
+  .mobile-overlay {
+    display: none !important;
+  }
+}
 </style>
