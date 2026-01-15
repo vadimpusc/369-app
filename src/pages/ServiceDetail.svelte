@@ -65,6 +65,30 @@
       </div>
     </div>
   </section>
+  
+{#if item.bannerImage && item.bannerTitle}
+  <div class="service-qa-banner">
+    <h2 class="service-qa-banner-title">
+      {item.bannerTitle}
+    </h2>
+
+    {#if item["longer-description"]}
+      <p class="service-qa-banner-description">
+        {item["longer-description"]}
+      </p>
+    {/if}
+
+    <img
+      src={item.bannerImage}
+      alt={item.bannerTitle}
+      loading="lazy"
+    />
+  </div>
+{/if}
+
+
+
+
 
   <!-- Q&A section underneath, centered -->
   {#if item.qa && item.qa.length > 0}
@@ -164,6 +188,18 @@
     margin-bottom: 1.5rem;
   }
 
+  .service-qa-banner-description {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0 auto 1.5rem;  /* center with bottom spacing */
+  max-width: 900px;        /* constrain width for readability */
+  padding: 0 1.25rem;      /* small side padding on mobile */
+  display: block;           /* make sure it shows */
+  text-align: center;       /* optional: center text horizontally */
+  opacity: 0.85;            /* subtle styling, optional */
+}
+
+
   .service-detail-actions {
     display: flex;
     gap: 1rem;
@@ -250,4 +286,29 @@
     font-size: 0.95rem;
     line-height: 1.65;
   }
+
+  .service-qa-banner {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.service-qa-banner-title {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.service-qa-banner img {
+  width: 100%;           /* full width on small screens */
+  max-width: 1800px;     /* limit width on large screens */
+  height: auto;          /* maintain aspect ratio */
+  display: block;
+  margin: 0 auto;        /* center the image if narrower than container */
+}
+
+
 </style>

@@ -7,8 +7,7 @@
   <header class="services-header">
     <h1>Our Online Services</h1>
     <p>
-      Order poster design, Filmhub graphics, and trailer editing directly online.
-      Upload your materials and receive delivery within a few days.
+      We craft standout key art for independent films, from posters to pitch decks and full marketing materials. Our team operates where filmmaking thrives - London, Los Angeles, Kyoto, and Osaka, combining global industry insight with a passion for cinema.
     </p>
   </header>
 
@@ -39,7 +38,7 @@
 
   .services-header p {
     font-size: 1.1rem;
-    line-height: 1.65;
+    line-height: 1.5;
     color: var(--text-muted);
     max-width: 750px;
     margin: 0 auto;
@@ -62,6 +61,7 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+ line-height: 1.5;
 }
 
   @media (max-width: 1600px) {
