@@ -1,12 +1,27 @@
 <section class="container services-page">
 
+  <!-- Our Online Services -->
+  <section class="services-section">
+    <header class="services-header">
+      <h1>Our Online Services</h1>
+      <p>
+        Need quick creative work like poster design or trailer editing? Place your order online, upload your materials, and get your project delivered in just a few days.
+      </p>
+    </header>
+
+    <div class="cta">
+      <a href="/service" class="btn-primary">Get Started Online</a>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
   <!-- Day-Rate Video Shoots -->
   <section class="services-section">
     <header class="services-header">
       <h1>Day-Rate Video Shoots (Japan Only)</h1>
       <p>
         Perfect for small projects, promotional videos, interviews, and social media content. Every shoot is tailored to your needs. If your project is outside Japan, please contact us, and we will do our best to accommodate your shoot.
-
       </p>
     </header>
 
@@ -22,16 +37,20 @@
         </thead>
         <tbody>
           <tr>
-            <td>Half-Day Shoot</td>
-            <td>up to 4 hours</td>
-            <td>¥120,000〜</td>
-            <td>Filming only, basic crew (camera + assistant), standard equipment (camera + lighting)</td>
+            <td data-label="Package">Half-Day Shoot</td>
+            <td data-label="Duration">up to 4 hours</td>
+            <td data-label="Starting Price">¥120,000〜</td>
+            <td data-label="What’s Included">
+              Filming only, basic crew (camera + assistant), standard equipment (camera + lighting)
+            </td>
           </tr>
           <tr>
-            <td>Full-Day Shoot</td>
-            <td>up to 8 hours</td>
-            <td>¥200,000〜</td>
-            <td>Filming + director/producer support, basic crew (camera + assistant + lighting), standard location coordination</td>
+            <td data-label="Package">Full-Day Shoot</td>
+            <td data-label="Duration">up to 8 hours</td>
+            <td data-label="Starting Price">¥200,000〜</td>
+            <td data-label="What’s Included">
+              Filming + director/producer support, basic crew (camera + assistant + lighting), standard location coordination
+            </td>
           </tr>
         </tbody>
       </table>
@@ -57,88 +76,61 @@
 
   <div class="section-divider"></div>
 
-  <!-- Our Online Services -->
-  <section class="services-section">
-    <header class="services-header">
-      <h1>Our Online Services</h1>
-      <p>
-        For quick creative needs such as poster design or trailer editing, you can order directly
-        online and upload your materials. Delivery is handled within days.
-      </p>
-    </header>
-
-    <div class="cta">
-      <a href="/service" class="btn-primary">Explore Our Online Services</a>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
   <!-- Our Film Production Services -->
   <section class="services-section">
     <header class="services-header">
-<h1>Our Film Production Services</h1>
-<p>
-  San Roku Ku provides full-service production support for projects in Japan and the United States. 
-  From development and on-set management to post-production, we help filmmakers and studios bring their stories to life with efficiency and creative precision.
-</p>
-
+      <h1>Our Film Production Services</h1>
+      <p>
+        San Roku Ku provides full-service production support for projects in Japan and the United States.
+        From development and on-set management to post-production, we help filmmakers and studios bring their stories to life with efficiency and creative precision.
+      </p>
     </header>
 
     <section class="grid">
       <article class="card">
         <h2>Development & Story Consulting</h2>
         <p>
-          Script analysis, creative feedback, and development support focused on clarity, structure, 
+          Script analysis, creative feedback, and development support focused on clarity, structure,
           and positioning for finance, casting, and production across international markets.
         </p>
       </article>
+
       <article class="card">
         <h2>Production & Crew Support</h2>
         <p>
-          End to end production support, from scheduling and budgeting through on set management, 
+          End to end production support, from scheduling and budgeting through on set management,
           delivery, and coordination with creative and technical teams.
         </p>
       </article>
+
       <article class="card">
         <h2>Post Production & Finishing</h2>
         <p>
-          Editorial, colour, sound, and mastering workflows prepared for festivals, broadcasters, 
+          Editorial, colour, sound, and mastering workflows prepared for festivals, broadcasters,
           and streaming platforms, with a focus on creative intent and delivery standards.
         </p>
       </article>
-      <article class="card">
-        <h2>Graphic Design & Key Art</h2>
-        <p>
-          Campaign ready artwork, key visuals, motion assets, and stills designed to support press, 
-          pitching, festivals, and release strategies across territories.
-        </p>
-      </article>
-      <article class="card">
-        <h2>Web & Digital Tools</h2>
-        <p>
-          Purpose built landing pages, pitch portals, and simple digital tools designed to support 
-          filmmakers, releases, and content driven brands.
-        </p>
-      </article>
+
       <article class="card">
         <h2>Distribution & Release Strategy</h2>
         <p>
-          Release planning, deliverables, and marketing support that help projects travel across 
+          Release planning, deliverables, and marketing support that help projects travel across
           platforms, territories, and audiences with confidence.
         </p>
       </article>
+
       <article class="card">
         <h2>International Project Support</h2>
         <p>
-          Creative and practical support for projects working between Japan and the US, including 
+          Creative and practical support for projects working between Japan and the US, including
           development alignment, communication flow, and delivery expectations.
         </p>
       </article>
+
       <article class="card">
         <h2>Localization & Delivery Oversight</h2>
         <p>
-          Supervision of subtitles, dubbing, and final materials to ensure tone, clarity, and cultural 
+          Supervision of subtitles, dubbing, and final materials to ensure tone, clarity, and cultural
           intent are preserved for international audiences.
         </p>
       </article>
@@ -149,12 +141,47 @@
     </p>
 
     <div class="cta">
-        <a href="mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Services" class="btn-primary">
+      <a href="mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Services" class="btn-primary">
         Get an Estimate
       </a>
-         <p>Or</p>
+      <p>Or</p>
       <a href="/strategy" class="btn-primary">Book Your Call</a>
     </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Other Services -->
+  <section class="services-section">
+    <header class="services-header">
+      <h1>Other Services</h1>
+      <p>
+        Additional creative services designed to support your project beyond production.
+      </p>
+    </header>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Graphic Design & Key Art</h2>
+        <p>
+          Campaign ready artwork, key visuals, motion assets, and stills designed to support press,
+          pitching, festivals, and release strategies across territories.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Web & Digital Tools</h2>
+        <p>
+          Purpose built landing pages, pitch portals, and simple digital tools designed to support
+          filmmakers, releases, and content driven brands.
+        </p>
+      </article>
+    </section>
+       <div class="cta">
+        <a href="mailto:newbusiness@sanrokuku.com?subject=Other%20Services" class="btn-primary">
+          Get an Estimate
+        </a>
+      </div>
   </section>
 
 </section>
@@ -162,7 +189,6 @@
 <style>
 .services-page {
   padding: 3.5rem 0 4rem;
-  
 }
 
 /* Subtle section wrapper */
@@ -171,7 +197,6 @@
   margin-bottom: 3rem;
   border-radius: var(--radius-xl);
   background: transparent;
-  
 }
 
 /* Very faint divider line */
@@ -180,36 +205,35 @@
   background: rgba(255,255,255,0.03);
   margin: 3rem 0;
   width: 100%;
-  
 }
 
 .services-header h1 {
   font-size: 2.1rem;
   margin-bottom: 0.4rem;
   text-align: center;
-    line-height: 1.5;
-  
+  line-height: 1.5;
 }
+
 .services-header p {
   color: var(--text-muted);
   max-width: 640px;
   margin: 0.2rem auto 0;
   text-align: center;
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 /* Grid for cards */
 .grid {
   display: flex;
-  flex-wrap: wrap;         /* allow multiple rows */
-  gap: 1.6rem;             /* space between cards */
-  justify-content: center;  /* centers the whole cards in each row, including last row */
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
   margin-top: 2.6rem;
 }
 
 .card {
-  flex: 0 1 430px;         /* base width 230px, can shrink if needed */
-  max-width: 340px;        /* prevents cards from stretching too much */
+  flex: 0 1 430px;
+  max-width: 340px;
   background: radial-gradient(circle at top left, #16233b, #060912);
   border-radius: var(--radius-xl);
   padding: 1.6rem 1.8rem;
@@ -221,13 +245,16 @@
   text-align: center;
   margin: 0 0 0.5rem;
 }
+
 .card p {
   margin: 0;
   line-height: 1.5;
   font-size: 0.92rem;
 }
 
-/* Table style for Day-Rate Video Shoots */
+/* =========================
+   Day-Rate Shoots Table
+   ========================= */
 .shoots-table {
   width: 100%;
   border-collapse: collapse;
@@ -235,28 +262,35 @@
   font-size: 0.92rem;
   line-height: 1.5;
 }
-.shoots-table th, .shoots-table td {
+
+.shoots-table th,
+.shoots-table td {
   border: 1px solid #444;
   padding: 0.9rem;
   text-align: left;
 }
+
 .shoots-table th {
   background: radial-gradient(circle at top left, #16233b, #060912);
   color: #fff;
 }
+
 .shoots-table td {
   background: #0d172c;
 }
 
-/* Optional Add-Ons */
+/* =========================
+   Optional Add-Ons
+   ========================= */
 .addons-grid {
-    display: flex;
-  flex-wrap: wrap;        
-  gap: 1.6rem;             /* space between cards */
-  justify-content: center;  /* centers the whole cards in each row, including last row */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
   margin-top: 2.6rem;
-    line-height: 1.5;
+  line-height: 1.5;
 }
+
 .addon {
   background: radial-gradient(circle at top left, #1b2a4b, #0a0f1d);
   color: #fff;
@@ -267,16 +301,17 @@
   box-shadow: var(--shadow-soft);
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .addon:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);
   cursor: pointer;
 }
+
 .addons-header {
   text-align: center;
   margin-top: 2rem;
   font-size: 1.1rem;
-  
 }
 
 /* Buttons */
@@ -284,14 +319,14 @@
   padding: 0.55rem 1.3rem;
   font-size: 0.86rem;
 }
+
 .block {
   margin-top: 3.5rem;
-  
 }
+
 .cta {
   text-align: center;
   margin-top: 2.6rem;
-  
 }
 
 /* Services note paragraph */
@@ -301,6 +336,61 @@
   margin: 2rem auto 0;
   text-align: center;
   font-size: 0.95rem;
-  
+  line-height: 1.5;
 }
+
+/* =========================
+   MOBILE ONLY TABLE FIX
+   Desktop is untouched
+   ========================= */
+@media (max-width: 768px) {
+
+  .shoots-table {
+    border: 0;
+  }
+
+  .shoots-table thead {
+    display: none;
+  }
+
+  .shoots-table,
+  .shoots-table tbody,
+  .shoots-table tr,
+  .shoots-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .shoots-table tr {
+    margin-bottom: 1.6rem;
+    background: radial-gradient(circle at top left, #16233b, #060912);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shoots-table td {
+    border: none;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    font-size: 0.9rem;
+  }
+
+  .shoots-table td:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .shoots-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+}
+
+
 </style>

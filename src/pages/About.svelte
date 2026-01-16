@@ -2,6 +2,9 @@
 
   <!-- Header -->
   <header class="about-header">
+  <div class="fade-in-image">
+  <img src="assets/logos/369.png" alt="San Roku Ku - Film Production Company in United States and Japan" />
+</div>
     <h1>San Roku Ku</h1>
 <p>
   San Roku Ku is a production company focused on bold, cinematic storytelling. 
@@ -190,5 +193,30 @@
   font-size: 0.95rem;
   padding: 20px;
   line-height: 1.5;
+}
+
+.fade-in-image {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+}
+
+.fade-in-image img {
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;    
+  
+  
+  /* Start invisible */
+  opacity: 0;
+
+  /* Fade-in animation */
+  animation: fadeIn 4.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 </style>

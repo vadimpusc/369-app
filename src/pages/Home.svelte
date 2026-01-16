@@ -60,7 +60,7 @@
                 class="btn-primary"
                 on:click={() => navigate(`/films/${slide.slug}`)}
               >
-                View Film
+                Learn More
               </button>
             </div>
           </div>
@@ -90,20 +90,26 @@
 </section>
 
 <section class="container section centered-section">
-<h2 class="section-title">Your Production Partner in Japan and the US</h2>
-<p class="section-subtitle">
-  San Roku Ku is a production and post production partner working between Japan and the United States. We produce original films and support international productions filming in Japan, helping teams navigate local systems, crews, and cultural differences with clarity and efficiency. Our focus is making cross border filmmaking practical and transparent.
+
+<div class="fade-in-image">
+  <img src="assets/logos/369.png" alt="San Roku Ku - Film Production Company in United States and Japan" />
+</div>
+
+
+<h2 class="section-title">Your Production Partner</h2>
+<p class="section-subtitle-main">
+San Roku Ku is a full-service production and post-production partner bridging Japan and the United States. We create original films and support international productions working in both countries, guiding teams through local systems, crews, and cultural differences with clarity and efficiency. Our mission is to make cross-border filmmaking practical, transparent, and stress-free.
 </p>
 
   <button class="btn-primary" on:click={() => navigate("/services")}>
-    Learn More
+    Our Services
   </button>
 </section>
 
 <section class="container section">
   <h2 class="section-title">Latest Releases</h2>
   <p class="section-subtitle">
-   Discover our newest films, from our slate of independent and studio productions.
+   Discover our newest releases, from our slate of independent and studio productions.
   </p>
 
   <div class="film-strip">
@@ -174,8 +180,9 @@
   }
   .logline {
     max-width: 520px;
-    color: var(--text-muted);
+    color: var(--text);
     font-size: 1rem;
+    line-height: 1.5;
   }
   .hero-actions {
     margin-top: 1.6rem;
@@ -229,13 +236,25 @@
     font-size: 1.6rem;
     margin-bottom: 0.3rem;
     text-align: center;
+    
   }
   .section-subtitle {
     margin-top: 0;
     color: var(--text-muted);
     -width: 560px;
     text-align: center;
+    line-height: 1.5;
   }
+    .section-subtitle-main {
+    margin-top: 0;
+    color: var(--text);
+    -width: 560px;
+    text-align: center;
+    line-height: 1.5;
+      margin: 0 auto;
+  max-width: 750px;
+  }
+
   .film-strip {
     margin-top: 2rem;
     display: grid;
@@ -306,5 +325,32 @@
     0 0 8px rgba(80, 150, 255, 0.4) inset;
 }
 
+.fade-in-image {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+}
+
+.fade-in-image img {
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;    
+  margin: 20px;
+  
+  /* Start invisible */
+  opacity: 0;
+
+  /* Fade-in animation */
+  animation: fadeIn 4.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 
 </style>
+
+

@@ -110,10 +110,10 @@
   transition: transform 180ms ease, box-shadow 220ms ease;
 }
 
-.title-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 45px rgba(72, 180, 255, 0.45); /* elegant glow */
-}
+  .title-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 40px 5px rgba(72, 180, 255, 0.2);
+  }
 
 
   .poster-shell {

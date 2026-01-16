@@ -7,8 +7,7 @@
   <header class="services-header">
     <h1>Our Online Services</h1>
     <p>
-      We craft standout key art for independent films, from posters to pitch decks and full marketing materials. Our team operates where filmmaking thrives - London, Los Angeles, Kyoto, and Osaka, combining global industry insight with a passion for cinema.
-    </p>
+From posters and pitch decks to trailer edits and full marketing materials, we craft key art that makes independent films impossible to ignore. Operating in London, Los Angeles, Kyoto, and Osaka, our team blends global film industry insight with a love for storytelling on screen.    </p>
   </header>
 
   <section class="services-grid">
