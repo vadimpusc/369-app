@@ -164,6 +164,11 @@
         <a href="/series" on:click|preventDefault={() => go("/series")}>Series Catalogue</a>
         <a href="/documentaries" on:click|preventDefault={() => go("/documentaries")}>Documentary Catalogue</a>
         <a href="/submit-your-film" on:click|preventDefault={() => go("/submit-your-film")}>Submit for Distribution</a>
+     <a href="https://development.sanrokuku.com" rel="noopener noreferrer">
+  Development Slate
+</a>
+
+
       </div>
       <div class="footer-col">
         <h4>Studio</h4>
