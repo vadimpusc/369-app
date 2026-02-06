@@ -5,7 +5,7 @@
     <header class="services-header">
       <h1>Our Online Services</h1>
       <p>
-        Need quick creative work like poster design or trailer editing? Place your order online, upload your materials, and get your project delivered in just a few days.
+        Need quick creative service? Place your order online, upload your materials, and get your project delivered in just a few days. We're here to support your vision.
       </p>
     </header>
 
@@ -16,6 +16,7 @@
 
   <div class="section-divider"></div>
 
+{#if false}
   <!-- Day-Rate Video Shoots -->
   <section class="services-section">
     <header class="services-header">
@@ -73,8 +74,9 @@
       </div>
     </div>
   </section>
-
-  <div class="section-divider"></div>
+  
+    <div class="section-divider"></div>
+  {/if}
 
   <!-- Our Film Production Services -->
   <section class="services-section">
@@ -149,7 +151,9 @@
     </div>
   </section>
 
+{#if false}
   <div class="section-divider"></div>
+ {/if}
 
   <!-- Other Services -->
   <section class="services-section">
@@ -162,9 +166,9 @@
 
     <section class="grid">
       <article class="card">
-        <h2>Graphic Design & Key Art</h2>
+        <h2>Other Graphic Design</h2>
         <p>
-          Campaign ready artwork, key visuals, motion assets, and stills designed to support press,
+          Artworks, key visuals, motion assets, and stills designed to support press,
           pitching, festivals, and release strategies across territories.
         </p>
       </article>
