@@ -44,27 +44,74 @@
           {item.description}
         </p>
 
-        <div class="service-detail-actions">
-          <a
-            href={item.orderUrl}
-            class="btn-primary"
-            target="_blank"
-            rel="noopener"
-          >
-            {item.ctaLabel || "Order now"}
-          </a>
+   <div class="service-detail-actions">
 
-          <button
-            type="button"
-            class="btn-secondary"
-            on:click={() => navigate("/service")}
-          >
-            Back to all services
-          </button>
-        </div>
+  {#if item.orderUrl}
+    <a
+      href={item.orderUrl}
+      class="btn-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      {item.ctaLabel || "Order Poster"}
+    </a>
+  {/if}
+
+  {#if item.viewWorkUrl}
+    <a
+      href={item.viewWorkUrl}
+      class="btn-primary"
+      target="_blank"
+      rel="noopener"
+    >
+      View Work
+    </a>
+  {/if}
+
+  <button
+    type="button"
+    class="btn-secondary"
+    on:click={() => navigate("/service")}
+  >
+    Back to all services
+  </button>
+
+</div>
+
       </div>
     </div>
   </section>
+
+{#if item.serviceBannerImage1}
+  <div class="service-banner service-banner-1">
+    <img src={item.serviceBannerImage1} alt={item.title} loading="lazy" />
+  </div>
+{/if}
+
+{#if item.serviceBannerImage2}
+  <div class="service-banner service-banner-2">
+    <img src={item.serviceBannerImage2} alt={item.title} loading="lazy" />
+  </div>
+{/if}
+
+{#if item.serviceBannerImage3}
+  <div class="service-banner service-banner-3">
+    <img src={item.serviceBannerImage3} alt={item.title} loading="lazy" />
+  </div>
+{/if}
+
+{#if item.serviceBannerImage4}
+  <div class="service-banner service-banner-4">
+    <img src={item.serviceBannerImage4} alt={item.title} loading="lazy" />
+  </div>
+{/if}
+
+{#if item.serviceBannerImage5}
+  <div class="service-banner service-banner-5">
+    <img src={item.serviceBannerImage5} alt={item.title} loading="lazy" />
+  </div>
+{/if}
+
   
 {#if item.bannerImage && item.bannerTitle}
   <div class="service-qa-banner">
@@ -77,7 +124,6 @@
         {item["longer-description"]}
       </p>
     {/if}
-
     <img
       src={item.bannerImage}
       alt={item.bannerTitle}
@@ -95,7 +141,7 @@
     <section class="section service-qa">
       <div class="container">
         <div class="service-qa-inner">
-          <h3>Questions &amp; Answers</h3>
+          <h3>Frequently Asked Questions</h3>
 
           <div class="qa-list">
             {#each item.qa as qa, index}
@@ -164,7 +210,7 @@
   }
 
   .service-detail-body h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
   }
 
@@ -178,6 +224,7 @@
 
   .service-tagline {
     font-size: 1rem;
+       line-height: 1.7;
     opacity: 0.8;
     margin-bottom: 1rem;
   }
@@ -192,7 +239,7 @@
   font-size: 0.98rem;
   line-height: 1.7;
   margin: 0 auto 1.5rem;  /* center with bottom spacing */
-  max-width: 900px;        /* constrain width for readability */
+  max-width: 840px;        /* constrain width for readability */
   padding: 0 1.25rem;      /* small side padding on mobile */
   display: block;           /* make sure it shows */
   text-align: center;       /* optional: center text horizontally */
@@ -295,7 +342,7 @@
 }
 
 .service-qa-banner-title {
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: clamp(.8rem, 3.5vw, 3rem);
   font-weight: 700;
   letter-spacing: 0.02em;
   margin-bottom: 1.5rem;
@@ -308,6 +355,49 @@
   height: auto;          /* maintain aspect ratio */
   display: block;
   margin: 0 auto;        /* center the image if narrower than container */
+}
+
+.service-banner {
+  width: 100%;
+  margin: 3rem auto;
+}
+
+.service-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Individual widths */
+.service-banner-1 img {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.service-banner-2 img {
+   max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.service-banner-3 img {
+    max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.service-banner-4 img {
+    max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.service-banner-5 img {
+    max-width: 900px;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 
 

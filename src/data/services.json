@@ -1,119 +1,127 @@
 [
   {
     "slug": "poster-design",
-    "title": "Poster Design",
-    "category": "Design",
-    "tagline": "Custom movie posters tailored to your film's tone, genre, and style.",
-    "description": "We focus on creating visuals that not only look stunning but also sell your story, grab attention in crowded marketplaces, and give your project the competitive edge it deserves.",
-     "bannerTitle": "Transparent Pricing and Fast Delivery",
-     "longer-description": "We create striking, professional posters for independent films that capture your story and grab attention. Unlike generic platforms, our team is based where filmmaking thrives - London, Los Angeles, Kyoto, and Osaka, combining real industry experience with a genuine passion for cinema. Real designers with love towards cinema, delivering posters that make your film impossible to ignore.",
+    "title": "Movie Poster Design",
+    "category": "Graphic Design",
+    "tagline": "Your film deserves a poster that makes people stop and watch.",
+    "description": "We design cinematic posters specifically for independent films, streaming platforms, and film festivals. We understand how posters need to communicate tone, genre, and emotion instantly. Every poster is crafted to capture attention, build credibility, and help your film stand out in crowded marketplaces, festivals, and streaming services.",
+     "bannerTitle": "Professional Movie Posters Designed by Filmmakers",
+     "longer-description": "We design cinematic posters specifically for independent films, streaming releases, and film festivals. Unlike generic design platforms, San Roku Ku is an active production company with real filmmaking experience. We understand each film’s requirements, streaming platform standards, and how posters appear as thumbnails where the decision to watch is made in seconds. Every poster is crafted to communicate your film’s tone, attract attention, and help your project compete with professional releases. This is poster design built for filmmakers who want their work to stand out and be taken seriously.",
     "bannerImage": "/assets/services/poster-banner.png",
+"serviceBannerImage1": "/assets/services/369-1.jpg",
+"serviceBannerImage2": "/assets/services/369-2.jpg",
+"serviceBannerImage3": "",
+"serviceBannerImage4": "",
+"serviceBannerImage5": "",
     "image": "/assets/services/369.png",
     "ctaLabel": "Order Poster",
     "orderUrl": "https://tally.so/r/EkqPDr",
+    "viewWorkUrl": "",
     "featured": true,
-    "qa": [
-      {
-        "question": "In what format will I receive the files?",
-        "answer": "JPG format is included in all packages.Layered, editable source files (e.g. PSD) are included in Premium or can be added on for Standard or Basic."
-      },
-      {
-        "question": "How long does it take to complete my order?",
-        "answer": "Basic: approx 7-10 days after receiving your design brief and all required assets. Standard: approx 5-7 days. Premium: faster delivery (e.g. 3-5 days) plus express/rush option for tighter deadlines (48-hour turnarounds) at extra cost."
-      },
-          {
-        "question": "How many revisions are included?",
-        "answer": "Basic: 1 revision (of the chosen concept). Standard: up to 3 revisions. Premium: up to 5 revisions + minor tweaks beyond that are possible for a small extra charge"
-      },
-      {
-        "question": "Are source or editable files included?",
-        "answer": "Only Premium automatically includes source/editable files. For Standard or Basic, source files are available as an add-on."
-      },
-        {
-        "question": "Usage & rights",
-        "answer": "Once the design is finalized and full payment is received, you get full usage rights for the final design as per the chosen package (for print, festivals, web, social media, etc.). Any licensed assets or stock images will have their license terms respected. Having the source file allows you to make edits, but the design rights are non-transferable/resalable unless otherwise agreed."
-      },
-        {
-        "question": "What happens to design materials after order completion?",
-        "answer": "All working files, drafts, and unused mockups are deleted within 7 days of project completion. Final files that you purchased remain yours."
-      },
-        {
-        "question": "How do I place an order and what do you need from me?",
-        "answer": "To get started, please provide: Your chosen package (Basic, Standard, or Premium) + any extras (source file, extra revisions, rush delivery). A design brief: film title, genre, tone, audience, reference images or designs you like (and dislike), any logos or tagline text, and necessary credits. Any assets (logos, images, fonts) you want included. Sizes if known, deadlines."
-      },
-        {
-        "question": "Payment, cancellation & refunds",
-        "answer": "Full payment is required prior to starting any work. If you cancel before concepts are delivered, partial refund may apply (depending on how much work has been done). If you are not happy with initial concepts, we will work within your revision allowance to get things right. Extra revisions or changes outside the chosen package are billed separately."
-      },
-        {
-        "question": "I have a question, who do I contact?",
-        "answer": "If you have a question or you are not sure what package you need please contact us at newbusiness@sanrokuku.com"
-      }
-    ]
+"qa": [
+  {
+    "question": "In what format will I receive the files?",
+    "answer": "All packages include high-resolution JPG files ready for streaming platforms, film festivals, and social media. Premium also includes layered editable source files (PSD). Source files can be added to Basic or Standard if needed."
+  },
+  {
+    "question": "How long does it take?",
+    "answer": "Basic and Standard approximately 4–5 days. Premium: approximately 2–3 days. Express delivery (24-hour turnaround) is available if you have an urgent deadline."
+  },
+  {
+    "question": "How many revisions are included?",
+    "answer": "Basic includes 1 revision, Standard includes 2 revisions, and Premium includes up to 5 revisions. Our goal is to ensure your poster looks exactly right and is ready for release."
+  },
+  {
+    "question": "Are editable source files included?",
+    "answer": "Premium includes editable source files (PSD). These can also be added to Basic or Standard if you would like full flexibility for future edits."
+  },
+  {
+    "question": "Do I receive full usage rights?",
+    "answer": "Yes. Once the final design is delivered and approved, you receive full usage rights for your poster across streaming platforms, film festivals, marketing, websites, and social media."
+  },
+  {
+    "question": "What do you need from me to begin?",
+    "answer": "Please provide your film title, images or stills, genre, tone, tagline (if available), and any references you like. If you are unsure, we can guide you through the process."
+  },
+  {
+    "question": "Can you design a poster if I only have still frames?",
+    "answer": "Yes. Most independent filmmakers provide still frames from their film. We can create a professional cinematic poster using those images."
+  },
+  {
+    "question": "What if I am not sure which package to choose?",
+    "answer": "You can contact us at newbusiness@sanrokuku.com and we will recommend the best option based on your film and goals."
+  },
+  {
+    "question": "How does payment work?",
+    "answer": "Payment is required before work begins. This ensures your project is scheduled and production can start immediately."
+  },
+  {
+  "question": "What is your refund policy?",
+  "answer": "Because each poster is custom designed specifically for your film, refunds are not available once design work has begun. However, revisions are included in your package to ensure you are happy with the final result."
+}
+]
   },
   {
   "slug": "filmhub-graphics-design",
   "title": "Filmhub Graphics Design",
-  "category": "Design",
-  "tagline": "Properly formatted Filmhub and streaming platform graphics made for compliance, visibility, and sales.",
-  "description": "Filmhub and digital streaming platforms require multiple graphics with different ratios, sizes, and compositions. Incorrect sizing leads to rejection, delays, or poor catalog placement. We resize, optimize, and create additional artwork variants aligned with platform expectations to help your film present professionally and stand out.",
-  "bannerTitle": "Transparent Pricing and Fast Delivery",
-       "longer-description": "We create compliant, eye-catching graphics for Filmhub and other digital streaming platforms, optimized for every ratio, size, and format. Incorrect dimensions can lead to rejections, delays, or poor placement, that’s why we handle resizing, optimization, and extra artwork variants for you. With our expertise, your film presents professionally, stands out in crowded catalogs, and reaches audiences without hassle.",
+  "category": "Graphic Design",
+  "tagline": "Professional Filmhub and streaming graphics designed to make your film look professional and ready for distribution.",
+  "description": "Filmhub and streaming platforms require multiple artwork formats with specific sizes and layouts. Incorrect graphics can lead to rejection, delays, or your film looking unprofessional in the catalog. We prepare and optimize your graphics to meet Filmhub requirements and ensure your film presents correctly across streaming platforms. This includes properly formatted key art, thumbnails, banners, and platform-ready versions designed to improve visibility and attract viewers.",
+  "bannerTitle": "Filmhub-Ready Graphics Designed for Streaming Platforms",
+    "longer-description": "We create compliant, professional graphics formatted specifically for Filmhub and digital streaming platforms. Incorrect artwork can lead to rejection, delays, or poor visibility. We handle all required sizes, ratios, and platform-ready formats so your film presents correctly, looks professional, and stands out in crowded catalogs. Our goal is to ensure your film is ready for distribution and positioned to attract viewers.",
     "bannerImage": "/assets/services/filmh.jpg",
+"serviceBannerImage1": "/assets/services/filmh-1.jpg",
+"serviceBannerImage2": "",
+"serviceBannerImage3": "",
+"serviceBannerImage4": "",
+"serviceBannerImage5": "",
   "image": "/assets/services/369.png",
   "ctaLabel": "Order Filmhub Graphics",
   "orderUrl": "https://tally.so/r/81qkVl",
+    "viewWorkUrl": "",
   "featured": true,
-  "qa": [
-    {
-      "question": "What is included in the Filmhub Graphics service?",
-      "answer": "We resize and format your existing poster art for Filmhub compliant dimensions and modern marketplace use. Depending on your chosen package, this may include multiple variants for vertical key art, wide banners, square crops, platform thumbnails, and sales-focused compositions."
-    },
-    {
-      "question": "In what format will I receive the files?",
-      "answer": "Final files are delivered in JPG and web-optimized formats. Layered, editable source files (such as PSD) are included in Premium or available as an add-on for Standard or Basic."
-    },
-    {
-      "question": "How long does it take to complete my order?",
-      "answer": "Basic: approx 3–5 days after receiving your assets and brief. Standard: approx 3–5 days. Premium: approx 2–3 days with optional express delivery for urgent deadlines (48-hour turnaround available for an additional fee)."
-    },
-    {
-      "question": "How many revisions are included?",
-      "answer": "Basic: 1 revision. Standard: up to 2 revisions. Premium: up to 5 revisions with minor tweaks beyond that available for a small additional charge."
-    },
-    {
-      "question": "Do you design a poster from scratch?",
-      "answer": "Poster design from scratch is not included in the Basic or Standard Filmhub Graphics packages. The Premium tier covers full poster artwork creation if you do not already have a poster."
-    },
-    {
-      "question": "Are source or editable files included?",
-      "answer": "Premium automatically includes the editable layered files. Basic and Standard can receive source files as an optional paid add-on."
-    },
-    {
-      "question": "Usage & rights",
-      "answer": "Once final files are approved and paid in full, you receive usage rights for distribution platforms, marketing, web, and social. The original layered design structure remains non-transferable for resale or redistribution unless otherwise licensed."
-    },
-    {
-      "question": "Will you add cast names, credits, or billing block?",
-      "answer": "To comply with Filmhub regulations, we do not add a billing block or list cast and crew details. Placement, size, and visibility rules must align with marketplace requirements."
-    },
-    {
-      "question": "What happens to drafts and artwork after completion?",
-      "answer": "All unused mockups, layouts, and working files are deleted within 7 days of project completion. You retain only the final deliverables included in your chosen package."
-    },
-    {
-      "question": "How do I place an order and what do you need from me?",
-      "answer": "Please submit: your chosen package (Basic, Standard, Premium), any extras (source files, express delivery), your poster or artwork files, and any marketplace-specific notes or restrictions."
-    },
-    {
-      "question": "Payment, cancellation & refunds",
-      "answer": "Full payment is required before work begins. If cancellation occurs before delivery of first concepts, a partial refund may be possible depending on progress made. Requests beyond included revisions are billed separately."
-    },
-    {
-      "question": "I have questions, who do I contact?",
-      "answer": "If you are unsure which package fits your needs, contact us at newbusiness@sanrokuku.com"
-    }
-  ]
+"qa": [
+  {
+    "question": "What is included in the Filmhub Graphics service?",
+    "answer": "We resize and optimize your poster artwork to meet Filmhub and streaming platform requirements. Depending on your package, this includes vertical key art, banners, square versions, thumbnails, and platform-ready formats designed to ensure compliance and improve visibility."
+  },
+  {
+    "question": "In what format will I receive the files?",
+    "answer": "Final files are delivered in high-quality JPG format, fully optimized for Filmhub and streaming platforms. Editable source files (PSD) are included in Premium or available as an add-on."
+  },
+  {
+    "question": "How long does it take?",
+    "answer": "Basic and Standard orders are typically completed within 3–5 days after receiving your assets. Premium orders are prioritized and delivered within 2–3 days. Express delivery is available if needed."
+  },
+  {
+    "question": "How many revisions are included?",
+    "answer": "Basic includes 1 revision, Standard includes up to 2 revisions, and Premium includes up to 5 revisions. We work with you to ensure everything is correct and ready for submission."
+  },
+  {
+    "question": "Can you design a poster if I don't have one?",
+    "answer": "Yes. Full poster design from scratch is included in the Premium package. Basic and Standard focus on optimizing and formatting existing artwork."
+  },
+  {
+    "question": "Will my graphics meet Filmhub requirements?",
+    "answer": "Yes. All graphics are prepared to meet Filmhub specifications and streaming platform standards, ensuring your film is ready for submission and professional presentation."
+  },
+  {
+    "question": "Do I receive full usage rights?",
+    "answer": "Yes. Once complete, you receive full usage rights for distribution platforms, marketing, and promotional use."
+  },
+  {
+    "question": "What do you need from me?",
+    "answer": "Please provide your existing poster or artwork, film title, and any platform requirements if known. If you are unsure, we can guide you."
+  },
+  {
+    "question": "How do I place an order?",
+    "answer": "Click the Order Filmhub Graphics button and submit your project details. You can also contact us at newbusiness@sanrokuku.com if you have questions."
+  },
+  {
+    "question": "What is your refund policy?",
+    "answer": "Because all work is custom created for your film, refunds are not available once production begins. Revisions are included to ensure your graphics meet your expectations."
+  }
+]
 }
 
 ]
