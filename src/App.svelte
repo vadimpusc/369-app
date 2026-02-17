@@ -23,23 +23,42 @@
   import Service from "./pages/Service.svelte";
   import ServiceDetail from "./pages/ServiceDetail.svelte";
 
+  // NEW: Work pages
+  import WorkPosters from "./pages/WorkPosters.svelte";
+  import WorkFilmhub from "./pages/WorkFilmhub.svelte";
+
   const base = import.meta.env.BASE_URL;
 
   let mobileOpen = false; // mobile menu toggle
 
   const routeInfo = derived(currentPath, ($path) => {
     if ($path === "/") return { page: "home" };
+
+    // NEW: Work routes
+    if ($path === "/work/posters") return { page: "workPosters" };
+    if ($path === "/work/filmhub") return { page: "workFilmhub" };
+
     if ($path === "/films") return { page: "films" };
-    if ($path.startsWith("/films/")) return { page: "film", slug: $path.replace("/films/", "") };
+    if ($path.startsWith("/films/"))
+      return { page: "film", slug: $path.replace("/films/", "") };
+
     if ($path === "/series") return { page: "series" };
-    if ($path.startsWith("/series/")) return { page: "seriesDetail", slug: $path.replace("/series/", "") };
+    if ($path.startsWith("/series/"))
+      return { page: "seriesDetail", slug: $path.replace("/series/", "") };
+
     if ($path === "/documentaries") return { page: "documentaries" };
-    if ($path.startsWith("/documentaries/")) return { page: "docDetail", slug: $path.replace("/documentaries/", "") };
+    if ($path.startsWith("/documentaries/"))
+      return { page: "docDetail", slug: $path.replace("/documentaries/", "") };
+
     if ($path === "/jobs") return { page: "jobs" };
-    if ($path.startsWith("/jobs/")) return { page: "jobDetail", slug: $path.replace("/jobs/", "") };
+    if ($path.startsWith("/jobs/"))
+      return { page: "jobDetail", slug: $path.replace("/jobs/", "") };
+
     if ($path === "/services") return { page: "services" };
     if ($path === "/service") return { page: "service" };
-    if ($path.startsWith("/service/")) return { page: "serviceDetail", slug: $path.replace("/service/", "") };
+    if ($path.startsWith("/service/"))
+      return { page: "serviceDetail", slug: $path.replace("/service/", "") };
+
     if ($path === "/about") return { page: "about" };
     if ($path === "/contact") return { page: "contact" };
     if ($path === "/privacy-policy") return { page: "privacy" };
@@ -47,6 +66,7 @@
     if ($path === "/refund-policy") return { page: "refund" };
     if ($path === "/submit-your-film") return { page: "submit" };
     if ($path === "/strategy") return { page: "strategy" };
+
     return { page: "404" };
   });
 
@@ -111,6 +131,13 @@
 <main>
   {#if r.page === "home"}
     <Home />
+
+  {:else if r.page === "workPosters"}
+    <WorkPosters />
+
+  {:else if r.page === "workFilmhub"}
+    <WorkFilmhub />
+
   {:else if r.page === "films"}
     <Films />
   {:else if r.page === "film"}
@@ -164,12 +191,9 @@
         <a href="/series" on:click|preventDefault={() => go("/series")}>Series Catalogue</a>
         <a href="/documentaries" on:click|preventDefault={() => go("/documentaries")}>Documentary Catalogue</a>
         <a href="/submit-your-film" on:click|preventDefault={() => go("/submit-your-film")}>Submit for Distribution</a>
-     <a href="https://development.sanrokuku.com" rel="noopener noreferrer">
-  Development Slate
-</a>
-
-
+        <a href="https://development.sanrokuku.com" rel="noopener noreferrer">Development Slate</a>
       </div>
+
       <div class="footer-col">
         <h4>Studio</h4>
         <a href="/about" on:click|preventDefault={() => go("/about")}>About Us</a>
@@ -177,6 +201,7 @@
         <a href="/jobs" on:click|preventDefault={() => go("/jobs")}>Work Opportunities</a>
         <a href="/contact" on:click|preventDefault={() => go("/contact")}>Contact Us</a>
       </div>
+
       <div class="footer-col">
         <h4>Legal</h4>
         <a href="/terms-and-conditions" on:click|preventDefault={() => go("/terms-and-conditions")}>Terms and Conditions</a>
@@ -184,6 +209,7 @@
         <a href="/privacy-policy" on:click|preventDefault={() => go("/privacy-policy")}>Privacy Policy</a>
       </div>
     </div>
+
     <div class="footer-bottom">
       <span>All Rights Reserved © SAN ROKU KU</span>
     </div>
@@ -313,7 +339,6 @@
     gap: 2.5rem;
     text-align: center;
     margin-top: 2rem;
-    
   }
 
   .mobile-overlay button {

@@ -39,3 +39,8 @@ export function navigate(path) {
 window.addEventListener("popstate", () => {
   currentPath.set(normalizePath(window.location.pathname));
 });
+
+// NEW: Work routes for your gallery pages
+// Use these constants anywhere you want (buttons, nav, etc.)
+export const WORK_POSTERS_PATH = "/work/posters";
+export const WORK_FILMHUB_PATH = "/work/filmhub";

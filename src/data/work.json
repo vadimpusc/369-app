@@ -1,0 +1,176 @@
+{
+  "posters": {
+    "title": "Poster Examples",
+    "intro": "A selection of poster work designed to match tone, genre, and market positioning. We prioritize clarity, strong hierarchy, and standout thumbnails for crowded marketplaces.",
+    "processTitle": "Our Design Process",
+    "processText": "We start with your logline, comps, and target audience. Then we explore multiple directions, refine the strongest concept, and deliver print and web ready files with clean, consistent branding.",
+    "layout": "grid",
+    "items": [
+      {
+        "thumb": "/assets/work/posters/1.jpg",
+        "full": "/assets/work/posters/1.jpg",
+       "alt": "Despair, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/2.jpg",
+        "full": "/assets/work/posters/2.jpg",
+        "alt": "Exposure, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/3.jpg",
+        "full": "/assets/work/posters/3.jpg",
+        "alt": "The Job, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/4.jpg",
+        "full": "/assets/work/posters/4.jpg",
+        "alt": "The Job, official film poster."
+      },
+          {
+        "thumb": "/assets/work/posters/5.jpg",
+        "full": "/assets/work/posters/5.jpg",
+        "alt": "The Job, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/6.jpg",
+        "full": "/assets/work/posters/6.jpg",
+       "alt": "Spooked, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/7.jpg",
+        "full": "/assets/work/posters/7.jpg",
+        "alt": "Outsiders, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/8.jpg",
+        "full": "/assets/work/posters/8.jpg",
+        "alt": "The Man, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/9.jpg",
+        "full": "/assets/work/posters/9.jpg",
+        "alt": "Across Two Skies, official film poster."
+      },
+          {
+        "thumb": "/assets/work/posters/10.jpg",
+        "full": "/assets/work/posters/10.jpg",
+        "alt": "Man of the Cosmos, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/11.jpg",
+        "full": "/assets/work/posters/11.jpg",
+       "alt": "Following, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/12.jpg",
+        "full": "/assets/work/posters/12.jpg",
+        "alt": "Love in the City, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/13.jpg",
+        "full": "/assets/work/posters/13.jpg",
+        "alt": "The Job, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/14.jpg",
+        "full": "/assets/work/posters/14.jpg",
+        "alt": "Napoleon's Table, official film poster."
+      },
+          {
+        "thumb": "/assets/work/posters/15.jpg",
+        "full": "/assets/work/posters/15.jpg",
+        "alt": "Osaka, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/16.jpg",
+        "full": "/assets/work/posters/16.jpg",
+        "alt": "Outsiders, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/17.jpg",
+        "full": "/assets/work/posters/17.jpg",
+        "alt": "Love by Chance Again, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/18.jpg",
+        "full": "/assets/work/posters/18.jpg",
+        "alt": "Honey and Wine, official film poster."
+      }
+    ]
+  },
+
+  "filmhub": {
+    "title": "Filmhub Examples",
+    "intro": "Artwork optimized for delivery specs and storefront performance. Mixed aspect ratios, consistent brand language, and readable typography at small sizes.",
+    "processTitle": "How We Build Deliverables",
+"processText": "We design strictly to platform specifications. Many distribution platforms allow only the official film title, and reject artwork containing additional text such as taglines, festival laurels, or credits. We ensure your artwork is compliant, visually strong, and optimized for storefront performance across all major platforms.",
+    "layout": "masonry",
+    "items": [
+      {
+        "thumb": "/assets/work/filmh/1.jpg",
+        "full": "/assets/work/filmh/1.jpg",
+        "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+      {
+        "thumb": "/assets/work/filmh/2.jpg",
+        "full": "/assets/work/filmh/2.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+         {
+        "thumb": "/assets/work/filmh/3.jpg",
+        "full": "/assets/work/filmh/3.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/4.jpg",
+        "full": "/assets/work/filmh/4.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/5.jpg",
+        "full": "/assets/work/filmh/5.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/6.jpg",
+        "full": "/assets/work/filmh/6.jpg",
+        "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+      {
+        "thumb": "/assets/work/filmh/7.jpg",
+        "full": "/assets/work/filmh/7.jpg",
+        "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+      {
+        "thumb": "/assets/work/filmh/8.jpg",
+        "full": "/assets/work/filmh/8.jpg",
+        "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+         {
+        "thumb": "/assets/work/filmh/9.jpg",
+        "full": "/assets/work/filmh/9.jpg",
+       "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/10.jpg",
+        "full": "/assets/work/filmh/10.jpg",
+      "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/11.jpg",
+        "full": "/assets/work/filmh/11.jpg",
+        "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/12.jpg",
+        "full": "/assets/work/filmh/12.jpg",
+        "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+      {
+        "thumb": "/assets/work/filmh/13.jpg",
+        "full": "/assets/work/filmh/13.jpg",
+       "alt": "Exposure, director Hank Orion. Filmhub key art for streaming platforms."
+      }
+    ]
+  }
+}
