@@ -1,5 +1,93 @@
 [
   {
+    "slug": "the-river",
+    "title": "The River We Cannot Leave",
+    "trailer": "",
+    "type": "film",
+    "year": 2026,
+    "countries": ["United Kingdom", "Japan"],
+    "genres": ["Drama"],
+    "durationMinutes": 60,
+    "logline": "After a breakup, a drifting traveler meets a guarded local woman by a quiet river. Over one intimate afternoon, their shared honesty about love and loss helps them face buried grief and find the courage to let go and begin again.",
+    "poster": "/assets/posters/the-river.png",
+    "heroImage": "/assets/heroes/369.jpg",
+    "credits": {
+      "director": "Hank Orion",
+      "producer": "Vadim Pusceddu",
+      "starring": [
+      "Rei", 
+      "Dan Iliadis"
+      ]
+    },
+    "platforms": [
+      {
+        "label": "IMDb",
+        "logo": "/assets/platforms/imdb.png",
+        "url": "https://www.imdb.com/title/tt39474207"
+      },
+      {
+        "label": "Tubi",
+        "logo": "/assets/platforms/tubi.jpeg",
+        "url": ""
+      },
+          {
+      "label": "YouTube",
+      "logo": "/assets/platforms/youtube.png",
+      "url": ""
+    },
+        {
+      "label": "Amazon Video",
+      "logo": "/assets/platforms/amazon.jpeg",
+      "url": ""
+    },
+        {
+      "label": "Prime Video",
+      "logo": "/assets/platforms/prime.jpeg",
+      "url": ""
+    },
+        {
+      "label": "Apple TV",
+      "logo": "/assets/platforms/appletv.jpeg",
+      "url": ""
+    },
+        {
+      "label": "JustWatch",
+      "logo": "/assets/platforms/justwatch.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Cineverse",
+      "logo": "/assets/platforms/cineverse.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Reveel",
+      "logo": "/assets/platforms/reveel.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Hoopla",
+      "logo": "/assets/platforms/hoopla.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Roku Channel",
+      "logo": "/assets/platforms/roku.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Fubo TV",
+      "logo": "/assets/platforms/fubo.jpeg",
+      "url": ""
+    },
+    {
+      "label": "Fawesome",
+      "logo": "/assets/platforms/fawesome.jpeg",
+      "url": ""
+    }
+    ]
+  },
+  {
     "slug": "across-two-skies",
     "title": "Across Two Skies",
     "trailer": "https://youtu.be/u6vaLpdJfK4",
