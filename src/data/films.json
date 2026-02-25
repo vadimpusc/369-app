@@ -206,7 +206,7 @@
       {
         "label": "Tubi",
         "logo": "/assets/platforms/tubi.jpeg",
-        "url": ""
+        "url": "https://tubitv.com/movies/100052046/love-by-chance-again"
       },
           {
       "label": "YouTube",
@@ -251,7 +251,7 @@
     {
       "label": "Roku Channel",
       "logo": "/assets/platforms/roku.jpeg",
-      "url": ""
+      "url": "https://therokuchannel.roku.com/details/96f0fdb7459de650b5c78cf3ed7097c1/love-by-chance-again-2025"
     },
     {
       "label": "Fubo TV",
@@ -261,7 +261,7 @@
     {
       "label": "Fawesome",
       "logo": "/assets/platforms/fawesome.jpeg",
-      "url": ""
+      "url": "https://fawesome.tv/movies/10743377/love-by-chance-again-2025"
     }
     ]
   },

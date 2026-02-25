@@ -23,20 +23,32 @@
   import Service from "./pages/Service.svelte";
   import ServiceDetail from "./pages/ServiceDetail.svelte";
 
-  // NEW: Work pages
+  // Work pages
   import WorkPosters from "./pages/WorkPosters.svelte";
   import WorkFilmhub from "./pages/WorkFilmhub.svelte";
 
+  // NEW: Wedding Films page
+  import WeddingFilms from "./pages/wedding-films.svelte";
+
+// NEW: Brand Films page
+  import BrandFilms from "./pages/brand-films.svelte";
+
   const base = import.meta.env.BASE_URL;
 
-  let mobileOpen = false; // mobile menu toggle
+  let mobileOpen = false;
 
   const routeInfo = derived(currentPath, ($path) => {
     if ($path === "/") return { page: "home" };
 
-    // NEW: Work routes
+    // Work routes
     if ($path === "/work/posters") return { page: "workPosters" };
     if ($path === "/work/filmhub") return { page: "workFilmhub" };
+
+    // NEW: Wedding Films route
+    if ($path === "/wedding-films") return { page: "weddingFilms" };
+
+    // NEW: Brand Films route
+if ($path === "/brand-films") return { page: "brandFilms" };
 
     if ($path === "/films") return { page: "films" };
     if ($path.startsWith("/films/"))
@@ -73,7 +85,7 @@
   $: r = $routeInfo;
 
   function go(path) {
-    mobileOpen = false; // close mobile menu
+    mobileOpen = false;
     navigate(path);
   }
 </script>
@@ -81,7 +93,7 @@
 <header class="srk-nav">
   <div class="container nav-inner">
     <!-- Hamburger -->
-    <button class="nav-left-btn" on:click={() => (mobileOpen = true)}>
+    <button class="nav-left-btn" on:click={() => (mobileOpen = true)} aria-label="Open menu">
       &#9776;
     </button>
 
@@ -94,7 +106,7 @@
     />
 
     <!-- Desktop links -->
-    <nav class="nav-links desktop">
+    <nav class="nav-links desktop" aria-label="Main navigation">
       <button on:click={() => go("/about")}>About Us</button>
       <button on:click={() => go("/films")}>Films</button>
       <button on:click={() => go("/documentaries")}>Documentaries</button>
@@ -109,21 +121,24 @@
   </div>
 
   <!-- Mobile menu overlay -->
-  <div class="mobile-overlay" class:open={mobileOpen}>
-    <button class="close-btn" on:click={() => (mobileOpen = false)}>×</button>
+  <div class="mobile-overlay" class:open={mobileOpen} aria-hidden={!mobileOpen}>
+    <button class="close-btn" on:click={() => (mobileOpen = false)} aria-label="Close menu">×</button>
+
     <img
       src={`${base}assets/logos/369.png`}
       class="nav-logo mobile-logo"
       alt="San Roku Ku"
       on:click={() => go("/")}
     />
-    <nav class="mobile-links">
+
+    <nav class="mobile-links" aria-label="Mobile navigation">
       <button on:click={() => go("/about")}>About Us</button>
       <button on:click={() => go("/films")}>Films</button>
       <button on:click={() => go("/documentaries")}>Documentaries</button>
       <button on:click={() => go("/series")}>Series</button>
       <button on:click={() => go("/services")}>Services</button>
     </nav>
+
     <button class="contact-btn" on:click={() => go("/contact")}>Contact Us</button>
   </div>
 </header>
@@ -138,32 +153,44 @@
   {:else if r.page === "workFilmhub"}
     <WorkFilmhub />
 
+  {:else if r.page === "weddingFilms"}
+    <WeddingFilms />
+
+    {:else if r.page === "brandFilms"}
+  <BrandFilms />
+
   {:else if r.page === "films"}
     <Films />
   {:else if r.page === "film"}
     <FilmDetail slug={r.slug} />
+
   {:else if r.page === "series"}
     <Series />
   {:else if r.page === "seriesDetail"}
     <SeriesDetail slug={r.slug} />
+
   {:else if r.page === "documentaries"}
     <Documentaries />
   {:else if r.page === "docDetail"}
     <DocumentaryDetail slug={r.slug} />
+
   {:else if r.page === "jobs"}
     <Jobs />
   {:else if r.page === "jobDetail"}
     <JobDetail slug={r.slug} />
+
   {:else if r.page === "services"}
     <Services />
   {:else if r.page === "service"}
     <Service />
   {:else if r.page === "serviceDetail"}
     <ServiceDetail slug={r.slug} />
+
   {:else if r.page === "about"}
     <About />
   {:else if r.page === "contact"}
     <Contact />
+
   {:else if r.page === "privacy"}
     <PrivacyPolicy />
   {:else if r.page === "terms"}
@@ -174,9 +201,10 @@
     <SubmitYourFilm />
   {:else if r.page === "strategy"}
     <Strategy />
+
   {:else}
     <section class="container" style="padding: 5rem 0;">
-      <h1>Page not found</h1>
+      <h1>Page Not Found</h1>
       <p>Sorry, this page does not exist.</p>
     </section>
   {/if}
@@ -198,6 +226,8 @@
         <h4>Studio</h4>
         <a href="/about" on:click|preventDefault={() => go("/about")}>About Us</a>
         <a href="/services" on:click|preventDefault={() => go("/services")}>Services For Producers</a>
+         <a href="/services" on:click|preventDefault={() => go("/wedding-films")}>Wedding Films</a>
+         <a href="/services" on:click|preventDefault={() => go("/brand-films")}>Brand Films</a>
         <a href="/jobs" on:click|preventDefault={() => go("/jobs")}>Work Opportunities</a>
         <a href="/contact" on:click|preventDefault={() => go("/contact")}>Contact Us</a>
       </div>
@@ -405,4 +435,5 @@
     display: none !important;
   }
 }
+
 </style>
