@@ -8,6 +8,28 @@
      "bannerTitle": "Professional Movie Posters Designed by Filmmakers",
      "longer-description": "We design cinematic posters specifically for independent films, streaming releases, and film festivals. Unlike generic design platforms, San Roku Ku is an active production company with real filmmaking experience. We understand each film’s requirements, streaming platform standards, and how posters appear as thumbnails where the decision to watch is made in seconds. Every poster is crafted to communicate your film’s tone, attract attention, and help your project compete with professional releases. This is poster design built for filmmakers who want their work to stand out and be taken seriously.",
     "bannerImage": "/assets/services/poster-banner.png",
+    "howItWorks": {
+  "kicker": "Easy Process",
+  "title": "How it works",
+  "subtitle": "A simple, structured workflow from order to final delivery.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Place your order",
+      "description": "Choose your package and submit your details. During checkout you will be asked to provide your title, credits, images, references, and creative direction."
+    },
+    {
+      "number": "02",
+      "title": "Review and approve revisions",
+      "description": "You will receive your first draft within the agreed timeframe. You may request revisions according to the number included in your selected package."
+    },
+    {
+      "number": "03",
+      "title": "Final delivery",
+      "description": "Once approved, you will receive your final high-resolution delivery files, ready for print and digital use."
+    }
+  ]
+},
 "serviceBannerImage1": "/assets/services/369-1.jpg",
 "serviceBannerImage2": "/assets/services/369-2.jpg",
 "serviceBannerImage3": "",
@@ -78,6 +100,28 @@
   "bannerTitle": "Filmhub-Ready Graphics Designed for Streaming Platforms",
     "longer-description": "We create compliant, professional graphics formatted specifically for Filmhub and digital streaming platforms. Incorrect artwork can lead to rejection, delays, or poor visibility. We handle all required sizes, ratios, and platform-ready formats so your film presents correctly, looks professional, and stands out in crowded catalogs. Our goal is to ensure your film is ready for distribution and positioned to attract viewers.",
     "bannerImage": "/assets/services/filmh.jpg",
+    "howItWorks": {
+  "kicker": "Easy Process",
+  "title": "How it works",
+  "subtitle": "A simple, structured workflow from order to final delivery.",
+  "steps": [
+    {
+      "number": "01",
+      "title": "Place your order",
+      "description": "Choose your package and submit your details. During checkout you will be asked to provide your title, credits, images, references, and creative direction."
+    },
+    {
+      "number": "02",
+      "title": "Review and approve revisions",
+      "description": "You will receive your first draft within the agreed timeframe. You may request revisions according to the number included in your selected package."
+    },
+    {
+      "number": "03",
+      "title": "Final delivery",
+      "description": "Once approved, you will receive your final high-resolution delivery files, ready for print and digital use."
+    }
+  ]
+},
 "serviceBannerImage1": "/assets/services/filmh-1.jpg",
 "serviceBannerImage2": "",
 "serviceBannerImage3": "",

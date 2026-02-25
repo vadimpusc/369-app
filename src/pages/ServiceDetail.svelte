@@ -82,6 +82,139 @@
     </div>
   </section>
 
+{#if item.howItWorks && item.howItWorks.steps && item.howItWorks.steps.length > 0}
+  <section class="section howitworks" aria-labelledby="howitworks-title">
+    <div class="container">
+      <div class="howitworks-inner">
+        {#if item.howItWorks.kicker}
+          <p class="howitworks-kicker">{item.howItWorks.kicker}</p>
+        {/if}
+
+        <h3 id="howitworks-title" class="howitworks-title">
+          {item.howItWorks.title || "How it works"}
+        </h3>
+
+        {#if item.howItWorks.subtitle}
+          <p class="howitworks-subtitle">{item.howItWorks.subtitle}</p>
+        {/if}
+
+        <div class="howitworks-grid">
+          {#each item.howItWorks.steps as step (step.title)}
+            <article class="howitworks-card">
+              <div class="howitworks-top">
+                <span class="howitworks-step" aria-hidden="true">
+                  {step.number}
+                </span>
+                <h4 class="howitworks-heading">{step.title}</h4>
+              </div>
+              <p class="howitworks-text">{step.description}</p>
+            </article>
+          {/each}
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* HOW IT WORKS (premium) */
+      .howitworks { padding: clamp(56px, 8vw, 120px) 0; }
+
+      .howitworks-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .howitworks-kicker {
+        margin: 0 0 8px;
+        font-size: 12px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        opacity: 0.75;
+      }
+
+      .howitworks-title {
+        margin: 0 0 8px;
+        font-size: clamp(26px, 3.6vw, 40px);
+        line-height: 1.06;
+        letter-spacing: -0.01em;
+      }
+
+      .howitworks-subtitle {
+        margin: 0 auto 30px;
+        max-width: 760px;
+        font-size: 15px;
+        line-height: 1.7;
+        opacity: 0.8;
+      }
+
+      .howitworks-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 10px;
+        text-align: left;
+      }
+
+      .howitworks-card {
+        border-radius: 18px;
+        padding: 26px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+        transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+      }
+
+      .howitworks-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 255, 255, 0.16);
+        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
+      }
+
+      .howitworks-top {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+
+      .howitworks-step {
+        display: inline-grid;
+        place-items: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 999px;
+        background: rgba(199, 162, 90, 0.10);
+        border: 1px solid rgba(199, 162, 90, 0.18);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        opacity: 0.95;
+        flex: 0 0 auto;
+      }
+
+      .howitworks-heading {
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.2;
+      }
+
+      .howitworks-text {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.9;
+        opacity: 0.82;
+      }
+
+      @media (max-width: 900px) {
+        .howitworks-grid { grid-template-columns: 1fr; }
+        .howitworks-card { padding: 18px; }
+        .howitworks-step { width: 48px; height: 48px; }
+      }
+    </style>
+  </section>
+{/if}
+
 {#if item.serviceBannerImage1}
   <div class="service-banner service-banner-1">
     <img src={item.serviceBannerImage1} alt={item.title} loading="lazy" />
