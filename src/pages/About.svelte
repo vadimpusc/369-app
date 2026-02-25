@@ -8,7 +8,7 @@
     <h1>San Roku Ku</h1>
 <p>
   San Roku Ku is a production company focused on bold, cinematic storytelling. 
-  We produce original films and support international productions filming abroad, with a deep understanding of the creative, logistical, and cultural realities of shooting in Japan and the US. 
+  We produce original films and support international productions filming abroad, with a deep understanding of the creative, logistical, and cultural realities of shooting in Japan, Europe and the US. 
   We believe that strong cross cultural collaboration leads to more honest and memorable cinema. 
   From independent filmmakers to established studios, we help bring visions to the screen.
 </p>

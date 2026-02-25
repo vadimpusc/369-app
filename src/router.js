@@ -27,6 +27,15 @@ function normalizePath(pathname) {
   return path;
 }
 
+// Optional: prevent browser from restoring scroll on back/forward
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+}
+
 export const currentPath = writable(normalizePath(window.location.pathname));
 
 export function navigate(path) {
@@ -34,13 +43,18 @@ export function navigate(path) {
   const newUrl = base + normalized; // e.g. "/369-app/films"
   history.pushState({}, "", newUrl);
   currentPath.set(normalized);
+
+  // Force top on route change
+  scrollToTop();
 }
 
 window.addEventListener("popstate", () => {
   currentPath.set(normalizePath(window.location.pathname));
+
+  // Force top on back/forward
+  scrollToTop();
 });
 
-// NEW: Work routes for your gallery pages
-// Use these constants anywhere you want (buttons, nav, etc.)
+// Work routes for your gallery pages
 export const WORK_POSTERS_PATH = "/work/posters";
 export const WORK_FILMHUB_PATH = "/work/filmhub";
