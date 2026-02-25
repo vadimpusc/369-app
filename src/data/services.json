@@ -27,6 +27,14 @@
     "question": "How long does it take?",
     "answer": "Basic and Standard approximately 4–5 days. Premium: approximately 2–3 days. Express delivery (24-hour turnaround) is available if you have an urgent deadline."
   },
+    {
+  "question": "Approval Window",
+  "answer": "If we do not receive feedback within 48 hours after a revision is sent for approval, the order will be automatically marked as delivered and approved."
+},
+  {
+  "question": "Delivery Terms",
+  "answer": "All delivery files are considered final upon approval. Final files are provided in high resolution according to the package specifications. "
+},
   {
     "question": "How many revisions are included?",
     "answer": "Basic includes 1 revision, Standard includes 2 revisions, and Premium includes up to 5 revisions. Our goal is to ensure your poster looks exactly right and is ready for release."
@@ -51,10 +59,10 @@
     "question": "What if I am not sure which package to choose?",
     "answer": "You can contact us at newbusiness@sanrokuku.com and we will recommend the best option based on your film and goals."
   },
-  {
-    "question": "How does payment work?",
-    "answer": "Payment is required before work begins. This ensures your project is scheduled and production can start immediately."
-  },
+{
+  "question": "How does payment work?",
+  "answer": "Full payment is required before work begins to secure your project in our production schedule. All transactions are processed securely through Stripe Checkout. We do not store, collect, or have access to your card or payment details."
+},
   {
   "question": "What is your refund policy?",
   "answer": "Because each poster is custom designed specifically for your film, refunds are not available once design work has begun. However, revisions are included in your package to ensure you are happy with the final result."
@@ -93,6 +101,14 @@
     "question": "How long does it take?",
     "answer": "Basic and Standard orders are typically completed within 3–5 days after receiving your assets. Premium orders are prioritized and delivered within 2–3 days. Express delivery is available if needed."
   },
+    {
+  "question": "Approval Window",
+  "answer": "If we do not receive feedback within 48 hours after a revision is sent for approval, the order will be automatically marked as delivered and approved."
+},
+  {
+  "question": "Delivery Terms",
+  "answer": "All delivery files are considered final upon approval. Final files are provided in high resolution according to the package specifications. "
+},
   {
     "question": "How many revisions are included?",
     "answer": "Basic includes 1 revision, Standard includes up to 2 revisions, and Premium includes up to 5 revisions. We work with you to ensure everything is correct and ready for submission."
@@ -117,6 +133,10 @@
     "question": "How do I place an order?",
     "answer": "Click the Order Filmhub Graphics button and submit your project details. You can also contact us at newbusiness@sanrokuku.com if you have questions."
   },
+  {
+  "question": "How does payment work?",
+  "answer": "Full payment is required before work begins to secure your project in our production schedule. All transactions are processed securely through Stripe Checkout. We do not store, collect, or have access to your card or payment details."
+},
   {
     "question": "What is your refund policy?",
     "answer": "Because all work is custom created for your film, refunds are not available once production begins. Revisions are included to ensure your graphics meet your expectations."
