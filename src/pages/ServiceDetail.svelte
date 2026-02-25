@@ -64,7 +64,7 @@
       target="_blank"
       rel="noopener"
     >
-      View Work
+      View Examples
     </a>
   {/if}
 
