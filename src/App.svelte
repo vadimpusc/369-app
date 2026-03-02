@@ -361,7 +361,7 @@
   .mobile-overlay {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     position: fixed;
     inset: 0;
