@@ -27,10 +27,10 @@
   import WorkPosters from "./pages/WorkPosters.svelte";
   import WorkFilmhub from "./pages/WorkFilmhub.svelte";
 
-  // NEW: Wedding Films page
+  // Wedding Films page
   import WeddingFilms from "./pages/wedding-films.svelte";
 
-// NEW: Brand Films page
+  // Brand Films page
   import BrandFilms from "./pages/brand-films.svelte";
 
   const base = import.meta.env.BASE_URL;
@@ -44,11 +44,11 @@
     if ($path === "/work/posters") return { page: "workPosters" };
     if ($path === "/work/filmhub") return { page: "workFilmhub" };
 
-    // NEW: Wedding Films route
+    // Wedding Films route
     if ($path === "/wedding-films") return { page: "weddingFilms" };
 
-    // NEW: Brand Films route
-if ($path === "/brand-films") return { page: "brandFilms" };
+    // Brand Films route
+    if ($path === "/brand-films") return { page: "brandFilms" };
 
     if ($path === "/films") return { page: "films" };
     if ($path.startsWith("/films/"))
@@ -92,10 +92,23 @@ if ($path === "/brand-films") return { page: "brandFilms" };
 
 <header class="srk-nav">
   <div class="container nav-inner">
-    <!-- Hamburger -->
-    <button class="nav-left-btn" on:click={() => (mobileOpen = true)} aria-label="Open menu">
-      &#9776;
-    </button>
+    <!-- MOBILE: centered logo + hamburger (logo above hamburger) -->
+    <div class="mobile-center">
+      <img
+        src={`${base}assets/logos/369.png`}
+        alt="San Roku Ku"
+        class="nav-logo mobile-top-logo"
+        on:click={() => go("/")}
+      />
+
+      <button
+        class="nav-left-btn"
+        on:click={() => (mobileOpen = true)}
+        aria-label="Open menu"
+      >
+        &#9776;
+      </button>
+    </div>
 
     <!-- Desktop logo -->
     <img
@@ -107,90 +120,74 @@ if ($path === "/brand-films") return { page: "brandFilms" };
 
     <!-- Desktop links -->
     <nav class="nav-links desktop" aria-label="Main navigation">
-      <button on:click={() => go("/about")}>About Us</button>
       <button on:click={() => go("/films")}>Films</button>
       <button on:click={() => go("/documentaries")}>Documentaries</button>
       <button on:click={() => go("/series")}>Series</button>
-      <button on:click={() => go("/services")}>Services</button>
     </nav>
 
     <!-- Desktop contact -->
     <div class="nav-right desktop">
-      <button class="btn-primary" on:click={() => go("/contact")}>Contact Us</button>
+      <button class="btn-primary" on:click={() => go("/services")}>Our Services</button>
     </div>
   </div>
 
   <!-- Mobile menu overlay -->
   <div class="mobile-overlay" class:open={mobileOpen} aria-hidden={!mobileOpen}>
-    <button class="close-btn" on:click={() => (mobileOpen = false)} aria-label="Close menu">×</button>
-
-    <img
-      src={`${base}assets/logos/369.png`}
-      class="nav-logo mobile-logo"
-      alt="San Roku Ku"
-      on:click={() => go("/")}
-    />
+    <button
+      class="close-btn"
+      on:click={() => (mobileOpen = false)}
+      aria-label="Close menu"
+    >
+      ×
+    </button>
 
     <nav class="mobile-links" aria-label="Mobile navigation">
-      <button on:click={() => go("/about")}>About Us</button>
       <button on:click={() => go("/films")}>Films</button>
       <button on:click={() => go("/documentaries")}>Documentaries</button>
       <button on:click={() => go("/series")}>Series</button>
-      <button on:click={() => go("/services")}>Services</button>
     </nav>
 
-    <button class="contact-btn" on:click={() => go("/contact")}>Contact Us</button>
+    <button class="contact-btn" on:click={() => go("/services")}>Our Services</button>
   </div>
 </header>
 
 <main>
   {#if r.page === "home"}
     <Home />
-
   {:else if r.page === "workPosters"}
     <WorkPosters />
-
   {:else if r.page === "workFilmhub"}
     <WorkFilmhub />
-
   {:else if r.page === "weddingFilms"}
     <WeddingFilms />
-
-    {:else if r.page === "brandFilms"}
-  <BrandFilms />
-
+  {:else if r.page === "brandFilms"}
+    <BrandFilms />
   {:else if r.page === "films"}
     <Films />
   {:else if r.page === "film"}
     <FilmDetail slug={r.slug} />
-
   {:else if r.page === "series"}
     <Series />
   {:else if r.page === "seriesDetail"}
     <SeriesDetail slug={r.slug} />
-
   {:else if r.page === "documentaries"}
     <Documentaries />
   {:else if r.page === "docDetail"}
     <DocumentaryDetail slug={r.slug} />
-
   {:else if r.page === "jobs"}
     <Jobs />
   {:else if r.page === "jobDetail"}
     <JobDetail slug={r.slug} />
-
   {:else if r.page === "services"}
     <Services />
   {:else if r.page === "service"}
     <Service />
   {:else if r.page === "serviceDetail"}
     <ServiceDetail slug={r.slug} />
-
   {:else if r.page === "about"}
     <About />
   {:else if r.page === "contact"}
     <Contact />
-
   {:else if r.page === "privacy"}
     <PrivacyPolicy />
   {:else if r.page === "terms"}
@@ -201,7 +198,6 @@ if ($path === "/brand-films") return { page: "brandFilms" };
     <SubmitYourFilm />
   {:else if r.page === "strategy"}
     <Strategy />
-
   {:else}
     <section class="container" style="padding: 5rem 0;">
       <h1>Page Not Found</h1>
@@ -226,8 +222,8 @@ if ($path === "/brand-films") return { page: "brandFilms" };
         <h4>Studio</h4>
         <a href="/about" on:click|preventDefault={() => go("/about")}>About Us</a>
         <a href="/services" on:click|preventDefault={() => go("/services")}>Services For Producers</a>
-         <a href="/services" on:click|preventDefault={() => go("/wedding-films")}>Wedding Films</a>
-         <a href="/services" on:click|preventDefault={() => go("/brand-films")}>Brand Films</a>
+        <a href="/wedding-films" on:click|preventDefault={() => go("/wedding-films")}>Wedding Films</a>
+        <a href="/brand-films" on:click|preventDefault={() => go("/brand-films")}>Brand Films</a>
         <a href="/jobs" on:click|preventDefault={() => go("/jobs")}>Work Opportunities</a>
         <a href="/contact" on:click|preventDefault={() => go("/contact")}>Contact Us</a>
       </div>
@@ -253,8 +249,8 @@ if ($path === "/brand-films") return { page: "brandFilms" };
   top: 0;
   z-index: 40;
   backdrop-filter: blur(18px);
-  background: radial-gradient(circle at top, rgba(16,19,32,0.96), rgba(5,6,10,0.98));
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+  background: radial-gradient(circle at top, rgba(16, 19, 32, 0.96), rgba(5, 6, 10, 0.98));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   padding: 10px;
 }
 
@@ -265,20 +261,12 @@ if ($path === "/brand-films") return { page: "brandFilms" };
   height: 64px;
 }
 
-.nav-left-btn {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
 .nav-logo {
   height: 50px;
   cursor: pointer;
 }
 
+/* Desktop nav */
 .nav-links {
   display: flex;
   gap: 1.8rem;
@@ -317,18 +305,59 @@ if ($path === "/brand-films") return { page: "brandFilms" };
   font-size: 0.85rem;
 }
 
-/* ---------- MOBILE ---------- */
-@media (max-width: 768px) {
-  .nav-left-btn {
-    display: block;
-  }
+/* Mobile centered block (logo above hamburger) */
+.mobile-center {
+  display: none;
+}
 
+/* Hamburger base (hidden on desktop) */
+.nav-left-btn {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ---------- MOBILE (iPad breakpoint) ---------- */
+/* iPad portrait width is 768px, but you said "iPad size", so this uses 1024px */
+@media (max-width: 1024px) {
+  /* Hide desktop items */
   .nav-links,
   .nav-right,
   .desktop-logo {
     display: none;
   }
 
+  /* Show centered mobile stack */
+  .mobile-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  .mobile-center .nav-logo {
+    margin-top: 50px;
+    height: 64px;
+  }
+
+  .nav-left-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Make the container center the mobile stack */
+  .nav-inner {
+    justify-content: center;
+  }
+
+  /* Overlay */
   .mobile-overlay {
     display: none;
     flex-direction: column;
@@ -343,7 +372,7 @@ if ($path === "/brand-films") return { page: "brandFilms" };
 
   .mobile-overlay.open {
     display: flex;
-    background: black;
+    background: #000;
     height: 100vh;
   }
 
@@ -358,17 +387,12 @@ if ($path === "/brand-films") return { page: "brandFilms" };
     cursor: pointer;
   }
 
-  .mobile-overlay .mobile-logo {
-    height: 50px;
-    margin-top: 3rem;
-  }
-
   .mobile-links {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .mobile-overlay button {
@@ -390,11 +414,18 @@ if ($path === "/brand-films") return { page: "brandFilms" };
   }
 }
 
+/* Desktop only: hide overlay regardless */
+@media (min-width: 1025px) {
+  .mobile-overlay {
+    display: none !important;
+  }
+}
+
 /* ---------- FOOTER ---------- */
 .srk-footer {
   padding: 3rem 0 2rem;
   background: radial-gradient(circle at top, #050711, #010208);
-  border-top: 1px solid rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   margin-top: 4rem;
 }
 
@@ -425,15 +456,57 @@ if ($path === "/brand-films") return { page: "brandFilms" };
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
   padding-top: 1rem;
 }
 
-/* Desktop - hide mobile overlay */
-@media (min-width: 769px) {
-  .mobile-overlay {
-    display: none !important;
-  }
-}
+/* ---------- CLEAN COMPACT MOBILE FOOTER ---------- */
+@media (max-width: 1024px) {
 
+  .srk-footer {
+    padding: 2rem 0 1.2rem;
+    margin-top: 2.5rem;
+  }
+
+  .footer-inner {
+    gap: 1.8rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  /* Stack columns cleanly */
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .footer-col h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .footer-col a {
+    display: block;
+    margin: 0.3rem 0;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* Bottom line minimal */
+  .footer-bottom {
+    border-top: none;
+    padding-top: 0.5rem;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+}
 </style>

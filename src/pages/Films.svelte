@@ -95,6 +95,13 @@
     transition: transform 180ms ease, box-shadow 220ms ease;
   }
 
+@media (max-width: 768px) {
+  .title-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
   .title-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 40px 5px rgba(72, 180, 255, 0.2);

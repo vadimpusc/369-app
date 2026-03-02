@@ -93,12 +93,32 @@
     margin: 0.25rem 0;
     font-size: 0.9rem;
   }
-  @media (max-width: 800px) {
-    .hero-layout {
-      grid-template-columns: minmax(0, 1fr);
-    }
-    .hero-poster {
-      max-width: 220px;
-    }
+@media (max-width: 768px) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    text-align: center;
   }
+
+  .hero-poster {
+    width: 90%;
+    margin: 0 auto 1.5rem;   /* center + spacing below */
+    max-width: none;         /* remove the 220px cap */
+  }
+
+  .poster-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logline {
+    max-width: 90%;
+  }
+}
 </style>

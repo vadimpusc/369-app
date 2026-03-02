@@ -64,32 +64,6 @@
   </article>
 </section>
 
-<!-- Founder Section -->
-<section class="founder">
-  <div class="founder-inner">
-    <div class="avatar-wrap">
-      <img src="assets/stills/hank-orion.jpg" alt="Hank Orion" />
-    </div>
-    <div>
-      <h2>Hank Orion</h2>
-      <p class="role">Founder, Director, Producer, Screenwriter</p>
-   <p>
-  Founded by filmmaker Hank Orion, San Roku Ku brings years of experience producing films in Europe, UK, Japan and the United States. 
-</p>
-
-    </div>
-  </div>
-</section>
-
-  <!-- Call to Action -->
-  <div class="cta">
- <p class="services-note">
-  Have questions or want to say hello? Get in touch with us - we’d love to hear from you.
-</p>
-
-    <a href="mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Inquiry" class="btn-primary">Contact Us</a>
-  </div>
-
 </section>
 
 <style>
