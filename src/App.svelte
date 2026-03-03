@@ -138,17 +138,16 @@
 
     <!-- Desktop links -->
     <nav class="nav-links desktop" aria-label="Main navigation">
+      <button on:click={() => go("/about")}>{t("nav.about")}</button>
       <button on:click={() => go("/films")}>{t("nav.films")}</button>
       <button on:click={() => go("/documentaries")}>{t("nav.documentaries")}</button>
       <button on:click={() => go("/series")}>{t("nav.series")}</button>
+      <button on:click={() => go("/services")}>{t("nav.services")}</button>
+      <button on:click={() => go("/contact")}>{t("nav.contact")}</button>
     </nav>
 
-    <!-- Desktop contact -->
+    <!-- Desktop right (language only) -->
     <div class="nav-right desktop">
-      <button class="btn-primary" on:click={() => go("/services")}>
-        {t("nav.services")}
-      </button>
-
       <div class="lang-toggle" aria-label="Language">
         <button
           class:active={$currentLocale === "en"}
@@ -177,14 +176,13 @@
     </button>
 
     <nav class="mobile-links" aria-label="Mobile navigation">
+      <button on:click={() => go("/about")}>{t("nav.about")}</button>
       <button on:click={() => go("/films")}>{t("nav.films")}</button>
       <button on:click={() => go("/documentaries")}>{t("nav.documentaries")}</button>
       <button on:click={() => go("/series")}>{t("nav.series")}</button>
+      <button on:click={() => go("/services")}>{t("nav.services")}</button>
+      <button on:click={() => go("/contact")}>{t("nav.contact")}</button>
     </nav>
-
-    <button class="contact-btn" on:click={() => go("/services")}>
-      {t("nav.services")}
-    </button>
 
     <div class="mobile-lang">
       <button
@@ -284,7 +282,6 @@
           {t("footer.submit")}
         </a>
 
-        <!-- External link stays external -->
         <a href="https://development.sanrokuku.com" rel="noopener noreferrer" target="_blank">
           {t("footer.development")}
         </a>
@@ -404,11 +401,6 @@
 
 .nav-links button:hover::after {
   width: 100%;
-}
-
-.nav-right .btn-primary {
-  font-weight: 600;
-  font-size: 0.85rem;
 }
 
 .nav-right {
@@ -549,16 +541,6 @@
     background: none;
     border: none;
     cursor: pointer;
-  }
-
-  .mobile-overlay .contact-btn {
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    background: var(--accent);
-    color: #fff;
-    margin-bottom: 2rem;
   }
 }
 

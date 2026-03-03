@@ -1,5 +1,7 @@
 {
   "nav": {
+    "about": "About",
+    "contact": "Contact",
     "films": "Films",
     "documentaries": "Documentaries",
     "series": "Series",

@@ -6,7 +6,7 @@
     "type": "film",
     "year": 2026,
     "countries": ["United Kingdom", "Japan"],
-    "genres": ["1 Drama"],
+    "genres": ["Drama"],
     "durationMinutes": 60,
     "logline": "After a breakup, a drifting traveler meets a guarded local woman by a quiet river. Over one intimate afternoon, their shared honesty about love and loss helps them face buried grief and find the courage to let go and begin again.",
     "poster": "/assets/posters/the-river.png",

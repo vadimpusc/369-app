@@ -1,5 +1,7 @@
 {
   "nav": {
+    "about": "会社概要",
+    "contact": "お問い合わせ",
     "films": "映画",
     "documentaries": "ドキュメンタリー",
     "series": "シリーズ",
@@ -13,7 +15,7 @@
   "submit": "配給の応募",
   "development": "開発スレート",
 
-  "studio": "Studio",
+  "studio": "スタジオ",
   "about": "会社概要",
   "servicesForProducers": "制作サービス",
   "weddingFilms": "ウェディング",
@@ -21,7 +23,7 @@
   "workOpportunities": "求人",
   "contact": "お問い合わせ",
 
-  "legal": "Legal",
+   "legal": "法務",
   "terms": "利用規約",
   "refund": "返金ポリシー",
   "privacy": "プライバシーポリシー"
