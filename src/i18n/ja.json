@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "films": "映画",
+    "documentaries": "ドキュメンタリー",
+    "series": "シリーズ",
+    "services": "サービス"
+  },
+ "footer": {
+  "catalogue": "カタログ",
+  "filmCatalogue": "映画一覧",
+  "seriesCatalogue": "シリーズ一覧",
+  "documentaryCatalogue": "ドキュメンタリー一覧",
+  "submit": "配給の応募",
+  "development": "開発スレート",
+
+  "studio": "Studio",
+  "about": "会社概要",
+  "servicesForProducers": "制作サービス",
+  "weddingFilms": "ウェディング",
+  "brandFilms": "ブランド映像",
+  "workOpportunities": "求人",
+  "contact": "お問い合わせ",
+
+  "legal": "Legal",
+  "terms": "利用規約",
+  "refund": "返金ポリシー",
+  "privacy": "プライバシーポリシー"
+},
+  "home": {
+    "productionPartnerTitle": "あなたの制作パートナー",
+    "productionPartnerText": "San Roku Ku は映画、シリーズ、ドキュメンタリーの制作と配給を行い、ポストプロダクションやマーケティングのサービスでクリエイターを支援します。",
+    "latestReleasesTitle": "最新リリース",
+    "latestReleasesText": "最新タイトルをチェックして、カタログもご覧ください。"
+  },
+  "common": {
+    "notFoundTitle": "ページが見つかりません",
+    "notFoundText": "申し訳ありません。このページは存在しません。"
+  },
+  "language": {
+    "en": "EN",
+    "ja": "JP"
+  }
+}

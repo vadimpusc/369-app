@@ -1,8 +1,10 @@
 <script>
-  import work from "../data/work.json";
+  import { loadCollection } from "../lib/content";
+  import { currentLocale } from "../router";
   import WorkGallery from "../components/WorkGallery.svelte";
 
-  const data = work.posters;
+  $: work = loadCollection("work", $currentLocale);
+  $: data = work.posters;
 </script>
 
 <WorkGallery

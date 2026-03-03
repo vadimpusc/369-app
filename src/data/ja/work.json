@@ -1,0 +1,136 @@
+{
+  "posters": {
+    "title": "Poster Examples",
+    "intro": "JA.A selection of poster work designed to match tone, genre, and market positioning. We prioritize clarity, strong hierarchy, and standout thumbnails for crowded marketplaces.",
+    "processTitle": "Our Design Process",
+    "processText": "JA. We start with your logline, comps, and target audience. Then we explore multiple directions, refine the strongest concept, and deliver print and web ready files with clean, consistent branding.",
+    "layout": "grid",
+    "items": [
+       {
+        "thumb": "/assets/work/posters/the-river.png",
+        "full": "/assets/work/posters/the-river.png",
+       "alt": "The River We Cannot Leave, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/honey.jpg",
+        "full": "/assets/work/posters/honey.jpg",
+       "alt": "Honey and Wine, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/despair.jpg",
+        "full": "/assets/work/posters/despair.jpg",
+       "alt": "Despair, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/exposure.jpg",
+        "full": "/assets/work/posters/exposure.jpg",
+        "alt": "Exposure, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/job.jpg",
+        "full": "/assets/work/posters/job.jpg",
+        "alt": "The Job, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/spooked.png",
+        "full": "/assets/work/posters/spooked.png",
+       "alt": "Spooked, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/outsiders.jpg",
+        "full": "/assets/work/posters/outsiders.jpg",
+        "alt": "Outsiders, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/man.png",
+        "full": "/assets/work/posters/man.png",
+        "alt": "The Man, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/across.jpg",
+        "full": "/assets/work/posters/across.jpg",
+        "alt": "Across Two Skies, official film poster."
+      },
+          {
+        "thumb": "/assets/work/posters/cosmos.jpg",
+        "full": "/assets/work/posters/cosmos.jpg",
+        "alt": "Man of the Cosmos, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/following.jpg",
+        "full": "/assets/work/posters/following.jpg",
+       "alt": "Following, official film poster."
+      },
+      {
+        "thumb": "/assets/work/posters/love.jpg",
+        "full": "/assets/work/posters/love.jpg",
+        "alt": "Love in the City, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/napoleon.jpg",
+        "full": "/assets/work/posters/napoleon.jpg",
+        "alt": "Napoleon's Table, official film poster."
+      },
+          {
+        "thumb": "/assets/work/posters/osaka.jpg",
+        "full": "/assets/work/posters/osaka.jpg",
+        "alt": "Osaka, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/chance.jpg",
+        "full": "/assets/work/posters/chance.jpg",
+        "alt": "Love by Chance Again, official film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/darkness.jpg",
+        "full": "/assets/work/posters/darkness.jpg",
+        "alt": "I See Darkness, film poster."
+      },
+       {
+        "thumb": "/assets/work/posters/ritual.jpg",
+        "full": "/assets/work/posters/ritual.jpg",
+        "alt": "The Ritual, official film poster."
+      }
+    ]
+  },
+
+  "filmhub": {
+    "title": "JA. Filmhub Examples",
+    "intro": "Artwork optimized for delivery specs and storefront performance. Mixed aspect ratios, consistent brand language, and readable typography at small sizes.",
+    "processTitle": "How We Build Deliverables",
+"processText": "We design strictly to platform specifications. Many distribution platforms allow only the official film title, and reject artwork containing additional text such as taglines, festival laurels, or credits. We ensure your artwork is compliant, visually strong, and optimized for storefront performance across all major platforms.",
+    "layout": "masonry",
+    "items": [
+      {
+        "thumb": "/assets/work/filmh/1.jpg",
+        "full": "/assets/work/filmh/1.jpg",
+        "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+      {
+        "thumb": "/assets/work/filmh/2.jpg",
+        "full": "/assets/work/filmh/2.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+         {
+        "thumb": "/assets/work/filmh/3.jpg",
+        "full": "/assets/work/filmh/3.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/4.jpg",
+        "full": "/assets/work/filmh/4.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/5.jpg",
+        "full": "/assets/work/filmh/5.jpg",
+         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      },
+            {
+        "thumb": "/assets/work/filmh/6.jpg",
+        "full": "/assets/work/filmh/6.jpg",
+        "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+      }
+    ]
+  }
+}

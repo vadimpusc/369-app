@@ -1,6 +1,16 @@
 <script>
   import { derived } from "svelte/store";
-  import { currentPath, navigate } from "./router";
+  import { onMount } from "svelte";
+  import {
+    routePath,
+    currentLocale,
+    navigate,
+    switchLocale,
+    ensureLocaleInUrl,
+    hrefFor
+  } from "./router";
+
+  import { setUiLocale, t } from "./lib/i18n";
 
   import Home from "./pages/Home.svelte";
   import Films from "./pages/Films.svelte";
@@ -37,7 +47,14 @@
 
   let mobileOpen = false;
 
-  const routeInfo = derived(currentPath, ($path) => {
+  onMount(() => {
+    ensureLocaleInUrl();
+  });
+
+  // Keep UI dictionary in sync with URL locale
+  $: setUiLocale($currentLocale);
+
+  const routeInfo = derived(routePath, ($path) => {
     if ($path === "/") return { page: "home" };
 
     // Work routes
@@ -90,6 +107,7 @@
   }
 </script>
 
+{#key $currentLocale}
 <header class="srk-nav">
   <div class="container nav-inner">
     <!-- MOBILE: centered logo + hamburger (logo above hamburger) -->
@@ -120,14 +138,31 @@
 
     <!-- Desktop links -->
     <nav class="nav-links desktop" aria-label="Main navigation">
-      <button on:click={() => go("/films")}>Films</button>
-      <button on:click={() => go("/documentaries")}>Documentaries</button>
-      <button on:click={() => go("/series")}>Series</button>
+      <button on:click={() => go("/films")}>{t("nav.films")}</button>
+      <button on:click={() => go("/documentaries")}>{t("nav.documentaries")}</button>
+      <button on:click={() => go("/series")}>{t("nav.series")}</button>
     </nav>
 
     <!-- Desktop contact -->
     <div class="nav-right desktop">
-      <button class="btn-primary" on:click={() => go("/services")}>Our Services</button>
+      <button class="btn-primary" on:click={() => go("/services")}>
+        {t("nav.services")}
+      </button>
+
+      <div class="lang-toggle" aria-label="Language">
+        <button
+          class:active={$currentLocale === "en"}
+          on:click={() => switchLocale("en")}
+        >
+          {t("language.en")}
+        </button>
+        <button
+          class:active={$currentLocale === "ja"}
+          on:click={() => switchLocale("ja")}
+        >
+          {t("language.ja")}
+        </button>
+      </div>
     </div>
   </div>
 
@@ -142,97 +177,167 @@
     </button>
 
     <nav class="mobile-links" aria-label="Mobile navigation">
-      <button on:click={() => go("/films")}>Films</button>
-      <button on:click={() => go("/documentaries")}>Documentaries</button>
-      <button on:click={() => go("/series")}>Series</button>
+      <button on:click={() => go("/films")}>{t("nav.films")}</button>
+      <button on:click={() => go("/documentaries")}>{t("nav.documentaries")}</button>
+      <button on:click={() => go("/series")}>{t("nav.series")}</button>
     </nav>
 
-    <button class="contact-btn" on:click={() => go("/services")}>Our Services</button>
+    <button class="contact-btn" on:click={() => go("/services")}>
+      {t("nav.services")}
+    </button>
+
+    <div class="mobile-lang">
+      <button
+        class:active={$currentLocale === "en"}
+        on:click={() => switchLocale("en")}
+      >
+        {t("language.en")}
+      </button>
+      <button
+        class:active={$currentLocale === "ja"}
+        on:click={() => switchLocale("ja")}
+      >
+        {t("language.ja")}
+      </button>
+    </div>
   </div>
 </header>
 
 <main>
-  {#if r.page === "home"}
-    <Home />
-  {:else if r.page === "workPosters"}
-    <WorkPosters />
-  {:else if r.page === "workFilmhub"}
-    <WorkFilmhub />
-  {:else if r.page === "weddingFilms"}
-    <WeddingFilms />
-  {:else if r.page === "brandFilms"}
-    <BrandFilms />
-  {:else if r.page === "films"}
-    <Films />
-  {:else if r.page === "film"}
-    <FilmDetail slug={r.slug} />
-  {:else if r.page === "series"}
-    <Series />
-  {:else if r.page === "seriesDetail"}
-    <SeriesDetail slug={r.slug} />
-  {:else if r.page === "documentaries"}
-    <Documentaries />
-  {:else if r.page === "docDetail"}
-    <DocumentaryDetail slug={r.slug} />
-  {:else if r.page === "jobs"}
-    <Jobs />
-  {:else if r.page === "jobDetail"}
-    <JobDetail slug={r.slug} />
-  {:else if r.page === "services"}
-    <Services />
-  {:else if r.page === "service"}
-    <Service />
-  {:else if r.page === "serviceDetail"}
-    <ServiceDetail slug={r.slug} />
-  {:else if r.page === "about"}
-    <About />
-  {:else if r.page === "contact"}
-    <Contact />
-  {:else if r.page === "privacy"}
-    <PrivacyPolicy />
-  {:else if r.page === "terms"}
-    <Terms />
-  {:else if r.page === "refund"}
-    <RefundPolicy />
-  {:else if r.page === "submit"}
-    <SubmitYourFilm />
-  {:else if r.page === "strategy"}
-    <Strategy />
-  {:else}
-    <section class="container" style="padding: 5rem 0;">
-      <h1>Page Not Found</h1>
-      <p>Sorry, this page does not exist.</p>
-    </section>
-  {/if}
+  {#key $currentLocale + "|" + $routePath}
+    {#if r.page === "home"}
+      <Home />
+    {:else if r.page === "workPosters"}
+      <WorkPosters />
+    {:else if r.page === "workFilmhub"}
+      <WorkFilmhub />
+    {:else if r.page === "weddingFilms"}
+      <WeddingFilms />
+    {:else if r.page === "brandFilms"}
+      <BrandFilms />
+    {:else if r.page === "films"}
+      <Films />
+    {:else if r.page === "film"}
+      <FilmDetail slug={r.slug} />
+    {:else if r.page === "series"}
+      <Series />
+    {:else if r.page === "seriesDetail"}
+      <SeriesDetail slug={r.slug} />
+    {:else if r.page === "documentaries"}
+      <Documentaries />
+    {:else if r.page === "docDetail"}
+      <DocumentaryDetail slug={r.slug} />
+    {:else if r.page === "jobs"}
+      <Jobs />
+    {:else if r.page === "jobDetail"}
+      <JobDetail slug={r.slug} />
+    {:else if r.page === "services"}
+      <Services />
+    {:else if r.page === "service"}
+      <Service />
+    {:else if r.page === "serviceDetail"}
+      <ServiceDetail slug={r.slug} />
+    {:else if r.page === "about"}
+      <About />
+    {:else if r.page === "contact"}
+      <Contact />
+    {:else if r.page === "privacy"}
+      <PrivacyPolicy />
+    {:else if r.page === "terms"}
+      <Terms />
+    {:else if r.page === "refund"}
+      <RefundPolicy />
+    {:else if r.page === "submit"}
+      <SubmitYourFilm />
+    {:else if r.page === "strategy"}
+      <Strategy />
+    {:else}
+      <section class="container" style="padding: 5rem 0;">
+        <h1>{t("common.notFoundTitle")}</h1>
+        <p>{t("common.notFoundText")}</p>
+      </section>
+    {/if}
+  {/key}
 </main>
 
 <footer class="srk-footer">
   <div class="container footer-inner">
     <div class="footer-columns">
       <div class="footer-col">
-        <h4>Catalogue</h4>
-        <a href="/films" on:click|preventDefault={() => go("/films")}>Film Catalogue</a>
-        <a href="/series" on:click|preventDefault={() => go("/series")}>Series Catalogue</a>
-        <a href="/documentaries" on:click|preventDefault={() => go("/documentaries")}>Documentary Catalogue</a>
-        <a href="/submit-your-film" on:click|preventDefault={() => go("/submit-your-film")}>Submit for Distribution</a>
-        <a href="https://development.sanrokuku.com" rel="noopener noreferrer">Development Slate</a>
+        <h4>{t("footer.catalogue")}</h4>
+        <a href={hrefFor("/films")} on:click|preventDefault={() => go("/films")}>
+          {t("footer.filmCatalogue")}
+        </a>
+        <a href={hrefFor("/series")} on:click|preventDefault={() => go("/series")}>
+          {t("footer.seriesCatalogue")}
+        </a>
+        <a
+          href={hrefFor("/documentaries")}
+          on:click|preventDefault={() => go("/documentaries")}
+        >
+          {t("footer.documentaryCatalogue")}
+        </a>
+        <a
+          href={hrefFor("/submit-your-film")}
+          on:click|preventDefault={() => go("/submit-your-film")}
+        >
+          {t("footer.submit")}
+        </a>
+
+        <!-- External link stays external -->
+        <a href="https://development.sanrokuku.com" rel="noopener noreferrer" target="_blank">
+          {t("footer.development")}
+        </a>
       </div>
 
       <div class="footer-col">
-        <h4>Studio</h4>
-        <a href="/about" on:click|preventDefault={() => go("/about")}>About Us</a>
-        <a href="/services" on:click|preventDefault={() => go("/services")}>Services For Producers</a>
-        <a href="/wedding-films" on:click|preventDefault={() => go("/wedding-films")}>Wedding Films</a>
-        <a href="/brand-films" on:click|preventDefault={() => go("/brand-films")}>Brand Films</a>
-        <a href="/jobs" on:click|preventDefault={() => go("/jobs")}>Work Opportunities</a>
-        <a href="/contact" on:click|preventDefault={() => go("/contact")}>Contact Us</a>
+        <h4>{t("footer.studio")}</h4>
+        <a href={hrefFor("/about")} on:click|preventDefault={() => go("/about")}>
+          {t("footer.about")}
+        </a>
+        <a href={hrefFor("/services")} on:click|preventDefault={() => go("/services")}>
+          {t("footer.servicesForProducers")}
+        </a>
+        <a
+          href={hrefFor("/wedding-films")}
+          on:click|preventDefault={() => go("/wedding-films")}
+        >
+          {t("footer.weddingFilms")}
+        </a>
+        <a
+          href={hrefFor("/brand-films")}
+          on:click|preventDefault={() => go("/brand-films")}
+        >
+          {t("footer.brandFilms")}
+        </a>
+        <a href={hrefFor("/jobs")} on:click|preventDefault={() => go("/jobs")}>
+          {t("footer.workOpportunities")}
+        </a>
+        <a href={hrefFor("/contact")} on:click|preventDefault={() => go("/contact")}>
+          {t("footer.contact")}
+        </a>
       </div>
 
       <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="/terms-and-conditions" on:click|preventDefault={() => go("/terms-and-conditions")}>Terms and Conditions</a>
-        <a href="/refund-policy" on:click|preventDefault={() => go("/refund-policy")}>Refund Policy</a>
-        <a href="/privacy-policy" on:click|preventDefault={() => go("/privacy-policy")}>Privacy Policy</a>
+        <h4>{t("footer.legal")}</h4>
+        <a
+          href={hrefFor("/terms-and-conditions")}
+          on:click|preventDefault={() => go("/terms-and-conditions")}
+        >
+          {t("footer.terms")}
+        </a>
+        <a
+          href={hrefFor("/refund-policy")}
+          on:click|preventDefault={() => go("/refund-policy")}
+        >
+          {t("footer.refund")}
+        </a>
+        <a
+          href={hrefFor("/privacy-policy")}
+          on:click|preventDefault={() => go("/privacy-policy")}
+        >
+          {t("footer.privacy")}
+        </a>
       </div>
     </div>
 
@@ -241,6 +346,7 @@
     </div>
   </div>
 </footer>
+{/key}
 
 <style>
 /* ---------- NAVBAR ---------- */
@@ -305,6 +411,33 @@
   font-size: 0.85rem;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-toggle button {
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  padding: 0.45rem 0.7rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.lang-toggle button.active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 /* Mobile centered block (logo above hamburger) */
 .mobile-center {
   display: none;
@@ -322,16 +455,13 @@
 }
 
 /* ---------- MOBILE (iPad breakpoint) ---------- */
-/* iPad portrait width is 768px, but you said "iPad size", so this uses 1024px */
 @media (max-width: 1024px) {
-  /* Hide desktop items */
   .nav-links,
   .nav-right,
   .desktop-logo {
     display: none;
   }
 
-  /* Show centered mobile stack */
   .mobile-center {
     display: flex;
     flex-direction: column;
@@ -352,12 +482,10 @@
     justify-content: center;
   }
 
-  /* Make the container center the mobile stack */
   .nav-inner {
     justify-content: center;
   }
 
-  /* Overlay */
   .mobile-overlay {
     display: none;
     flex-direction: column;
@@ -395,6 +523,26 @@
     margin-top: 4rem;
   }
 
+  .mobile-lang {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 2.2rem;
+    justify-content: center;
+  }
+
+  .mobile-lang button {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-main);
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+  }
+
+  .mobile-lang button.active {
+    background: rgba(255, 255, 255, 0.12);
+  }
+
   .mobile-overlay button {
     font-size: 1.2rem;
     color: #fff;
@@ -414,7 +562,6 @@
   }
 }
 
-/* Desktop only: hide overlay regardless */
 @media (min-width: 1025px) {
   .mobile-overlay {
     display: none !important;
@@ -462,7 +609,6 @@
 
 /* ---------- CLEAN COMPACT MOBILE FOOTER ---------- */
 @media (max-width: 1024px) {
-
   .srk-footer {
     padding: 2rem 0 1.2rem;
     margin-top: 2.5rem;
@@ -474,7 +620,6 @@
     font-size: 0.85rem;
   }
 
-  /* Stack columns cleanly */
   .footer-columns {
     grid-template-columns: 1fr;
     gap: 1.6rem;
@@ -485,28 +630,26 @@
     margin-bottom: 0.6rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
   }
 
   .footer-col a {
     display: block;
     margin: 0.3rem 0;
     font-size: 0.82rem;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
   }
 
   .footer-col a:hover {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
   }
 
-  /* Bottom line minimal */
   .footer-bottom {
     border-top: none;
     padding-top: 0.5rem;
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255, 255, 255, 0.4);
   }
-
 }
 </style>

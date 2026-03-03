@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Services | San Roku Ku",
+    "description": "Online creative services and full production support for film projects in Japan and the United States.",
+    "ogImage": ""
+  },
+  "online": {
+    "title": "Our Online Services",
+    "intro": "Need quick creative service? Place your order online, upload your materials, and get your project delivered in just a few days. We're here to support your vision.",
+    "ctaText": "Get Started Online",
+    "ctaHref": "/service"
+  },
+  "production": {
+    "title": "Our Film Production Services",
+    "intro": "San Roku Ku provides full-service production support for projects in Japan and the United States. From development and on-set management to post-production, we help filmmakers and studios bring their stories to life with efficiency and creative precision.",
+    "cards": [
+      {
+        "title": "Development & Story Consulting",
+        "text": "Script analysis, creative feedback, and development support focused on clarity, structure, and positioning for finance, casting, and production across international markets."
+      },
+      {
+        "title": "Production & Crew Support",
+        "text": "End to end production support, from scheduling and budgeting through on set management, delivery, and coordination with creative and technical teams."
+      },
+      {
+        "title": "Post Production & Finishing",
+        "text": "Editorial, colour, sound, and mastering workflows prepared for festivals, broadcasters, and streaming platforms, with a focus on creative intent and delivery standards."
+      },
+      {
+        "title": "Distribution & Release Strategy",
+        "text": "Release planning, deliverables, and marketing support that help projects travel across platforms, territories, and audiences with confidence."
+      },
+      {
+        "title": "International Project Support",
+        "text": "Creative and practical support for projects working between Japan and the US, including development alignment, communication flow, and delivery expectations."
+      },
+      {
+        "title": "Localization & Delivery Oversight",
+        "text": "Supervision of subtitles, dubbing, and final materials to ensure tone, clarity, and cultural intent are preserved for international audiences."
+      }
+    ],
+    "note": "Every project is unique, and we tailor our services to fit your specific needs. Get in touch with us to discuss your project and receive a personalized estimate.",
+    "ctaEstimateText": "Get an Estimate",
+    "ctaEstimateHref": "mailto:newbusiness@sanrokuku.com?subject=Film%20Production%20Services",
+    "ctaOrText": "Or",
+    "ctaCallText": "Book Your Call",
+    "ctaCallHref": "/strategy"
+  },
+  "other": {
+    "title": "Other Services",
+    "intro": "Additional creative services designed to support your project beyond production.",
+    "cards": [
+      {
+        "title": "Other Graphic Design",
+        "text": "Artworks, key visuals, motion assets, and stills designed to support press, pitching, festivals, and release strategies across territories."
+      },
+      {
+        "title": "Web & Digital Tools",
+        "text": "Purpose built landing pages, pitch portals, and simple digital tools designed to support filmmakers, releases, and content driven brands."
+      }
+    ],
+    "ctaEstimateText": "Get an Estimate",
+    "ctaEstimateHref": "mailto:newbusiness@sanrokuku.com?subject=Other%20Services"
+  }
+}

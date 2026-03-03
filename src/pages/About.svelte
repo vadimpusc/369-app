@@ -1,69 +1,43 @@
+<script>
+  import { currentLocale } from "../router";
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  const base = import.meta.env.BASE_URL;
+
+  // Load page data for current locale, fall back to English
+  $: page =
+    loadPageContent("about", $currentLocale) ||
+    loadPageContent("about", "en");
+
+  // Apply SEO (title + meta description)
+  $: if (page?.seo) setSeo(page.seo);
+</script>
+
 <section class="container about-page">
-
-  <!-- Header -->
   <header class="about-header">
-  <div class="fade-in-image">
-  <img src="assets/logos/369.png" alt="San Roku Ku - Film Production Company in United States and Japan" />
-</div>
-    <h1>San Roku Ku</h1>
-<p>
-  San Roku Ku is a production company focused on bold, cinematic storytelling. 
-  We produce original films and support international productions filming abroad, with a deep understanding of the creative, logistical, and cultural realities of shooting in Japan, Europe and the US. 
-  We believe that strong cross cultural collaboration leads to more honest and memorable cinema. 
-  From independent filmmakers to established studios, we help bring visions to the screen.
-</p>
+    <div class="fade-in-image">
+      <img
+        src={`${base}assets/logos/369.png`}
+        alt={page?.hero?.logoAlt ?? "San Roku Ku"}
+      />
+    </div>
 
+    <h1>{page?.hero?.title ?? ""}</h1>
 
+    <p>
+      {page?.hero?.intro ?? ""}
+    </p>
   </header>
 
-<!-- Services Grid -->
-<section class="grid">
-  <article class="card">
-    <h2>Local Knowledge</h2>
-    <p>
-      We understand the realities of filming across borders, from permits and unions to local customs and workflows. 
-      Whether you are navigating Tokyo locations or US based production systems, we help keep your shoot efficient and focused.
-    </p>
-  </article>
-
-  <article class="card">
-    <h2>A Bridge Between Cultures</h2>
-    <p>
-      Language and cultural gaps can slow down productions. We work fluently in both Japanese and English and specialize in connecting international filmmakers with local crews, talent, and locations in Japan and the US.
-    </p>
-  </article>
-
-  <article class="card">
-    <h2>End to End Production Support</h2>
-    <p>
-      From early development through post production, we manage the practical details so you can concentrate on storytelling. 
-      Our approach keeps productions organized, transparent, and creatively aligned from start to finish.
-    </p>
-  </article>
-
-  <article class="card">
-    <h2>Trusted Local Networks</h2>
-    <p>
-      Through years of on the ground experience, we have built reliable relationships with crews, vendors, and partners in Japan and the US. 
-      Working with us gives you direct access to professionals who understand both local expectations and international standards.
-    </p>
-  </article>
-
-  <article class="card">
-    <h2>Clear and Practical Problem Solving</h2>
-    <p>
-      Challenges are inevitable in filmmaking. We stay calm under pressure and focus on practical solutions that keep productions moving forward without compromising creative intent.
-    </p>
-  </article>
-
-  <article class="card">
-    <h2>Vision Driven and Film Focused</h2>
-    <p>
-      Every project is approached with care for story, craft, and long term value. We focus on making films that travel well internationally while staying grounded in strong cinematic vision.
-    </p>
-  </article>
-</section>
-
+  <section class="grid">
+    {#each page?.cards ?? [] as card}
+      <article class="card">
+        <h2>{card.title}</h2>
+        <p>{card.text}</p>
+      </article>
+    {/each}
+  </section>
 </section>
 
 <style>
@@ -90,15 +64,15 @@
 /* Grid cards */
 .grid {
   display: flex;
-  flex-wrap: wrap;         /* allow multiple rows */
-  gap: 1.6rem;             /* space between cards */
-  justify-content: center;  /* centers the whole cards in each row, including last row */
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
   margin-top: 2.6rem;
 }
 
 .card {
-  flex: 0 1 430px;         /* base width 230px, can shrink if needed */
-  max-width: 340px;        /* prevents cards from stretching too much */
+  flex: 0 1 430px;
+  max-width: 340px;
   background: radial-gradient(circle at top left, #16233b, #060912);
   border-radius: var(--radius-xl);
   padding: 1.6rem 1.8rem;
@@ -171,20 +145,15 @@
 
 .fade-in-image {
   display: flex;
-  justify-content: center;   /* center horizontally */
+  justify-content: center;
 }
 
 .fade-in-image img {
   max-width: 200px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 50%;    
-  
-  
-  /* Start invisible */
+  border-radius: 50%;
   opacity: 0;
-
-  /* Fade-in animation */
   animation: fadeIn 4.2s ease-out forwards;
 }
 

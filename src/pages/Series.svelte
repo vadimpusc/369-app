@@ -1,6 +1,17 @@
 <script>
-  import series from "../data/series.json";
-  import { navigate } from "../router";
+  import { navigate, currentLocale } from "../router";
+  import { loadCollection } from "../lib/content";
+
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  $: series = loadCollection("series", $currentLocale);
+
+  $: page =
+    loadPageContent("series", $currentLocale) ||
+    loadPageContent("series", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
 
   function openSeries(slug) {
     navigate(`/series/${slug}`);
@@ -9,7 +20,6 @@
 
 <section class="titles-page">
   <div class="container">
-
     <div class="titles-grid">
       {#each series as show}
         <button
@@ -18,16 +28,16 @@
           on:click={() => openSeries(show.slug)}
         >
           <div class="poster-shell">
-<img
-  src={show.poster}
-  alt={`${show.title} poster`}
-  loading="lazy"
-/>
+            <img
+              src={show.poster}
+              alt={`${show.title} poster`}
+              loading="lazy"
+            />
           </div>
           <div class="title-meta">
             <h2>{show.title}</h2>
             <p class="meta-line">
-              {show.genres.join(", ").toUpperCase()} · {show.year}
+              {(show.genres?.join(", ") || "").toUpperCase()} · {show.year}
             </p>
           </div>
         </button>
@@ -35,11 +45,13 @@
     </div>
   </div>
 </section>
+
 <div style="max-width: 800px; margin: 40px auto 0; text-align: center; font-weight: 600; font-size: 1.1rem;">
-  We are actively developing new series. If you are a filmmaker or production company with a series to submit for distribution,
+  {page?.cta?.textBeforeLink ?? ""}
   <a href="https://sanrokuku.com/submit-your-film" style="text-decoration: underline;">
-    click here to submit
-  </a>.
+    {page?.cta?.linkText ?? ""}
+  </a>
+  {page?.cta?.textAfterLink ?? ""}
 </div>
 
 <style>
@@ -47,30 +59,29 @@
     padding: 3.5rem 0 4rem;
   }
 
-.titles-header {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  margin: 0 auto;
-  padding: 40px 0;
-}
+  .titles-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
 
-.titles-header h1 {
-  font-size: 2.1rem;
-  margin-bottom: 0.4rem;
-  text-align: center;
-}
+  .titles-header h1 {
+    font-size: 2.1rem;
+    margin-bottom: 0.4rem;
+    text-align: center;
+  }
 
-.titles-header p {
-  color: var(--text-muted);
-  max-width: 580px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
+  .titles-header p {
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
 
   /* grid - max 5 per row desktop, then wrap */
   .titles-grid {
@@ -98,22 +109,21 @@
     }
   }
 
-.title-card {
-  display: block;
-  width: 100%;
-  border: none;
-  background: none;
-  padding: 0;
-  cursor: pointer;
-  border-radius: 18px;
-  transition: transform 180ms ease, box-shadow 220ms ease;
-}
+  .title-card {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 18px;
+    transition: transform 180ms ease, box-shadow 220ms ease;
+  }
 
   .title-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 0 40px 5px rgba(72, 180, 255, 0.2);
   }
-
 
   .poster-shell {
     width: 100%;

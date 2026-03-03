@@ -1,13 +1,24 @@
 <script>
-  import services from "../data/services.json";
+  import { loadCollection } from "../lib/content";
+  import { currentLocale } from "../router";
   import ServiceCard from "../components/ServiceCard.svelte";
+
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  $: services = loadCollection("services", $currentLocale);
+
+  $: page =
+    loadPageContent("service", $currentLocale) ||
+    loadPageContent("service", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
 </script>
 
 <section class="container services-page">
   <header class="services-header">
-    <h1>Our Online Services</h1>
-    <p>
-From posters and pitch decks to trailer edits and full marketing materials, we craft key art that makes independent films impossible to ignore. Operating in London, Los Angeles, Kyoto, and Osaka, our team blends global film industry insight with a love for storytelling on screen.    </p>
+    <h1>{page?.hero?.title ?? "Our Online Services"}</h1>
+    <p>{page?.hero?.intro ?? ""}</p>
   </header>
 
   <section class="services-grid">
@@ -47,21 +58,21 @@ From posters and pitch decks to trailer edits and full marketing materials, we c
      SERVICES GRID (300px columns on desktop)
      ------------------------------------------ */
 
-.services-grid {
-  margin-top: 2.6rem;
+  .services-grid {
+    margin-top: 2.6rem;
 
-  display: grid;
-  justify-content: center;
-  gap: 2rem;
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
 
-  /* keep the card size fixed */
-  grid-template-columns: repeat(auto-fit, 300px);
+    /* keep the card size fixed */
+    grid-template-columns: repeat(auto-fit, 300px);
 
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
- line-height: 1.5;
-}
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
 
   @media (max-width: 1600px) {
     .services-grid {

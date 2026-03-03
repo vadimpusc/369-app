@@ -1,0 +1,32 @@
+{
+  "seo": {
+    "title": "Submit Your Film | San Roku Ku",
+    "description": "Submit your film, series, or documentary for distribution and potential release on our YouTube channel.",
+    "ogImage": ""
+  },
+  "hero": {
+    "title": "Distribute Your Films, Series, or Documentaries",
+    "intro": "San Roku Ku helps independent filmmakers bring their stories to audiences worldwide. Beyond traditional distribution, we also accept films for our YouTube channel, a fast-growing platform where you can build an audience, increase visibility, and monetize your work, all while keeping full creative control."
+  },
+  "cards": {
+    "lookingForTitle": "What We Are Looking For",
+    "lookingFor": [
+      "Feature films of 80 minutes or longer",
+      "Works in English or Japanese",
+      "Documentaries of 40 minutes or longer",
+      "TV or web series with episodes of 20 minutes or longer"
+    ],
+    "notAcceptTitle": "We Are Not Able To Accept",
+    "notAccept": [
+      "Short films",
+      "Works in languages other than English or Japanese",
+      "Films already widely released or sold in major territories",
+      "Screenplays or project pitches without a completed film"
+    ]
+  },
+  "note": "If you do not hear from us within 14 business days, please understand that your film was not selected at this time. Thank you for your submission.",
+  "cta": {
+    "text": "Submit for Distribution",
+    "href": "https://tally.so/r/81NdJ5"
+  }
+}

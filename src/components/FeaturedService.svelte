@@ -1,10 +1,12 @@
 <script>
-  import services from "../data/services.json";
+  import { loadCollection } from "../lib/content";
+  import { currentLocale } from "../router";
   import ServiceCard from "./ServiceCard.svelte";
 
   export let serviceSlug = null;
 
-  const featured =
+  $: services = loadCollection("services", $currentLocale);
+  $: featured =
     services.find((s) => s.slug === serviceSlug) ||
     services.find((s) => s.featured) ||
     services[0];

@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "films": "Films",
+    "documentaries": "Documentaries",
+    "series": "Series",
+    "services": "Our Services"
+  },
+"footer": {
+  "catalogue": "Catalogue",
+  "filmCatalogue": "Film Catalogue",
+  "seriesCatalogue": "Series Catalogue",
+  "documentaryCatalogue": "Documentary Catalogue",
+  "submit": "Submit for Distribution",
+  "development": "Development Slate",
+
+  "studio": "Studio",
+  "about": "About Us",
+  "servicesForProducers": "Services For Producers",
+  "weddingFilms": "Wedding Films",
+  "brandFilms": "Brand Films",
+  "workOpportunities": "Work Opportunities",
+  "contact": "Contact Us",
+
+  "legal": "Legal",
+  "terms": "Terms and Conditions",
+  "refund": "Refund Policy",
+  "privacy": "Privacy Policy"
+},
+  "home": {
+    "productionPartnerTitle": "Your Production Partner",
+    "productionPartnerText": "San Roku Ku produces and distributes independent films, series, and documentaries, and supports creators with premium post and marketing services.",
+    "latestReleasesTitle": "Latest Releases",
+    "latestReleasesText": "Discover our newest titles and explore the catalogue."
+  },
+  "common": {
+    "notFoundTitle": "Page Not Found",
+    "notFoundText": "Sorry, this page does not exist."
+  },
+  "language": {
+    "en": "EN",
+    "ja": "JP"
+  }
+}

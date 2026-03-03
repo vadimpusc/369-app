@@ -1,0 +1,123 @@
+
+{
+  "seo": {
+    "title": "Brand Films | San Roku Ku",
+    "description": "Premium director-led brand films and corporate promos. View UK and Japan pricing.",
+    "ogImage": ""
+  },
+  "hero": {
+    "kicker": "Brand Films",
+    "title": "Premium promos for brands that care about craft.",
+    "subtitle": "Director-led production for corporate, promo, and social campaigns. Choose your location to view pricing.",
+    "note": "Clear pricing. Limited monthly capacity to protect quality."
+  },
+  "toggle": {
+    "uk": "United Kingdom",
+    "jp": "Japan"
+  },
+  "labels": {
+    "from": "From",
+    "bestValue": "Best Value",
+    "requestQuote": "Request a Quote",
+    "checkAvailability": "Check Availability"
+  },
+  "packages": {
+    "uk": {
+      "solo": {
+        "name": "Solo",
+        "price": "£950",
+        "meta": "Half-day shoot (up to 4 hours)",
+        "items": [
+          "One shooter, camera + audio basics",
+          "Ideal for offices, interviews, events",
+          "1x hero edit (60 to 120 seconds)",
+          "2x social cutdowns (9:16 or 1:1)",
+          "Online delivery"
+        ]
+      },
+      "crew": {
+        "name": "Crew",
+        "price": "£2,750",
+        "meta": "Full-day shoot (up to 10 hours)",
+        "items": [
+          "Small crew (producer + camera + sound)",
+          "Lighting for interviews and key scenes",
+          "1x hero film (90 seconds to 3 minutes)",
+          "4x social cutdowns",
+          "Basic brand graphics and subtitles"
+        ]
+      },
+      "production": {
+        "name": "Production",
+        "price": "£6,900",
+        "meta": "Designed for launches and campaigns",
+        "items": [
+          "Larger crew (director + DP + sound + lighting)",
+          "Pre-production planning and shot design",
+          "1x hero film (2 to 5 minutes)",
+          "8x social deliverables",
+          "Advanced motion graphics option"
+        ]
+      }
+    },
+    "jp": {
+      "solo": {
+        "name": "Solo",
+        "price": "¥150,000",
+        "meta": "Half-day shoot (up to 4 hours)",
+        "items": [
+          "One shooter, camera + audio basics",
+          "Ideal for offices, interviews, events",
+          "1x hero edit (60 to 120 seconds)",
+          "2x social cutdowns (9:16 or 1:1)",
+          "Online delivery"
+        ]
+      },
+      "crew": {
+        "name": "Crew",
+        "price": "¥420,000",
+        "meta": "Full-day shoot (up to 10 hours)",
+        "items": [
+          "Small crew (producer + camera + sound)",
+          "Lighting for interviews and key scenes",
+          "1x hero film (90 seconds to 3 minutes)",
+          "4x social cutdowns",
+          "Basic brand graphics and subtitles"
+        ]
+      },
+      "production": {
+        "name": "Production",
+        "price": "¥980,000",
+        "meta": "Designed for launches and campaigns",
+        "items": [
+          "Larger crew (director + DP + sound + lighting)",
+          "Pre-production planning and shot design",
+          "1x hero film (2 to 5 minutes)",
+          "8x social deliverables",
+          "Advanced motion graphics option"
+        ]
+      }
+    }
+  },
+  "addons": {
+    "title": "Add-ons",
+    "items": [
+      "Second camera operator",
+      "Drone (where permitted)",
+      "Voice-over recording",
+      "Motion graphics and titles",
+      "Subtitles (EN, JP)",
+      "Extra deliverables for paid ads"
+    ]
+  },
+  "included": {
+    "title": "What’s included",
+    "items": [
+      "Simple process, clear schedule, calm set",
+      "Cinematic lighting and natural colour",
+      "Professional audio priorities",
+      "Deliverables optimised for web and social"
+    ]
+  },
+  "footerNote": "Travel, permits, complex locations, or tight deadlines can affect quotes."
+}

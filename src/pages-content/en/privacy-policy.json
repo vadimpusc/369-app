@@ -1,0 +1,103 @@
+{
+  "seo": {
+    "title": "Privacy Policy | San Roku Ku",
+    "description": "How San Roku Ku collects, uses, and protects personal data.",
+    "ogImage": ""
+  },
+  "title": "Privacy Policy",
+  "intro": "San Roku Ku is committed to protecting your privacy and handling your personal information in a transparent and secure manner. This Privacy Policy explains what information we collect, how we use it, and your rights under applicable data protection laws, including the UK General Data Protection Regulation (UK GDPR).",
+  "sections": [
+    {
+      "heading": "1. Information We Collect",
+      "bullets": [
+        "<strong>Contact Information:</strong> name, email address, and any details you provide when contacting us, submitting an order form, or commissioning services.",
+        "<strong>Project Information:</strong> film titles, artwork, images, assets, and related materials provided for creative services.",
+        "<strong>Payment Information:</strong> payments are processed securely via third party providers such as Stripe Checkout. We do not store or have access to your card or payment details.",
+        "<strong>Usage Data:</strong> basic analytics such as pages visited, browser type, device type, and general geographic location derived from IP address.",
+        "<strong>Cookies:</strong> small data files used to improve website performance and understand traffic patterns."
+      ]
+    },
+    {
+      "heading": "2. How We Use Your Information",
+      "bullets": [
+        "To respond to enquiries and provide requested services.",
+        "To manage projects, deliver creative work, and process orders.",
+        "To improve our website, services, and user experience.",
+        "To comply with legal obligations or protect our legal rights."
+      ]
+    },
+    {
+      "heading": "3. Legal Basis for Processing",
+      "paragraphs": [
+        "We process your data on one or more of the following legal bases:"
+      ],
+      "bullets": [
+        "Performance of a contract when you purchase services.",
+        "Legitimate interests in operating and improving our business.",
+        "Compliance with legal obligations.",
+        "Your consent, where required."
+      ]
+    },
+    {
+      "heading": "4. Sharing Your Information",
+      "paragraphs": [
+        "We do not sell your personal data. We may share limited information with trusted service providers who support our operations, including:"
+      ],
+      "bullets": [
+        "Payment processors such as Stripe.",
+        "Form and order management platforms such as Tally.",
+        "Website hosting and analytics providers."
+      ]
+    },
+    {
+      "heading": "5. Data Retention",
+      "paragraphs": [
+        "We retain personal information only for as long as necessary to fulfil the purposes outlined in this policy, including legal, accounting, or reporting requirements."
+      ]
+    },
+    {
+      "heading": "6. International Transfers",
+      "paragraphs": [
+        "Some service providers may be located outside the United Kingdom. Where data is transferred internationally, we ensure appropriate safeguards are in place as required by applicable law."
+      ]
+    },
+    {
+      "heading": "7. Data Security",
+      "paragraphs": [
+        "We implement reasonable technical and organisational measures to protect your information from unauthorised access, misuse, loss, or disclosure. However, no online system can be guaranteed completely secure."
+      ]
+    },
+    {
+      "heading": "8. Your Rights",
+      "paragraphs": [
+        "Under UK data protection law, you may have the right to:"
+      ],
+      "bullets": [
+        "Access the personal data we hold about you.",
+        "Request correction of inaccurate data.",
+        "Request deletion of your data where legally permitted.",
+        "Object to or restrict certain processing.",
+        "Withdraw consent where processing is based on consent."
+      ]
+    },
+    {
+      "heading": "9. Cookies",
+      "paragraphs": [
+        "Our website may use cookies or similar technologies to improve functionality and analyse usage. You may adjust your browser settings to refuse cookies if you prefer."
+      ]
+    },
+    {
+      "heading": "10. Changes to This Policy",
+      "paragraphs": [
+        "We may update this Privacy Policy from time to time. The latest version will always be available on this page and applies from the date of publication."
+      ]
+    },
+    {
+      "heading": "11. Contact",
+      "paragraphs": [
+        "If you have questions about this policy or how we handle your data, please contact:",
+        "<strong>support@sanrokuku.com</strong>"
+      ]
+    }
+  ]
+}

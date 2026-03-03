@@ -1,0 +1,38 @@
+{
+  "seo": {
+    "title": "About | San Roku Ku",
+    "description": "San Roku Ku is a production company focused on bold, cinematic storytelling across Japan, Europe, and the US.",
+    "ogImage": ""
+  },
+  "hero": {
+    "logoAlt": "San Roku Ku - Film Production Company in United States and Japan",
+    "title": "San Roku Ku",
+    "intro": "San Roku Ku is a production company focused on bold, cinematic storytelling. We produce original films and support international productions filming abroad, with a deep understanding of the creative, logistical, and cultural realities of shooting in Japan, Europe and the US. We believe that strong cross cultural collaboration leads to more honest and memorable cinema. From independent filmmakers to established studios, we help bring visions to the screen."
+  },
+  "cards": [
+    {
+      "title": "Local Knowledge",
+      "text": "We understand the realities of filming across borders, from permits and unions to local customs and workflows. Whether you are navigating Tokyo locations or US based production systems, we help keep your shoot efficient and focused."
+    },
+    {
+      "title": "A Bridge Between Cultures",
+      "text": "Language and cultural gaps can slow down productions. We work fluently in both Japanese and English and specialize in connecting international filmmakers with local crews, talent, and locations in Japan and the US."
+    },
+    {
+      "title": "End to End Production Support",
+      "text": "From early development through post production, we manage the practical details so you can concentrate on storytelling. Our approach keeps productions organized, transparent, and creatively aligned from start to finish."
+    },
+    {
+      "title": "Trusted Local Networks",
+      "text": "Through years of on the ground experience, we have built reliable relationships with crews, vendors, and partners in Japan and the US. Working with us gives you direct access to professionals who understand both local expectations and international standards."
+    },
+    {
+      "title": "Clear and Practical Problem Solving",
+      "text": "Challenges are inevitable in filmmaking. We stay calm under pressure and focus on practical solutions that keep productions moving forward without compromising creative intent."
+    },
+    {
+      "title": "Vision Driven and Film Focused",
+      "text": "Every project is approached with care for story, craft, and long term value. We focus on making films that travel well internationally while staying grounded in strong cinematic vision."
+    }
+  ]
+}

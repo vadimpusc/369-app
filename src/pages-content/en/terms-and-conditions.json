@@ -1,0 +1,105 @@
+{
+  "seo": {
+    "title": "Terms and Conditions | San Roku Ku",
+    "description": "Terms governing use of the San Roku Ku website, services, digital products, and content.",
+    "ogImage": ""
+  },
+  "title": "Terms and Conditions",
+  "intro": "These terms govern your use of the San Roku Ku website and any services, digital products, or content we provide. By accessing our site or placing an order for services, you agree to these terms.",
+  "sections": [
+    {
+      "heading": "1. General",
+      "type": "list",
+      "items": [
+        "Our site and materials are provided for professional and informational use.",
+        "We may update these terms from time to time. Continued use of the site means you accept the revised terms.",
+        "All services are subject to availability and acceptance of your order."
+      ]
+    },
+    {
+      "heading": "2. Intellectual Property",
+      "type": "paragraphs",
+      "items": [
+        "All films, images, text, designs, branding, and website content are owned by San Roku Ku or used with permission. You may not copy, distribute, reproduce, modify, or publicly display any material without prior written consent.",
+        "For custom design services, final approved artwork remains the intellectual property of the client once full payment has been received. San Roku Ku reserves the right to display completed work in portfolios, promotional materials, and on our website unless otherwise agreed in writing."
+      ]
+    },
+    {
+      "heading": "3. Service Scope",
+      "type": "paragraphs",
+      "items": [
+        "Service descriptions, package details, and revision limits are defined on the relevant service page at the time of purchase. Revision limits are strictly based on the package selected.",
+        "Additional revisions beyond the included package allowance may incur additional fees."
+      ]
+    },
+    {
+      "heading": "4. Approval Window",
+      "type": "paragraphs",
+      "items": [
+        "If feedback is not received within 48 hours after a revision is delivered for approval, the order will be automatically marked as delivered and approved. Further changes after approval may be treated as a new revision or new order."
+      ]
+    },
+    {
+      "heading": "5. Delivery Terms",
+      "type": "paragraphs",
+      "items": [
+        "Final files are delivered according to the specifications of the selected package. All files are considered final upon approval. Editable source files are included only in packages where explicitly stated or if purchased as an add-on."
+      ]
+    },
+    {
+      "heading": "6. Client Responsibilities",
+      "type": "paragraphs",
+      "items": [
+        "Clients are responsible for ensuring they have the legal rights to all materials provided, including but not limited to film stills, images, footage, fonts, logos, music, and trademarks.",
+        "San Roku Ku is not liable for claims, damages, or legal issues arising from materials supplied by the client."
+      ]
+    },
+    {
+      "heading": "7. Usage Rights",
+      "type": "paragraphs",
+      "items": [
+        "Upon full payment and final approval, clients receive full usage rights for their custom artwork across streaming platforms, film festivals, marketing campaigns, websites, and social media."
+      ]
+    },
+    {
+      "heading": "8. Payment Terms",
+      "type": "paragraphs",
+      "items": [
+        "Full payment is required before work begins in order to secure your project within our production schedule.",
+        "All transactions are processed securely via third-party payment providers such as Stripe Checkout. San Roku Ku does not store, collect, or have access to your card or payment details.",
+        "Failure to complete payment will result in suspension or cancellation of services."
+      ]
+    },
+    {
+      "heading": "9. Refund Policy",
+      "type": "paragraphs",
+      "items": [
+        "Because all poster design and streaming graphics services are custom created specifically for your film, refunds are not available once design or production work has begun.",
+        "Revision rounds are included according to your selected package to ensure satisfaction prior to final delivery."
+      ]
+    },
+    {
+      "heading": "10. Limitation of Liability",
+      "type": "paragraphs",
+      "items": [
+        "To the fullest extent permitted by law, San Roku Ku is not liable for indirect or consequential loss, loss of profits, rejection by streaming platforms, delays caused by client response time, or data loss.",
+        "Where liability cannot be excluded by law, it is limited to the total amount paid for the relevant service."
+      ]
+    },
+    {
+      "heading": "11. Governing Law",
+      "type": "paragraphs",
+      "items": [
+        "These terms are governed by the laws of the United Kingdom. Any disputes will be handled in the courts of England and Wales."
+      ]
+    },
+    {
+      "heading": "12. Contact",
+      "type": "paragraphs",
+      "items": [
+        "For questions regarding these terms, please contact:",
+        "support@sanrokuku.com or newbusiness@sanrokuku.com"
+      ]
+    }
+  ]
+}

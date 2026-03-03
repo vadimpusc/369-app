@@ -1,7 +1,19 @@
 <script>
+  import { currentLocale } from "../router";
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
   let loc = "uk"; // "uk" | "jp"
 
-  // Base enquiry
+  // Load page JSON (locale first, fallback to EN)
+  $: page =
+    loadPageContent("brand-films", $currentLocale) ||
+    loadPageContent("brand-films", "en");
+
+  // Apply SEO (title + meta description + optional og:image)
+  $: if (page?.seo) setSeo(page.seo);
+
+  // Email links (keep as logic, copy can come from JSON)
   const emailBase =
     "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20a%20brand%20or%20corporate%20film.%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%20(16%3A9%2C%209%3A16%2C%201%3A1)%3A%0A%2D%20Estimated%20budget%3A%0A%0AThank%20you%2C";
 
@@ -24,15 +36,22 @@
 
   const emailJPProduction =
     "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
+
+  // Helper for text with safe defaults
+  const get = (obj, path, fallback = "") => {
+    try {
+      return path.split(".").reduce((acc, key) => acc?.[key], obj) ?? fallback;
+    } catch {
+      return fallback;
+    }
+  };
 </script>
 
 <section class="container brand-page">
   <header class="brand-header">
-    <p class="brand-kicker">Brand Films</p>
-    <h1>Premium promos for brands that care about craft.</h1>
-    <p class="brand-subtitle">
-      Director-led production for corporate, promo, and social campaigns. Choose your location to view pricing.
-    </p>
+    <p class="brand-kicker">{get(page, "hero.kicker", "Brand Films")}</p>
+    <h1>{get(page, "hero.title", "")}</h1>
+    <p class="brand-subtitle">{get(page, "hero.subtitle", "")}</p>
 
     <div class="brand-toggle" role="tablist" aria-label="Location toggle">
       <button
@@ -42,7 +61,7 @@
         aria-selected={loc === "uk"}
         on:click={() => (loc = "uk")}
       >
-        United Kingdom
+        {get(page, "toggle.uk", "United Kingdom")}
       </button>
 
       <button
@@ -52,179 +71,187 @@
         aria-selected={loc === "jp"}
         on:click={() => (loc = "jp")}
       >
-        Japan
+        {get(page, "toggle.jp", "Japan")}
       </button>
     </div>
 
     <div class="brand-cta-row">
-      <p class="brand-cta-note">Clear pricing. Limited monthly capacity to protect quality.</p>
+      <p class="brand-cta-note">{get(page, "hero.note", "")}</p>
     </div>
   </header>
 
   {#if loc === "uk"}
-    <!-- LOCATION: UK -->
     <section class="brand-loc is-visible" role="tabpanel" aria-label="United Kingdom pricing">
       <div class="brand-grid">
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Solo</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">£950</span></p>
-            <p class="pkg-meta">Half-day shoot (up to 4 hours)</p>
+            <h2 class="pkg-name">{get(page, "packages.uk.solo.name", "Solo")}</h2>
+            <p class="pkg-price">
+              <span class="from">{get(page, "labels.from", "From")}</span>
+              <span class="money">{get(page, "packages.uk.solo.price", "£950")}</span>
+            </p>
+            <p class="pkg-meta">{get(page, "packages.uk.solo.meta", "")}</p>
           </div>
           <ul class="pkg-list">
-            <li>One shooter, camera + audio basics</li>
-            <li>Ideal for offices, interviews, events</li>
-            <li>1x hero edit (60 to 120 seconds)</li>
-            <li>2x social cutdowns (9:16 or 1:1)</li>
-            <li>Online delivery</li>
+            {#each get(page, "packages.uk.solo.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKSolo}>Request a Quote</a>
+            <a class="srk-btn srk-btn-ghost" href={emailUKSolo}>
+              {get(page, "labels.requestQuote", "Request a Quote")}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">Best Value</div>
+          <div class="pkg-badge">{get(page, "labels.bestValue", "Best Value")}</div>
           <div class="pkg-top">
-            <h2 class="pkg-name">Crew</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">£2,750</span></p>
-            <p class="pkg-meta">Full-day shoot (up to 10 hours)</p>
+            <h2 class="pkg-name">{get(page, "packages.uk.crew.name", "Crew")}</h2>
+            <p class="pkg-price">
+              <span class="from">{get(page, "labels.from", "From")}</span>
+              <span class="money">{get(page, "packages.uk.crew.price", "£2,750")}</span>
+            </p>
+            <p class="pkg-meta">{get(page, "packages.uk.crew.meta", "")}</p>
           </div>
           <ul class="pkg-list">
-            <li>Small crew (producer + camera + sound)</li>
-            <li>Lighting for interviews and key scenes</li>
-            <li>1x hero film (90 seconds to 3 minutes)</li>
-            <li>4x social cutdowns</li>
-            <li>Basic brand graphics and subtitles</li>
+            {#each get(page, "packages.uk.crew.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailUKCrew}>Request a Quote</a>
+            <a class="srk-btn srk-btn-primary" href={emailUKCrew}>
+              {get(page, "labels.requestQuote", "Request a Quote")}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Production</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">£6,900</span></p>
-            <p class="pkg-meta">Designed for launches and campaigns</p>
+            <h2 class="pkg-name">{get(page, "packages.uk.production.name", "Production")}</h2>
+            <p class="pkg-price">
+              <span class="from">{get(page, "labels.from", "From")}</span>
+              <span class="money">{get(page, "packages.uk.production.price", "£6,900")}</span>
+            </p>
+            <p class="pkg-meta">{get(page, "packages.uk.production.meta", "")}</p>
           </div>
           <ul class="pkg-list">
-            <li>Larger crew (director + DP + sound + lighting)</li>
-            <li>Pre-production planning and shot design</li>
-            <li>1x hero film (2 to 5 minutes)</li>
-            <li>8x social deliverables</li>
-            <li>Advanced motion graphics option</li>
+            {#each get(page, "packages.uk.production.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKProduction}>Request a Quote</a>
+            <a class="srk-btn srk-btn-ghost" href={emailUKProduction}>
+              {get(page, "labels.requestQuote", "Request a Quote")}
+            </a>
           </div>
         </article>
       </div>
 
       <section class="brand-addons">
         <div class="addons-card">
-          <h3>Add-ons</h3>
+          <h3>{get(page, "addons.title", "Add-ons")}</h3>
           <ul>
-            <li>Second camera operator</li>
-            <li>Drone (where permitted)</li>
-            <li>Voice-over recording</li>
-            <li>Motion graphics and titles</li>
-            <li>Subtitles (EN, JP)</li>
-            <li>Extra deliverables for paid ads</li>
+            {#each get(page, "addons.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
         </div>
 
         <div class="addons-card">
-          <h3>What’s included</h3>
+          <h3>{get(page, "included.title", "What’s included")}</h3>
           <ul>
-            <li>Simple process, clear schedule, calm set</li>
-            <li>Cinematic lighting and natural colour</li>
-            <li>Professional audio priorities</li>
-            <li>Deliverables optimised for web and social</li>
+            {#each get(page, "included.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
         </div>
       </section>
     </section>
   {:else}
-    <!-- LOCATION: JP -->
     <section class="brand-loc is-visible" role="tabpanel" aria-label="Japan pricing">
       <div class="brand-grid">
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Solo</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">¥150,000</span></p>
-            <p class="pkg-meta">Half-day shoot (up to 4 hours)</p>
+            <h2 class="pkg-name">{get(page, "packages.jp.solo.name", "Solo")}</h2>
+            <p class="pkg-price">
+              <span class="from">{get(page, "labels.from", "From")}</span>
+              <span class="money">{get(page, "packages.jp.solo.price", "¥150,000")}</span>
+            </p>
+            <p class="pkg-meta">{get(page, "packages.jp.solo.meta", "")}</p>
           </div>
           <ul class="pkg-list">
-            <li>One shooter, camera + audio basics</li>
-            <li>Ideal for offices, interviews, events</li>
-            <li>1x hero edit (60 to 120 seconds)</li>
-            <li>2x social cutdowns (9:16 or 1:1)</li>
-            <li>Online delivery</li>
+            {#each get(page, "packages.jp.solo.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPSolo}>Check Availability</a>
+            <a class="srk-btn srk-btn-ghost" href={emailJPSolo}>
+              {get(page, "labels.checkAvailability", "Check Availability")}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">Best Value</div>
+          <div class="pkg-badge">{get(page, "labels.bestValue", "Best Value")}</div>
           <div class="pkg-top">
-            <h2 class="pkg-name">Crew</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">¥420,000</span></p>
-            <p class="pkg-meta">Full-day shoot (up to 10 hours)</p>
+            <h2 class="pkg-name">{get(page, "packages.jp.crew.name", "Crew")}</h2>
+            <p class="pkg-price">
+              <span class="from">{get(page, "labels.from", "From")}</span>
+              <span class="money">{get(page, "packages.jp.crew.price", "¥420,000")}</span>
+            </p>
+            <p class="pkg-meta">{get(page, "packages.jp.crew.meta", "")}</p>
           </div>
           <ul class="pkg-list">
-            <li>Small crew (producer + camera + sound)</li>
-            <li>Lighting for interviews and key scenes</li>
-            <li>1x hero film (90 seconds to 3 minutes)</li>
-            <li>4x social cutdowns</li>
-            <li>Basic brand graphics and subtitles</li>
+            {#each get(page, "packages.jp.crew.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailJPCrew}>Check Availability</a>
+            <a class="srk-btn srk-btn-primary" href={emailJPCrew}>
+              {get(page, "labels.checkAvailability", "Check Availability")}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Production</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">¥980,000</span></p>
-            <p class="pkg-meta">Designed for launches and campaigns</p>
+            <h2 class="pkg-name">{get(page, "packages.jp.production.name", "Production")}</h2>
+            <p class="pkg-price">
+              <span class="from">{get(page, "labels.from", "From")}</span>
+              <span class="money">{get(page, "packages.jp.production.price", "¥980,000")}</span>
+            </p>
+            <p class="pkg-meta">{get(page, "packages.jp.production.meta", "")}</p>
           </div>
           <ul class="pkg-list">
-            <li>Larger crew (director + DP + sound + lighting)</li>
-            <li>Pre-production planning and shot design</li>
-            <li>1x hero film (2 to 5 minutes)</li>
-            <li>8x social deliverables</li>
-            <li>Advanced motion graphics option</li>
+            {#each get(page, "packages.jp.production.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPProduction}>Check Availability</a>
+            <a class="srk-btn srk-btn-ghost" href={emailJPProduction}>
+              {get(page, "labels.checkAvailability", "Check Availability")}
+            </a>
           </div>
         </article>
       </div>
 
       <section class="brand-addons">
         <div class="addons-card">
-          <h3>Add-ons</h3>
+          <h3>{get(page, "addons.title", "Add-ons")}</h3>
           <ul>
-            <li>Second camera operator</li>
-            <li>Drone (where permitted)</li>
-            <li>Voice-over recording</li>
-            <li>Motion graphics and titles</li>
-            <li>Subtitles (EN, JP)</li>
-            <li>Extra deliverables for paid ads</li>
+            {#each get(page, "addons.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
         </div>
 
         <div class="addons-card">
-          <h3>What’s included</h3>
+          <h3>{get(page, "included.title", "What’s included")}</h3>
           <ul>
-            <li>Simple process, clear schedule, calm set</li>
-            <li>Cinematic lighting and natural colour</li>
-            <li>Professional audio priorities</li>
-            <li>Deliverables optimised for web and social</li>
+            {#each get(page, "included.items", []) as item}
+              <li>{item}</li>
+            {/each}
           </ul>
         </div>
       </section>
@@ -232,7 +259,7 @@
   {/if}
 
   <p class="brand-note">
-    Travel, permits, complex locations, or tight deadlines can affect quotes.
+    {get(page, "footerNote", "Travel, permits, complex locations, or tight deadlines can affect quotes.")}
   </p>
 </section>
 

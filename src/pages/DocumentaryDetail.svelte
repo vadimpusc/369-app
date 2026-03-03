@@ -1,22 +1,45 @@
 <script>
-  import documentaries from "../data/documentaries.json";
+  import { loadCollection } from "../lib/content";
   import TitleDetail from "../components/TitleDetail.svelte";
-  import { navigate } from "../router";
+  import { navigate, currentLocale } from "../router";
+  import { setSeo } from "../lib/seo";
 
   export let slug;
 
-  const item = documentaries.find((d) => d.slug === slug);
+  $: documentaries = loadCollection("documentaries", $currentLocale);
+  $: item = documentaries.find((d) => d.slug === slug);
 
-  // Convert a normal YouTube URL into an embed URL
+  // Locale-aware UI labels
+  $: labels =
+    $currentLocale === "ja"
+      ? {
+          notFound: "ドキュメンタリーが見つかりません",
+          back: "ドキュメンタリー一覧へ戻る",
+          trailer: "予告編"
+        }
+      : {
+          notFound: "Documentary not found",
+          back: "Back to Documentaries",
+          trailer: "Trailer"
+        };
+
+  // Dynamic SEO per documentary
+  $: if (item) {
+    setSeo({
+      title: `${item.title} | Documentary | San Roku Ku`,
+      description: item.logline || item.description || "",
+      ogImage: item.poster || ""
+    });
+  }
+
+  // Convert normal YouTube URL into embed URL
   function toEmbed(url) {
     if (!url) return null;
 
     let x = url.trim();
 
-    // Standard YouTube watch URL
     x = x.replace("watch?v=", "embed/");
 
-    // Short youtu.be link
     if (x.includes("youtu.be/")) {
       const id = x.split("youtu.be/")[1].split(/[?&]/)[0];
       x = `https://www.youtube.com/embed/${id}`;
@@ -28,19 +51,19 @@
 
 {#if !item}
   <section class="container" style="padding: 4rem 0;">
-    <h1>Documentary not found</h1>
+    <h1>{labels.notFound}</h1>
     <button class="btn-primary" on:click={() => navigate("/documentaries")}>
-      Back to Documentaries
+      {labels.back}
     </button>
   </section>
 {:else}
-  <!-- Your existing detail layout -->
+  <!-- Detail Layout -->
   <TitleDetail item={item} kind="Documentary" />
 
   <!-- Trailer Section -->
   {#if item.trailer}
     <section class="doc-trailer">
-      <h2>Trailer</h2>
+      <h2>{labels.trailer}</h2>
 
       <div class="trailer-wrapper">
         <iframe
@@ -68,7 +91,7 @@
 
   .trailer-wrapper {
     width: 100%;
-    max-width: 900px; /* same as films + series */
+    max-width: 900px;
     margin: 0 auto;
   }
 

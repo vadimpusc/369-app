@@ -1,18 +1,29 @@
+<script>
+  import { currentLocale } from "../router";
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  $: page =
+    loadPageContent("contact", $currentLocale) ||
+    loadPageContent("contact", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
+</script>
+
 <section class="container contact-page">
   <header class="contact-header">
-    <h1>Contact Us</h1>
-    <p>
-      Whether you are developing a new project or looking for production support, we are happy
-      to talk about how San Roku Ku can help.
+    <h1>{page?.hero?.title ?? ""}</h1>
+    <p>{page?.hero?.intro ?? ""}</p>
+
+    <p
+      style="text-align: center; color: white; font-size: 18px; font-weight: 600; margin-top: 20px;"
+    >
+      {page?.hero?.email ?? "info@sanrokuku.com"}
     </p>
-<p style="text-align: center; color: white; font-size: 18px; font-weight: 600; margin-top: 20px;">
-  info@sanrokuku.com
-</p>
   </header>
 
   <p class="note">
-    Please do not send unsolicited scripts or materials. Unrequested submissions cannot be
-    reviewed or returned.
+    {page?.note ?? ""}
   </p>
 </section>
 
@@ -20,25 +31,25 @@
   .contact-page {
     padding: 3.5rem 0 4rem;
   }
-.contact-header {
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
+  .contact-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
 
-.contact-header h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
+  .contact-header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
 
-.contact-header p {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: var(--text-muted);
-  margin: 0 auto;
-  max-width: 750px;
-}
+  .contact-header p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 auto;
+    max-width: 750px;
+  }
 
   .contact-form {
     margin-top: 2.2rem;

@@ -1,10 +1,41 @@
 <script>
-  import services from "../data/services.json";
-  import { navigate } from "../router";
+  import { loadCollection } from "../lib/content";
+  import { navigate, currentLocale } from "../router";
+  import { setSeo } from "../lib/seo";
 
   export let slug;
 
-  const item = services.find((s) => s.slug === slug);
+  $: services = loadCollection("services", $currentLocale);
+  $: item = services.find((s) => s.slug === slug);
+
+  // Locale-aware UI labels (no dependency on t() keys)
+  $: labels =
+    $currentLocale === "ja"
+      ? {
+          notFound: "サービスが見つかりません",
+          back: "サービス一覧へ戻る",
+          viewExamples: "制作例を見る",
+          faq: "よくある質問",
+          howItWorks: "制作の流れ",
+          orderDefault: "注文する"
+        }
+      : {
+          notFound: "Service not found",
+          back: "Back to Services",
+          viewExamples: "View Examples",
+          faq: "Frequently Asked Questions",
+          howItWorks: "How it works",
+          orderDefault: "Order"
+        };
+
+  // Safe, dynamic SEO (won't crash if setSeo is missing fields)
+  $: if (item) {
+    setSeo({
+      title: `${item.title} | San Roku Ku`,
+      description: item.tagline || item.description || "",
+      ogImage: item.image || ""
+    });
+  }
 
   // accordion state for Q&A
   let openIndex = -1;
@@ -16,9 +47,9 @@
 
 {#if !item}
   <section class="container" style="padding: 4rem 0;">
-    <h1>Service not found</h1>
+    <h1>{labels.notFound}</h1>
     <button class="btn-primary" on:click={() => navigate("/service")}>
-      Back to Services
+      {labels.back}
     </button>
   </section>
 {:else}
@@ -44,237 +75,230 @@
           {item.description}
         </p>
 
-   <div class="service-detail-actions">
+        <div class="service-detail-actions">
+          {#if item.orderUrl}
+            <a
+              href={item.orderUrl}
+              class="btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              {item.ctaLabel || labels.orderDefault}
+            </a>
+          {/if}
 
-  {#if item.orderUrl}
-    <a
-      href={item.orderUrl}
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      {item.ctaLabel || "Order Poster"}
-    </a>
-  {/if}
+          {#if item.viewWorkUrl}
+            <a
+              href={item.viewWorkUrl}
+              class="btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              {labels.viewExamples}
+            </a>
+          {/if}
 
-  {#if item.viewWorkUrl}
-    <a
-      href={item.viewWorkUrl}
-      class="btn-primary"
-      target="_blank"
-      rel="noopener"
-    >
-      View Examples
-    </a>
-  {/if}
-
-  <button
-    type="button"
-    class="btn-secondary"
-    on:click={() => navigate("/service")}
-  >
-    Back to all services
-  </button>
-
-</div>
-
-      </div>
-    </div>
-  </section>
-
-{#if item.howItWorks && item.howItWorks.steps && item.howItWorks.steps.length > 0}
-  <section class="section howitworks" aria-labelledby="howitworks-title">
-    <div class="container">
-      <div class="howitworks-inner">
-        {#if item.howItWorks.kicker}
-          <p class="howitworks-kicker">{item.howItWorks.kicker}</p>
-        {/if}
-
-        <h3 id="howitworks-title" class="howitworks-title">
-          {item.howItWorks.title || "How it works"}
-        </h3>
-
-        {#if item.howItWorks.subtitle}
-          <p class="howitworks-subtitle">{item.howItWorks.subtitle}</p>
-        {/if}
-
-        <div class="howitworks-grid">
-          {#each item.howItWorks.steps as step (step.title)}
-            <article class="howitworks-card">
-              <div class="howitworks-top">
-                <span class="howitworks-step" aria-hidden="true">
-                  {step.number}
-                </span>
-                <h4 class="howitworks-heading">{step.title}</h4>
-              </div>
-              <p class="howitworks-text">{step.description}</p>
-            </article>
-          {/each}
+          <button
+            type="button"
+            class="btn-secondary"
+            on:click={() => navigate("/service")}
+          >
+            {labels.back}
+          </button>
         </div>
       </div>
     </div>
-
-    <style>
-      /* HOW IT WORKS (premium) */
-      .howitworks { padding: clamp(56px, 8vw, 120px) 0; }
-
-      .howitworks-inner {
-        max-width: 1100px;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      .howitworks-kicker {
-        margin: 0 0 8px;
-        font-size: 12px;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-        opacity: 0.75;
-      }
-
-      .howitworks-title {
-        margin: 0 0 8px;
-        font-size: clamp(26px, 3.6vw, 40px);
-        line-height: 1.06;
-        letter-spacing: -0.01em;
-      }
-
-      .howitworks-subtitle {
-        margin: 0 auto 30px;
-        max-width: 760px;
-        font-size: 15px;
-        line-height: 1.7;
-        opacity: 0.8;
-      }
-
-      .howitworks-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-        margin-top: 10px;
-        text-align: left;
-      }
-
-      .howitworks-card {
-        border-radius: 18px;
-        padding: 26px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-        transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
-      }
-
-      .howitworks-card:hover {
-        transform: translateY(-6px);
-        border-color: rgba(255, 255, 255, 0.16);
-        box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
-      }
-
-      .howitworks-top {
-        display: flex;
-        align-items: baseline;
-        gap: 16px;
-        margin-bottom: 12px;
-      }
-
-      .howitworks-step {
-        display: inline-grid;
-        place-items: center;
-        width: 56px;
-        height: 56px;
-        border-radius: 999px;
-        background: rgba(199, 162, 90, 0.10);
-        border: 1px solid rgba(199, 162, 90, 0.18);
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        opacity: 0.95;
-        flex: 0 0 auto;
-      }
-
-      .howitworks-heading {
-        margin: 0;
-        font-size: 18px;
-        line-height: 1.2;
-      }
-
-      .howitworks-text {
-        margin: 0;
-        font-size: 15px;
-        line-height: 1.9;
-        opacity: 0.82;
-      }
-
-      @media (max-width: 900px) {
-        .howitworks-grid { grid-template-columns: 1fr; }
-        .howitworks-card { padding: 18px; }
-        .howitworks-step { width: 48px; height: 48px; }
-      }
-    </style>
   </section>
-{/if}
 
-{#if item.serviceBannerImage1}
-  <div class="service-banner service-banner-1">
-    <img src={item.serviceBannerImage1} alt={item.title} loading="lazy" />
-  </div>
-{/if}
+  {#if item.howItWorks && item.howItWorks.steps && item.howItWorks.steps.length > 0}
+    <section class="section howitworks" aria-labelledby="howitworks-title">
+      <div class="container">
+        <div class="howitworks-inner">
+          {#if item.howItWorks.kicker}
+            <p class="howitworks-kicker">{item.howItWorks.kicker}</p>
+          {/if}
 
-{#if item.serviceBannerImage2}
-  <div class="service-banner service-banner-2">
-    <img src={item.serviceBannerImage2} alt={item.title} loading="lazy" />
-  </div>
-{/if}
+          <h3 id="howitworks-title" class="howitworks-title">
+            {item.howItWorks.title || labels.howItWorks}
+          </h3>
 
-{#if item.serviceBannerImage3}
-  <div class="service-banner service-banner-3">
-    <img src={item.serviceBannerImage3} alt={item.title} loading="lazy" />
-  </div>
-{/if}
+          {#if item.howItWorks.subtitle}
+            <p class="howitworks-subtitle">{item.howItWorks.subtitle}</p>
+          {/if}
 
-{#if item.serviceBannerImage4}
-  <div class="service-banner service-banner-4">
-    <img src={item.serviceBannerImage4} alt={item.title} loading="lazy" />
-  </div>
-{/if}
+          <div class="howitworks-grid">
+            {#each item.howItWorks.steps as step (step.title)}
+              <article class="howitworks-card">
+                <div class="howitworks-top">
+                  <span class="howitworks-step" aria-hidden="true">
+                    {step.number}
+                  </span>
+                  <h4 class="howitworks-heading">{step.title}</h4>
+                </div>
+                <p class="howitworks-text">{step.description}</p>
+              </article>
+            {/each}
+          </div>
+        </div>
+      </div>
 
-{#if item.serviceBannerImage5}
-  <div class="service-banner service-banner-5">
-    <img src={item.serviceBannerImage5} alt={item.title} loading="lazy" />
-  </div>
-{/if}
+      <style>
+        /* HOW IT WORKS (premium) */
+        .howitworks { padding: clamp(56px, 8vw, 120px) 0; }
 
-  
-{#if item.bannerImage && item.bannerTitle}
-  <div class="service-qa-banner">
-    <h2 class="service-qa-banner-title">
-      {item.bannerTitle}
-    </h2>
+        .howitworks-inner {
+          max-width: 1100px;
+          margin: 0 auto;
+          text-align: center;
+        }
 
-    {#if item["longer-description"]}
-      <p class="service-qa-banner-description">
-        {item["longer-description"]}
-      </p>
-    {/if}
-    <img
-      src={item.bannerImage}
-      alt={item.bannerTitle}
-      loading="lazy"
-    />
-  </div>
-{/if}
+        .howitworks-kicker {
+          margin: 0 0 8px;
+          font-size: 12px;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+          opacity: 0.75;
+        }
 
+        .howitworks-title {
+          margin: 0 0 8px;
+          font-size: clamp(26px, 3.6vw, 40px);
+          line-height: 1.06;
+          letter-spacing: -0.01em;
+        }
 
+        .howitworks-subtitle {
+          margin: 0 auto 30px;
+          max-width: 760px;
+          font-size: 15px;
+          line-height: 1.7;
+          opacity: 0.8;
+        }
 
+        .howitworks-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 22px;
+          margin-top: 10px;
+          text-align: left;
+        }
 
+        .howitworks-card {
+          border-radius: 18px;
+          padding: 26px;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+          transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+        }
+
+        .howitworks-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(255, 255, 255, 0.16);
+          box-shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .howitworks-top {
+          display: flex;
+          align-items: baseline;
+          gap: 16px;
+          margin-bottom: 12px;
+        }
+
+        .howitworks-step {
+          display: inline-grid;
+          place-items: center;
+          width: 56px;
+          height: 56px;
+          border-radius: 999px;
+          background: rgba(199, 162, 90, 0.10);
+          border: 1px solid rgba(199, 162, 90, 0.18);
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          opacity: 0.95;
+          flex: 0 0 auto;
+        }
+
+        .howitworks-heading {
+          margin: 0;
+          font-size: 18px;
+          line-height: 1.2;
+        }
+
+        .howitworks-text {
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.9;
+          opacity: 0.82;
+        }
+
+        @media (max-width: 900px) {
+          .howitworks-grid { grid-template-columns: 1fr; }
+          .howitworks-card { padding: 18px; }
+          .howitworks-step { width: 48px; height: 48px; }
+        }
+      </style>
+    </section>
+  {/if}
+
+  {#if item.serviceBannerImage1}
+    <div class="service-banner service-banner-1">
+      <img src={item.serviceBannerImage1} alt={item.title} loading="lazy" />
+    </div>
+  {/if}
+
+  {#if item.serviceBannerImage2}
+    <div class="service-banner service-banner-2">
+      <img src={item.serviceBannerImage2} alt={item.title} loading="lazy" />
+    </div>
+  {/if}
+
+  {#if item.serviceBannerImage3}
+    <div class="service-banner service-banner-3">
+      <img src={item.serviceBannerImage3} alt={item.title} loading="lazy" />
+    </div>
+  {/if}
+
+  {#if item.serviceBannerImage4}
+    <div class="service-banner service-banner-4">
+      <img src={item.serviceBannerImage4} alt={item.title} loading="lazy" />
+    </div>
+  {/if}
+
+  {#if item.serviceBannerImage5}
+    <div class="service-banner service-banner-5">
+      <img src={item.serviceBannerImage5} alt={item.title} loading="lazy" />
+    </div>
+  {/if}
+
+  {#if item.bannerImage && item.bannerTitle}
+    <div class="service-qa-banner">
+      <h2 class="service-qa-banner-title">
+        {item.bannerTitle}
+      </h2>
+
+      {#if item["longer-description"]}
+        <p class="service-qa-banner-description">
+          {item["longer-description"]}
+        </p>
+      {/if}
+
+      <img
+        src={item.bannerImage}
+        alt={item.bannerTitle}
+        loading="lazy"
+      />
+    </div>
+  {/if}
 
   <!-- Q&A section underneath, centered -->
   {#if item.qa && item.qa.length > 0}
     <section class="section service-qa">
       <div class="container">
         <div class="service-qa-inner">
-          <h3>Frequently Asked Questions</h3>
+          <h3>{labels.faq}</h3>
 
           <div class="qa-list">
             {#each item.qa as qa, index}
@@ -357,7 +381,7 @@
 
   .service-tagline {
     font-size: 1rem;
-       line-height: 1.7;
+    line-height: 1.7;
     opacity: 0.8;
     margin-bottom: 1rem;
   }
@@ -369,16 +393,15 @@
   }
 
   .service-qa-banner-description {
-  font-size: 0.98rem;
-  line-height: 1.7;
-  margin: 0 auto 1.5rem;  /* center with bottom spacing */
-  max-width: 840px;        /* constrain width for readability */
-  padding: 0 1.25rem;      /* small side padding on mobile */
-  display: block;           /* make sure it shows */
-  text-align: center;       /* optional: center text horizontally */
-  opacity: 0.85;            /* subtle styling, optional */
-}
-
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin: 0 auto 1.5rem;
+    max-width: 840px;
+    padding: 0 1.25rem;
+    display: block;
+    text-align: center;
+    opacity: 0.85;
+  }
 
   .service-detail-actions {
     display: flex;
@@ -387,7 +410,6 @@
     margin-top: 2rem;
   }
 
-  /* Q&A block underneath, centered */
   .service-qa {
     padding: 0 0 4rem;
   }
@@ -468,70 +490,46 @@
   }
 
   .service-qa-banner {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  text-align: center;
-  margin-bottom: 3.5rem;
-}
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
 
-.service-qa-banner-title {
-  font-size: clamp(.8rem, 3.5vw, 3rem);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  margin-bottom: 1.5rem;
-  padding: 0 1.5rem;
-}
+  .service-qa-banner-title {
+    font-size: clamp(.8rem, 3.5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+  }
 
-.service-qa-banner img {
-  width: 100%;           /* full width on small screens */
-  max-width: 1800px;     /* limit width on large screens */
-  height: auto;          /* maintain aspect ratio */
-  display: block;
-  margin: 0 auto;        /* center the image if narrower than container */
-}
+  .service-qa-banner img {
+    width: 100%;
+    max-width: 1800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
-.service-banner {
-  width: 100%;
-  margin: 3rem auto;
-}
+  .service-banner {
+    width: 100%;
+    margin: 3rem auto;
+  }
 
-.service-banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .service-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-
-/* Individual widths */
-.service-banner-1 img {
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-.service-banner-2 img {
-   max-width: 900px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-.service-banner-3 img {
+  .service-banner-1 img,
+  .service-banner-2 img,
+  .service-banner-3 img,
+  .service-banner-4 img,
+  .service-banner-5 img {
     max-width: 900px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-.service-banner-4 img {
-    max-width: 900px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-.service-banner-5 img {
-    max-width: 900px;
-  margin: 0 auto;
-  border-radius: 20px;
-}
-
-
+    margin: 0 auto;
+    border-radius: 20px;
+  }
 </style>

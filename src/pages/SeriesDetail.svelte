@@ -1,11 +1,36 @@
 <script>
-  import series from "../data/series.json";
+  import { loadCollection } from "../lib/content";
   import TitleDetail from "../components/TitleDetail.svelte";
-  import { navigate } from "../router";
+  import { navigate, currentLocale } from "../router";
+  import { setSeo } from "../lib/seo";
 
   export let slug;
 
-  const item = series.find((s) => s.slug === slug);
+  $: series = loadCollection("series", $currentLocale);
+  $: item = series.find((s) => s.slug === slug);
+
+  // Locale-aware UI labels
+  $: labels =
+    $currentLocale === "ja"
+      ? {
+          notFound: "シリーズが見つかりません",
+          back: "シリーズ一覧へ戻る",
+          trailer: "予告編"
+        }
+      : {
+          notFound: "Series not found",
+          back: "Back to Series",
+          trailer: "Trailer"
+        };
+
+  // Dynamic SEO per series
+  $: if (item) {
+    setSeo({
+      title: `${item.title} | Series | San Roku Ku`,
+      description: item.logline || item.description || "",
+      ogImage: item.poster || ""
+    });
+  }
 
   // Convert YouTube URL to embed
   function toEmbed(url) {
@@ -28,9 +53,9 @@
 
 {#if !item}
   <section class="container" style="padding: 4rem 0;">
-    <h1>Series not found</h1>
+    <h1>{labels.notFound}</h1>
     <button class="btn-primary" on:click={() => navigate("/series")}>
-      Back to Series
+      {labels.back}
     </button>
   </section>
 {:else}
@@ -38,7 +63,7 @@
 
   {#if item.trailer}
     <section class="series-trailer">
-      <h2>Trailer</h2>
+      <h2>{labels.trailer}</h2>
 
       <div class="trailer-wrapper">
         <iframe

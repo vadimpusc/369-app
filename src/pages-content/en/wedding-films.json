@@ -1,0 +1,78 @@
+{
+  "seo": {
+    "title": "Wedding Films | San Roku Ku",
+    "description": "Cinematic wedding films in the UK and Japan. Director-led, intimate storytelling with clear packages.",
+    "ogImage": ""
+  },
+  "hero": {
+    "kicker": "Wedding Films",
+    "title": "Cinematic. Intimate. Timeless.",
+    "subtitle": "A boutique, director-led approach. One filmmaker, one camera, focused storytelling. Choose your location to view pricing and availability.",
+    "toggleUk": "United Kingdom",
+    "toggleJp": "Japan",
+    "note": "Limited bookings each year to maintain creative focus."
+  },
+  "common": {
+    "from": "From",
+    "checkAvailability": "Check Availability",
+    "addonsTitle": "Add-ons",
+    "expectTitle": "What to expect"
+  },
+  "packages": {
+    "essential": {
+      "name": "Essential",
+      "ukPrice": "£1,450",
+      "jpPrice": "¥220,000",
+      "bullets": [
+        "Up to 8 hours coverage",
+        "One filmmaker, one camera",
+        "Cinematic highlight film, 4 to 6 minutes",
+        "Professionally recorded vows and key moments",
+        "Online delivery"
+      ]
+    },
+    "signature": {
+      "name": "Signature",
+      "badge": "Most Popular",
+      "ukPrice": "£1,950",
+      "jpPrice": "¥290,000",
+      "bullets": [
+        "Up to 10 hours coverage",
+        "One filmmaker, one camera",
+        "Cinematic highlight film, 6 to 8 minutes",
+        "Full ceremony edit",
+        "Full speeches edit",
+        "Online delivery"
+      ]
+    },
+    "directors": {
+      "name": "Director’s Cut",
+      "ukPrice": "£2,600",
+      "jpPrice": "¥380,000",
+      "bullets": [
+        "Full day coverage",
+        "One filmmaker, one camera",
+        "Cinematic film, 8 to 12 minutes",
+        "Ceremony and speeches included",
+        "Creative consultation before the wedding",
+        "Priority editing",
+        "Online delivery"
+      ]
+    }
+  },
+  "addons": [
+    "Additional hours",
+    "Second filmmaker (on request)",
+    "24-hour teaser edit",
+    "Pre-wedding film",
+    "RAW footage (archival delivery)",
+    "Destination and travel coverage"
+  ],
+  "expect": [
+    "Calm, unobtrusive filming style",
+    "Clean audio priorities (vows and speeches)",
+    "Natural colour, cinematic contrast, timeless edit",
+    "Clear communication and a simple process"
+  ],
+  "finalNote": "Venue restrictions can affect filming access, we’ll confirm this with you in advance."
+}

@@ -1,49 +1,49 @@
+<script>
+  import { currentLocale } from "../router";
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  $: page =
+    loadPageContent("submit-your-film", $currentLocale) ||
+    loadPageContent("submit-your-film", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
+</script>
+
 <section class="container submit-page">
   <header class="submit-header">
-    <h1>Distribute Your Films, Series, or Documentaries</h1>
-<p>
-  San Roku Ku helps independent filmmakers bring their stories to audiences worldwide. 
-  Beyond traditional distribution, we also accept films for our YouTube channel, a fast-growing platform where you can build an audience, increase visibility, and monetize your work, all while keeping full creative control.
-</p>
-
+    <h1>{page?.hero?.title ?? ""}</h1>
+    <p>{page?.hero?.intro ?? ""}</p>
   </header>
 
   <section class="criteria">
     <div class="card">
-      <h2>What We Are Looking For</h2>
- <ul>
-  <li>Feature films of 80 minutes or longer</li>
-  <li>Works in English or Japanese</li>
-  <li>Documentaries of 40 minutes or longer</li>
-  <li>TV or web series with episodes of 20 minutes or longer</li>
-</ul>
-
+      <h2>{page?.cards?.lookingForTitle ?? ""}</h2>
+      <ul>
+        {#each page?.cards?.lookingFor ?? [] as item}
+          <li>{item}</li>
+        {/each}
+      </ul>
     </div>
+
     <div class="card">
-      <h2>We Are Not Able To Accept</h2>
-  <ul>
-  <li>Short films</li>
-  <li>Works in languages other than English or Japanese</li>
-  <li>Films already widely released or sold in major territories</li>
-  <li>Screenplays or project pitches without a completed film</li>
-</ul>
-
+      <h2>{page?.cards?.notAcceptTitle ?? ""}</h2>
+      <ul>
+        {#each page?.cards?.notAccept ?? [] as item}
+          <li>{item}</li>
+        {/each}
+      </ul>
     </div>
-    
   </section>
- 
-<p class="note">
-  If you do not hear from us within 14 business days, please understand that your film was not selected at this time. Thank you for your submission.
-</p>
 
-
+  <p class="note">{page?.note ?? ""}</p>
 </section>
 
 <div class="submit-btn-container">
-  <a href="https://tally.so/r/81NdJ5" target="_blank" class="srk-btn">Submit for Distribution</a>
+  <a href={page?.cta?.href ?? "https://tally.so/r/81NdJ5"} target="_blank" class="srk-btn" rel="noopener noreferrer">
+    {page?.cta?.text ?? ""}
+  </a>
 </div>
-
-
 
 <style>
 .submit-btn-container {
@@ -70,7 +70,6 @@
   box-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
   transform: translateY(-1px);
 }
-
 
   .submit-page {
     padding: 3.5rem 0 4rem;

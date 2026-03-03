@@ -1,14 +1,23 @@
 <script>
-  import jobs from "../data/jobs.json";
-  import { navigate } from "../router";
+  import { navigate, currentLocale } from "../router";
+  import { loadCollection } from "../lib/content";
+
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  $: jobs = loadCollection("jobs", $currentLocale);
+
+  $: page =
+    loadPageContent("jobs", $currentLocale) ||
+    loadPageContent("jobs", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
 </script>
 
 <section class="container jobs-page">
   <header class="jobs-header">
-    <h1>Work With Us</h1>
-    <p>
-      Freelance and project based roles with San Roku Ku and our slate of independent productions.
-    </p>
+    <h1>{page?.hero?.title ?? ""}</h1>
+    <p>{page?.hero?.intro ?? ""}</p>
   </header>
 
   <div class="jobs-list">
@@ -17,7 +26,7 @@
         <h2>{job.title}</h2>
         <p class="job-meta">{job.type} · {job.location}</p>
         <p class="job-intro">{job.shortIntro}</p>
-        <button class="job-btn">More Details</button>
+        <button class="job-btn">{page?.labels?.moreDetails ?? "More Details"}</button>
       </article>
     {/each}
   </div>
@@ -28,24 +37,24 @@
     padding: 3.5rem 0 4rem;
   }
   .jobs-header {
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
 
-.jobs-header h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
+  .jobs-header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
 
-.jobs-header p {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: var(--text-muted);
-  margin: 0 auto;
-  max-width: 750px;
-}
+  .jobs-header p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 auto;
+    max-width: 750px;
+  }
 
   .jobs-list {
     margin-top: 2.4rem;

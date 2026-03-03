@@ -1,8 +1,24 @@
 <script>
-  import films from "../data/films.json";
-  import { navigate } from "../router";
+  import { onDestroy } from "svelte";
+  import { loadCollection } from "../lib/content";
+  import { t } from "../lib/i18n";
+  import { navigate, currentLocale } from "../router";
 
-  const slides = films.slice(0, 4).map((film) => ({
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  // Films are already locale-driven
+  $: films = loadCollection("films", $currentLocale);
+
+  // Page UI copy + SEO
+  $: page =
+    loadPageContent("home", $currentLocale) ||
+    loadPageContent("home", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
+
+  // Slides derived from films
+  $: slides = films.slice(0, 4).map((film) => ({
     title: film.title,
     logline: film.logline,
     image: film.heroImage || film.poster,
@@ -10,9 +26,10 @@
   }));
 
   let index = 0;
-  const total = slides.length;
+  $: total = slides.length;
 
   function show(i) {
+    if (total <= 0) return;
     index = (i + total) % total;
   }
 
@@ -38,29 +55,28 @@
     clearInterval(interval);
   }
 
-  startAutoplay();
+  // Restart autoplay whenever slide count changes (locale switch changes films)
+  $: if (total) {
+    index = 0;
+    startAutoplay();
+  }
+
+  onDestroy(() => clearInterval(interval));
 </script>
 
-<section
-  class="hero"
-  on:mouseenter={stopAutoplay}
-  on:mouseleave={startAutoplay}
->
+<section class="hero" on:mouseenter={stopAutoplay} on:mouseleave={startAutoplay}>
   {#each slides as slide, i}
     <div class:active={i === index} class="hero-slide">
       <img src={slide.image} alt={slide.title} loading="lazy" />
       <div class="hero-overlay">
         <div class="container hero-content">
           <div>
-            <p class="eyebrow">Feature Film</p>
+            <p class="eyebrow">{page?.hero?.eyebrow ?? "Feature Film"}</p>
             <h1>{slide.title}</h1>
             <p class="logline">{slide.logline}</p>
             <div class="hero-actions">
-              <button
-                class="btn-primary"
-                on:click={() => navigate(`/films/${slide.slug}`)}
-              >
-                Learn More
+              <button class="btn-primary" on:click={() => navigate(`/films/${slide.slug}`)}>
+                {page?.hero?.learnMore ?? "Learn More"}
               </button>
             </div>
           </div>
@@ -70,54 +86,44 @@
   {/each}
 
   {#if total > 1}
-    <button class="hero-arrow left" on:click={prev} aria-label="Previous">
-      ‹
-    </button>
-    <button class="hero-arrow right" on:click={next} aria-label="Next">
-      ›
-    </button>
+    <button class="hero-arrow left" on:click={prev} aria-label="Previous">‹</button>
+    <button class="hero-arrow right" on:click={next} aria-label="Next">›</button>
 
     <div class="hero-dots">
-  {#each slides as _, i}
-  <button
-    class:active={i === index}
-    on:click={() => show(i)}
-    aria-label={`Go to slide ${i + 1}`}
-  ></button>
-{/each}
+      {#each slides as _, i}
+        <button
+          class:active={i === index}
+          on:click={() => show(i)}
+          aria-label={`Go to slide ${i + 1}`}
+        ></button>
+      {/each}
     </div>
   {/if}
 </section>
 
 <section class="container section centered-section">
+  <div class="fade-in-image">
+    <img
+      src="assets/logos/369.png"
+      alt={page?.partner?.logoAlt ?? "San Roku Ku"}
+    />
+  </div>
 
-<div class="fade-in-image">
-  <img src="assets/logos/369.png" alt="San Roku Ku - Film Production Company in United States and Japan" />
-</div>
-
-
-<h2 class="section-title">Your Production Partner</h2>
-<p class="section-subtitle-main">
-San Roku Ku is a full-service production and post-production partner bridging Japan and the United States. We create original films and support international productions working in both countries, guiding teams through local systems, crews, and cultural differences with clarity and efficiency. Our mission is to make cross-border filmmaking practical, transparent, and stress-free.
-</p>
+  <h2 class="section-title">{t("home.productionPartnerTitle")}</h2>
+  <p class="section-subtitle-main">{t("home.productionPartnerText")}</p>
 
   <button class="btn-primary" on:click={() => navigate("/services")}>
-    Our Services
+    {t("nav.services")}
   </button>
 </section>
 
 <section class="container section">
-  <h2 class="section-title">Latest Releases</h2>
-  <p class="section-subtitle">
-   Discover our newest releases, from our slate of independent and studio productions.
-  </p>
+  <h2 class="section-title">{t("home.latestReleasesTitle")}</h2>
+  <p class="section-subtitle">{t("home.latestReleasesText")}</p>
 
   <div class="film-strip">
     {#each films.slice(0, 6) as film}
-      <div
-        class="film-strip-item"
-        on:click={() => navigate(`/films/${film.slug}`)}
-      >
+      <div class="film-strip-item" on:click={() => navigate(`/films/${film.slug}`)}>
         <div class="poster-frame">
           <img src={film.poster} alt={film.title} loading="lazy" />
         </div>
@@ -128,6 +134,7 @@ San Roku Ku is a full-service production and post-production partner bridging Ja
 </section>
 
 <style>
+  /* keep your existing CSS exactly as-is */
   .hero {
     position: relative;
     height: min(90vh, 900px);
@@ -236,7 +243,6 @@ San Roku Ku is a full-service production and post-production partner bridging Ja
     font-size: 1.6rem;
     margin-bottom: 0.3rem;
     text-align: center;
-    
   }
   .section-subtitle {
     margin-top: 0;
@@ -245,14 +251,14 @@ San Roku Ku is a full-service production and post-production partner bridging Ja
     text-align: center;
     line-height: 1.5;
   }
-    .section-subtitle-main {
+  .section-subtitle-main {
     margin-top: 0;
     color: var(--text);
     -width: 560px;
     text-align: center;
     line-height: 1.5;
-      margin: 0 auto;
-  max-width: 750px;
+    margin: 0 auto;
+    max-width: 750px;
   }
 
   .film-strip {
@@ -270,87 +276,70 @@ San Roku Ku is a full-service production and post-production partner bridging Ja
     font-weight: 500;
   }
 
-
-.centered-section {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.4rem;
-  margin: 0 auto;
-  max-width: 900px;
-  padding: 60px 20px;
-
-  /* elegant subtle glow around the section */
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 255, 255, 0.06) 0%,
-    rgba(0, 0, 0, 0) 70%
-  );
-
-  border-radius: 20px;
-}
-
-.centered-section .section-title {
-  font-size: 2.4rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #ffffff;
-  text-shadow: 0 0 15px rgba(80, 150, 255, 0.25);
-  margin: 0 auto;
-}
-
-.centered-section .section-subtitle {
-  margin: 0 auto;
-  max-width: 750px;
-  line-height: 1.65;
-  font-size: 1.1rem;
-  color: #c9d2df;
-
-  /* soft ambient glow under text */
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-}
-
-/* glow button already looks good, we just enhance it lightly */
-.centered-section .btn-primary {
-  margin-top: 1rem;
-  padding: 0.85rem 2.4rem;
-  font-size: 1.05rem;
-  border-radius: 50px;
-
-  /* slight outer ring to make it look premium */
-  box-shadow:
-    0 0 30px rgba(80, 150, 255, 0.5),
-    0 0 8px rgba(80, 150, 255, 0.4) inset;
-}
-
-.fade-in-image {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-}
-
-.fade-in-image img {
-  max-width: 250px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;    
-  margin: 20px;
-  
-  /* Start invisible */
-  opacity: 0;
-
-  /* Fade-in animation */
-  animation: fadeIn 4.2s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
+  .centered-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 60px 20px;
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.06) 0%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    border-radius: 20px;
   }
-}
 
+  .centered-section .section-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(80, 150, 255, 0.25);
+    margin: 0 auto;
+  }
 
+  .centered-section .section-subtitle {
+    margin: 0 auto;
+    max-width: 750px;
+    line-height: 1.65;
+    font-size: 1.1rem;
+    color: #c9d2df;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .centered-section .btn-primary {
+    margin-top: 1rem;
+    padding: 0.85rem 2.4rem;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    box-shadow:
+      0 0 30px rgba(80, 150, 255, 0.5),
+      0 0 8px rgba(80, 150, 255, 0.4) inset;
+  }
+
+  .fade-in-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fade-in-image img {
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+    opacity: 0;
+    animation: fadeIn 4.2s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
 </style>
-
-

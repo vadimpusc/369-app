@@ -1,94 +1,105 @@
-<section class="container contact-page">
-  <header class="contact-header">
-    <h1>Schedule a 15-Minute Call to Discuss Your Film Needs</h1>
-    <p>
-    Every project is unique, and we take the time to understand your vision before building the right production package. Schedule a quick 15-minute consultation to discuss your ideas, explore options, and see how we can bring your story to life.
-    </p>
+<script>
+  import { onMount } from "svelte";
+  import { currentLocale } from "../router";
 
-  </header>
-<!-- Cal inline embed code begins -->
-<div id="my-cal-inline-369-15-minute-consultation" style="width:100%;height:100%;overflow:hidden;"></div>
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
 
-<style>
-  /* Make both the container and embedded iframe transparent */
-  #my-cal-inline-369-15-minute-consultation {
-    background: transparent !important;
+  const CAL_SRC = "https://app.cal.com/embed/embed.js";
+  const NS = "369-15-minute-consultation";
+
+  $: page =
+    loadPageContent("strategy", $currentLocale) ||
+    loadPageContent("strategy", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
+
+  function loadScriptOnce(src, id) {
+    return new Promise((resolve, reject) => {
+      const existing = document.getElementById(id);
+      if (existing) return resolve(true);
+
+      const s = document.createElement("script");
+      s.src = src;
+      s.async = true;
+      s.id = id;
+      s.onload = () => resolve(true);
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
   }
 
-  #my-cal-inline-369-15-minute-consultation iframe {
-    background: transparent !important;
-    color-scheme: dark;
+  function initCalInline() {
+    if (!window.Cal) return;
+
+    window.Cal("init", NS, { origin: "https://app.cal.com" });
+
+    window.Cal.ns[NS]("inline", {
+      elementOrSelector: "#my-cal-inline-369-15-minute-consultation",
+      config: { layout: "month_view", theme: "dark" },
+      calLink: "hankorion/369-15-minute-consultation"
+    });
+
+    window.Cal.ns[NS]("ui", {
+      theme: "dark",
+      hideEventTypeDetails: true,
+      layout: "month_view"
+    });
   }
-</style>
 
-<script type="text/javascript">
-  (function (C, A, L) {
-    let p = function (a, ar) { a.q.push(ar); };
-    let d = C.document;
-    C.Cal = C.Cal || function () {
-      let cal = C.Cal;
-      let ar = arguments;
-      if (!cal.loaded) {
-        cal.ns = {};
-        cal.q = cal.q || [];
-        d.head.appendChild(d.createElement("script")).src = A;
-        cal.loaded = true;
-      }
-      if (ar[0] === L) {
-        const api = function () { p(api, arguments); };
-        const namespace = ar[1];
-        api.q = api.q || [];
-        if (typeof namespace === "string") {
-          cal.ns[namespace] = cal.ns[namespace] || api;
-          p(cal.ns[namespace], ar);
-          p(cal, ["initNamespace", namespace]);
-        } else p(cal, ar);
-        return;
-      }
-      p(cal, ar);
-    };
-  })(window, "https://app.cal.com/embed/embed.js", "init");
-
-  Cal("init", "369-15-minute-consultation", { origin: "https://app.cal.com" });
-
-  Cal.ns["369-15-minute-consultation"]("inline", {
-    elementOrSelector: "#my-cal-inline-369-15-minute-consultation",
-    config: { "layout": "month_view", "theme": "dark" },
-    calLink: "hankorion/369-15-minute-consultation",
-  });
-
-  Cal.ns["369-15-minute-consultation"]("ui", {
-    "theme": "dark",
-    "hideEventTypeDetails": true,
-    "layout": "month_view"
+  onMount(async () => {
+    try {
+      await loadScriptOnce(CAL_SRC, "cal-embed-js");
+      initCalInline();
+    } catch (e) {
+      console.error("Failed to load Cal embed:", e);
+    }
   });
 </script>
-<!-- Cal inline embed code ends -->
+
+<section class="container contact-page">
+  <header class="contact-header">
+    <h1>{page?.hero?.title ?? ""}</h1>
+    <p>{page?.hero?.intro ?? ""}</p>
+  </header>
+
+  <!-- Cal inline embed -->
+  <div id="my-cal-inline-369-15-minute-consultation" style="width:100%;height:100%;overflow:hidden;"></div>
+
+  <style>
+    #my-cal-inline-369-15-minute-consultation {
+      background: transparent !important;
+    }
+    #my-cal-inline-369-15-minute-consultation iframe {
+      background: transparent !important;
+      color-scheme: dark;
+    }
+  </style>
 </section>
 
 <style>
   .contact-page {
     padding: 3.5rem 0 4rem;
   }
-.contact-header {
-  text-align: center;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 60px 20px;
-}
+  .contact-header {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
 
-.contact-header h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
-}
+  .contact-header h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
 
-.contact-header p {
-  font-size: 1.1rem;
-  line-height: 1.65;
-  color: var(--text-muted);
-  margin: 0 auto;
-  max-width: 750px;
-}
+  .contact-header p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin: 0 auto;
+    max-width: 750px;
+  }
 
   .contact-form {
     margin-top: 2.2rem;

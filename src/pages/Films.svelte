@@ -1,6 +1,17 @@
 <script>
-  import films from "../data/films.json";
-  import { navigate } from "../router";
+  import { navigate, currentLocale } from "../router";
+  import { loadCollection } from "../lib/content";
+
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
+  $: films = loadCollection("films", $currentLocale);
+
+  $: page =
+    loadPageContent("films", $currentLocale) ||
+    loadPageContent("films", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
 
   function openFilm(slug) {
     navigate(`/films/${slug}`);
@@ -95,12 +106,12 @@
     transition: transform 180ms ease, box-shadow 220ms ease;
   }
 
-@media (max-width: 768px) {
-  .title-card {
-    width: 90%;
-    margin: 0 auto;
+  @media (max-width: 768px) {
+    .title-card {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
-}
 
   .title-card:hover {
     transform: translateY(-4px);

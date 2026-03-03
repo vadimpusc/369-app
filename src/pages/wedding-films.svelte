@@ -1,4 +1,8 @@
 <script>
+  import { currentLocale } from "../router";
+  import { loadPageContent } from "../lib/pageContent";
+  import { setSeo } from "../lib/seo";
+
   let loc = "uk"; // "uk" | "jp"
 
   const emailBase =
@@ -21,16 +25,23 @@
 
   const emailJPDirectors =
     "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
+
+  $: page =
+    loadPageContent("wedding-films", $currentLocale) ||
+    loadPageContent("wedding-films", "en");
+
+  $: if (page?.seo) setSeo(page.seo);
+
+  $: hero = page?.hero || {};
+  $: common = page?.common || {};
+  $: pkgs = page?.packages || {};
 </script>
 
 <section class="container wedding-page">
   <header class="wedding-header">
-    <p class="wedding-kicker">Wedding Films</p>
-    <h1>Cinematic. Intimate. Timeless.</h1>
-    <p class="wedding-subtitle">
-      A boutique, director-led approach. One filmmaker, one camera, focused storytelling.
-      Choose your location to view pricing and availability.
-    </p>
+    <p class="wedding-kicker">{hero.kicker ?? ""}</p>
+    <h1>{hero.title ?? ""}</h1>
+    <p class="wedding-subtitle">{hero.subtitle ?? ""}</p>
 
     <div class="wedding-toggle" role="tablist" aria-label="Location toggle">
       <button
@@ -40,7 +51,7 @@
         aria-selected={loc === "uk"}
         on:click={() => (loc = "uk")}
       >
-        United Kingdom
+        {hero.toggleUk ?? "United Kingdom"}
       </button>
 
       <button
@@ -50,191 +61,192 @@
         aria-selected={loc === "jp"}
         on:click={() => (loc = "jp")}
       >
-        Japan
+        {hero.toggleJp ?? "Japan"}
       </button>
     </div>
 
     <div class="wedding-cta-row">
-      <p class="wedding-cta-note">Limited bookings each year to maintain creative focus.</p>
+      <p class="wedding-cta-note">{hero.note ?? ""}</p>
     </div>
   </header>
 
   {#if loc === "uk"}
-    <!-- LOCATION: UK -->
     <section class="wedding-loc is-visible" role="tabpanel" aria-label="United Kingdom pricing">
       <div class="wedding-grid">
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Essential</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">£1,450</span></p>
+            <h2 class="pkg-name">{pkgs?.essential?.name ?? "Essential"}</h2>
+            <p class="pkg-price">
+              <span class="from">{common.from ?? "From"}</span>
+              <span class="money">{pkgs?.essential?.ukPrice ?? "£1,450"}</span>
+            </p>
           </div>
           <ul class="pkg-list">
-            <li>Up to 8 hours coverage</li>
-            <li>One filmmaker, one camera</li>
-            <li>Cinematic highlight film, 4 to 6 minutes</li>
-            <li>Professionally recorded vows and key moments</li>
-            <li>Online delivery</li>
+            {#each pkgs?.essential?.bullets ?? [] as b}
+              <li>{b}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKEssential}>Check Availability</a>
+            <a class="srk-btn srk-btn-ghost" href={emailUKEssential}>
+              {common.checkAvailability ?? "Check Availability"}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-badge">{pkgs?.signature?.badge ?? "Most Popular"}</div>
           <div class="pkg-top">
-            <h2 class="pkg-name">Signature</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">£1,950</span></p>
+            <h2 class="pkg-name">{pkgs?.signature?.name ?? "Signature"}</h2>
+            <p class="pkg-price">
+              <span class="from">{common.from ?? "From"}</span>
+              <span class="money">{pkgs?.signature?.ukPrice ?? "£1,950"}</span>
+            </p>
           </div>
           <ul class="pkg-list">
-            <li>Up to 10 hours coverage</li>
-            <li>One filmmaker, one camera</li>
-            <li>Cinematic highlight film, 6 to 8 minutes</li>
-            <li>Full ceremony edit</li>
-            <li>Full speeches edit</li>
-            <li>Online delivery</li>
+            {#each pkgs?.signature?.bullets ?? [] as b}
+              <li>{b}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailUKSignature}>Check Availability</a>
+            <a class="srk-btn srk-btn-primary" href={emailUKSignature}>
+              {common.checkAvailability ?? "Check Availability"}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Director’s Cut</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">£2,600</span></p>
+            <h2 class="pkg-name">{pkgs?.directors?.name ?? "Director’s Cut"}</h2>
+            <p class="pkg-price">
+              <span class="from">{common.from ?? "From"}</span>
+              <span class="money">{pkgs?.directors?.ukPrice ?? "£2,600"}</span>
+            </p>
           </div>
           <ul class="pkg-list">
-            <li>Full day coverage</li>
-            <li>One filmmaker, one camera</li>
-            <li>Cinematic film, 8 to 12 minutes</li>
-            <li>Ceremony and speeches included</li>
-            <li>Creative consultation before the wedding</li>
-            <li>Priority editing</li>
-            <li>Online delivery</li>
+            {#each pkgs?.directors?.bullets ?? [] as b}
+              <li>{b}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKDirectors}>Check Availability</a>
+            <a class="srk-btn srk-btn-ghost" href={emailUKDirectors}>
+              {common.checkAvailability ?? "Check Availability"}
+            </a>
           </div>
         </article>
       </div>
 
       <section class="wedding-addons">
         <div class="addons-card">
-          <h3>Add-ons</h3>
+          <h3>{common.addonsTitle ?? "Add-ons"}</h3>
           <ul>
-            <li>Additional hours</li>
-            <li>Second filmmaker (on request)</li>
-            <li>24-hour teaser edit</li>
-            <li>Pre-wedding film</li>
-            <li>RAW footage (archival delivery)</li>
-            <li>Destination and travel coverage</li>
+            {#each page?.addons ?? [] as a}
+              <li>{a}</li>
+            {/each}
           </ul>
         </div>
 
         <div class="addons-card">
-          <h3>What to expect</h3>
+          <h3>{common.expectTitle ?? "What to expect"}</h3>
           <ul>
-            <li>Calm, unobtrusive filming style</li>
-            <li>Clean audio priorities (vows and speeches)</li>
-            <li>Natural colour, cinematic contrast, timeless edit</li>
-            <li>Clear communication and a simple process</li>
+            {#each page?.expect ?? [] as e}
+              <li>{e}</li>
+            {/each}
           </ul>
         </div>
       </section>
     </section>
   {:else}
-    <!-- LOCATION: JP -->
     <section class="wedding-loc is-visible" role="tabpanel" aria-label="Japan pricing">
       <div class="wedding-grid">
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Essential</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">¥220,000</span></p>
+            <h2 class="pkg-name">{pkgs?.essential?.name ?? "Essential"}</h2>
+            <p class="pkg-price">
+              <span class="from">{common.from ?? "From"}</span>
+              <span class="money">{pkgs?.essential?.jpPrice ?? "¥220,000"}</span>
+            </p>
           </div>
           <ul class="pkg-list">
-            <li>Up to 8 hours coverage</li>
-            <li>One filmmaker, one camera</li>
-            <li>Cinematic highlight film, 4 to 6 minutes</li>
-            <li>Professionally recorded vows and key moments</li>
-            <li>Online delivery</li>
+            {#each pkgs?.essential?.bullets ?? [] as b}
+              <li>{b}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPEssential}>Check Availability</a>
+            <a class="srk-btn srk-btn-ghost" href={emailJPEssential}>
+              {common.checkAvailability ?? "Check Availability"}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">Most Popular</div>
+          <div class="pkg-badge">{pkgs?.signature?.badge ?? "Most Popular"}</div>
           <div class="pkg-top">
-            <h2 class="pkg-name">Signature</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">¥290,000</span></p>
+            <h2 class="pkg-name">{pkgs?.signature?.name ?? "Signature"}</h2>
+            <p class="pkg-price">
+              <span class="from">{common.from ?? "From"}</span>
+              <span class="money">{pkgs?.signature?.jpPrice ?? "¥290,000"}</span>
+            </p>
           </div>
           <ul class="pkg-list">
-            <li>Up to 10 hours coverage</li>
-            <li>One filmmaker, one camera</li>
-            <li>Cinematic highlight film, 6 to 8 minutes</li>
-            <li>Full ceremony edit</li>
-            <li>Full speeches edit</li>
-            <li>Online delivery</li>
+            {#each pkgs?.signature?.bullets ?? [] as b}
+              <li>{b}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailJPSignature}>Check Availability</a>
+            <a class="srk-btn srk-btn-primary" href={emailJPSignature}>
+              {common.checkAvailability ?? "Check Availability"}
+            </a>
           </div>
         </article>
 
         <article class="pkg-card">
           <div class="pkg-top">
-            <h2 class="pkg-name">Director’s Cut</h2>
-            <p class="pkg-price"><span class="from">From</span> <span class="money">¥380,000</span></p>
+            <h2 class="pkg-name">{pkgs?.directors?.name ?? "Director’s Cut"}</h2>
+            <p class="pkg-price">
+              <span class="from">{common.from ?? "From"}</span>
+              <span class="money">{pkgs?.directors?.jpPrice ?? "¥380,000"}</span>
+            </p>
           </div>
           <ul class="pkg-list">
-            <li>Full day coverage</li>
-            <li>One filmmaker, one camera</li>
-            <li>Cinematic film, 8 to 12 minutes</li>
-            <li>Ceremony and speeches included</li>
-            <li>Creative consultation before the wedding</li>
-            <li>Priority editing</li>
-            <li>Online delivery</li>
+            {#each pkgs?.directors?.bullets ?? [] as b}
+              <li>{b}</li>
+            {/each}
           </ul>
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPDirectors}>Check Availability</a>
+            <a class="srk-btn srk-btn-ghost" href={emailJPDirectors}>
+              {common.checkAvailability ?? "Check Availability"}
+            </a>
           </div>
         </article>
       </div>
 
       <section class="wedding-addons">
         <div class="addons-card">
-          <h3>Add-ons</h3>
+          <h3>{common.addonsTitle ?? "Add-ons"}</h3>
           <ul>
-            <li>Additional hours</li>
-            <li>Second filmmaker (on request)</li>
-            <li>24-hour teaser edit</li>
-            <li>Pre-wedding film</li>
-            <li>RAW footage (archival delivery)</li>
-            <li>Destination and travel coverage</li>
+            {#each page?.addons ?? [] as a}
+              <li>{a}</li>
+            {/each}
           </ul>
         </div>
 
         <div class="addons-card">
-          <h3>What to expect</h3>
+          <h3>{common.expectTitle ?? "What to expect"}</h3>
           <ul>
-            <li>Calm, unobtrusive filming style</li>
-            <li>Clean audio priorities (vows and speeches)</li>
-            <li>Natural colour, cinematic contrast, timeless edit</li>
-            <li>Clear communication and a simple process</li>
+            {#each page?.expect ?? [] as e}
+              <li>{e}</li>
+            {/each}
           </ul>
         </div>
       </section>
     </section>
   {/if}
 
-  <p class="wedding-note">
-    Venue restrictions can affect filming access, we’ll confirm this with you in advance.
-  </p>
+  <p class="wedding-note">{page?.finalNote ?? ""}</p>
 </section>
 
 <style>
+  /* your CSS stays exactly the same */
   .wedding-page {
     padding: 3.8rem 0 4.2rem;
   }
@@ -409,7 +421,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.2rem;
-    
   }
 
   .addons-card {
@@ -418,7 +429,6 @@
     border-radius: var(--radius-xl);
     padding: 1.4rem 1.6rem;
     box-shadow: var(--shadow-soft);
-    
   }
 
   .addons-card h3 {
@@ -426,7 +436,6 @@
     font-size: 1.15rem;
     text-align: left;
     text-align: center;
-    
   }
 
   .addons-card ul {
@@ -470,13 +479,11 @@
   .srk-btn-primary {
     background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
     border: 1px solid rgba(255, 255, 255, 0.18);
-     margin: 0 auto;
+    margin: 0 auto;
   }
 
   .srk-btn-ghost {
     background: rgba(255, 255, 255, 0.05);
     margin: 0 auto;
   }
-
-
 </style>

@@ -1,14 +1,39 @@
 <script>
-  import films from "../data/films.json";
+  import { loadCollection } from "../lib/content";
   import TitleDetail from "../components/TitleDetail.svelte";
-  import { navigate } from "../router";
+  import { navigate, currentLocale } from "../router";
+  import { setSeo } from "../lib/seo";
 
   export let slug;
 
-  const item = films.find((f) => f.slug === slug);
+  $: films = loadCollection("films", $currentLocale);
+  $: item = films.find((f) => f.slug === slug);
 
   function goBack() {
     navigate("/films");
+  }
+
+  // Locale-aware UI labels
+  $: labels =
+    $currentLocale === "ja"
+      ? {
+          notFound: "作品が見つかりません",
+          back: "映画一覧へ戻る",
+          trailer: "予告編"
+        }
+      : {
+          notFound: "Film not found",
+          back: "Back to Films",
+          trailer: "Trailer"
+        };
+
+  // Dynamic SEO per film
+  $: if (item) {
+    setSeo({
+      title: `${item.title} | Film | San Roku Ku`,
+      description: item.logline || item.description || "",
+      ogImage: item.poster || ""
+    });
   }
 
   // Converts any YouTube URL into an embed URL
@@ -32,9 +57,9 @@
 
 {#if !item}
   <section class="container" style="padding: 4rem 0;">
-    <h1>Film not found</h1>
+    <h1>{labels.notFound}</h1>
     <button class="btn-primary" on:click={goBack}>
-      Back to Films
+      {labels.back}
     </button>
   </section>
 {:else}
@@ -44,7 +69,7 @@
   <!-- Trailer under the details -->
   {#if item.trailer}
     <section class="film-trailer">
-      <h2>Trailer</h2>
+      <h2>{labels.trailer}</h2>
 
       <div class="trailer-wrapper">
         <iframe
@@ -72,7 +97,7 @@
 
   .trailer-wrapper {
     width: 100%;
-    max-width: 900px; /* your requested width */
+    max-width: 900px;
     margin: 0 auto;
   }
 
