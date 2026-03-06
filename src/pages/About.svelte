@@ -5,12 +5,10 @@
 
   const base = import.meta.env.BASE_URL;
 
-  // Load page data for current locale, fall back to English
   $: page =
     loadPageContent("about", $currentLocale) ||
     loadPageContent("about", "en");
 
-  // Apply SEO (title + meta description)
   $: if (page?.seo) setSeo(page.seo);
 </script>
 
