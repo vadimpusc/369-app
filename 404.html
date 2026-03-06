@@ -4,7 +4,30 @@
     <meta charset="UTF-8" />
     <title>San Roku Ku | Production Company</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" crossorigin src="/assets/index-DNO6XZng.js"></script>
+    <meta name="description" content="San Roku Ku is a production company working across film, television, documentaries, branded content, and creative development." />
+    <link rel="canonical" href="https://sanrokuku.com/en/" />
+
+    <script>
+      (function () {
+        var path = window.location.pathname;
+
+        if (
+          path === "/"
+        ) {
+          window.location.replace("/en/");
+          return;
+        }
+
+        if (
+          !path.startsWith("/en") &&
+          !path.startsWith("/ja") &&
+          !path.includes(".")
+        ) {
+          window.location.replace("/en" + path);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-B93falcB.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BrCXqSMI.css">
   </head>
   <body>

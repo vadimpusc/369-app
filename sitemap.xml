@@ -1,40 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://sanrokuku.com/</loc>
+    <loc>https://sanrokuku.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/about" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/about" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/films</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/series</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/series" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/series" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/series" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/series</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/series" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/series" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/series" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/documentaries</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/documentaries" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/documentaries" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/documentaries" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/documentaries</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/documentaries" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/documentaries" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/documentaries" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/services" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/services</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/services" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/contact" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/contact" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/service/poster-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/poster-design" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/service/poster-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/poster-design" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/service/filmhub-graphics-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/filmhub-graphics-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/service/filmhub-graphics-design</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/filmhub-graphics-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
   </url>
 
 </urlset>
