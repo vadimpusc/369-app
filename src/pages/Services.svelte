@@ -1,5 +1,5 @@
 <script>
-  import { currentLocale } from "../router";
+  import { currentLocale, hrefFor } from "../router";
   import { loadPageContent } from "../lib/pageContent";
   import { setSeo } from "../lib/seo";
 
@@ -8,6 +8,12 @@
     loadPageContent("services", "en");
 
   $: if (page?.seo) setSeo(page.seo);
+
+  function localizedHref(href = "#") {
+    if (!href || href === "#") return href;
+    if (/^(https?:|mailto:|tel:)/.test(href)) return href;
+    return hrefFor(href);
+  }
 </script>
 
 <section class="container services-page">
@@ -19,7 +25,7 @@
     </header>
 
     <div class="cta">
-      <a href={page?.online?.ctaHref ?? "/service"} class="btn-primary">
+      <a href={localizedHref(page?.online?.ctaHref ?? "/service")} class="btn-primary">
         {page?.online?.ctaText ?? ""}
       </a>
     </div>
@@ -110,11 +116,11 @@
     </p>
 
     <div class="cta">
-      <a href={page?.production?.ctaEstimateHref ?? "#"} class="btn-primary">
+      <a href={localizedHref(page?.production?.ctaEstimateHref ?? "#")} class="btn-primary">
         {page?.production?.ctaEstimateText ?? ""}
       </a>
       <p>{page?.production?.ctaOrText ?? ""}</p>
-      <a href={page?.production?.ctaCallHref ?? "/strategy"} class="btn-primary">
+      <a href={localizedHref(page?.production?.ctaCallHref ?? "/strategy")} class="btn-primary">
         {page?.production?.ctaCallText ?? ""}
       </a>
     </div>
@@ -141,7 +147,7 @@
     </section>
 
     <div class="cta">
-      <a href={page?.other?.ctaEstimateHref ?? "#"} class="btn-primary">
+      <a href={localizedHref(page?.other?.ctaEstimateHref ?? "#")} class="btn-primary">
         {page?.other?.ctaEstimateText ?? ""}
       </a>
     </div>

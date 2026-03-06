@@ -97,7 +97,7 @@
     </div>
   </header>
 
-  <section class="wedding-loc is-visible" role="tabpanel" aria-label={`${get(page, `toggle.${loc}`, loc)} pricing`}>
+  <section class="wedding-loc is-visible" aria-label={`${get(page, `toggle.${loc}`, loc)} pricing`}>
     <div class="wedding-grid">
       {#each packageOrder as tier}
         <article class="pkg-card" class:pkg-featured={tier === "signature"} aria-label={tier === "signature" ? "Featured package" : undefined}>

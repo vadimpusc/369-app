@@ -120,7 +120,7 @@
   </div>
 
   {#if activeIndex !== -1}
-    <div class="lightbox" role="dialog" aria-modal="true" on:click|self={closeLightbox}>
+    <div class="lightbox" role="dialog" aria-modal="true" tabindex="-1" on:click|self={closeLightbox} on:keydown={(e) => e.key === "Escape" && closeLightbox()}>
       <button class="lb-close" type="button" on:click={closeLightbox} aria-label="Close">×</button>
 
       <button class="lb-nav lb-prev" type="button" on:click={prev} aria-label="Previous">‹</button>

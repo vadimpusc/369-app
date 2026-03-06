@@ -112,12 +112,13 @@
   <div class="container nav-inner">
     <!-- MOBILE: centered logo + hamburger (logo above hamburger) -->
     <div class="mobile-center">
-      <img
-        src={`${base}assets/logos/369.png`}
-        alt="San Roku Ku"
-        class="nav-logo mobile-top-logo"
-        on:click={() => go("/")}
-      />
+      <a href={hrefFor("/")} on:click|preventDefault={() => go("/")} aria-label="San Roku Ku home">
+        <img
+          src={`${base}assets/logos/369.png`}
+          alt="San Roku Ku"
+          class="nav-logo mobile-top-logo"
+        />
+      </a>
 
       <button
         class="nav-left-btn"
@@ -129,21 +130,22 @@
     </div>
 
     <!-- Desktop logo -->
-    <img
-      src={`${base}assets/logos/369.png`}
-      alt="San Roku Ku"
-      class="nav-logo desktop-logo"
-      on:click={() => go("/")}
-    />
+    <a href={hrefFor("/")} on:click|preventDefault={() => go("/")} aria-label="San Roku Ku home">
+      <img
+        src={`${base}assets/logos/369.png`}
+        alt="San Roku Ku"
+        class="nav-logo desktop-logo"
+      />
+    </a>
 
     <!-- Desktop links -->
     <nav class="nav-links desktop" aria-label="Main navigation">
-      <button on:click={() => go("/about")}>{t("nav.about")}</button>
-      <button on:click={() => go("/films")}>{t("nav.films")}</button>
-      <button on:click={() => go("/documentaries")}>{t("nav.documentaries")}</button>
-      <button on:click={() => go("/series")}>{t("nav.series")}</button>
-      <button on:click={() => go("/services")}>{t("nav.services")}</button>
-      <button on:click={() => go("/contact")}>{t("nav.contact")}</button>
+      <a href={hrefFor("/about")} on:click|preventDefault={() => go("/about")}>{t("nav.about")}</a>
+      <a href={hrefFor("/films")} on:click|preventDefault={() => go("/films")}>{t("nav.films")}</a>
+      <a href={hrefFor("/documentaries")} on:click|preventDefault={() => go("/documentaries")}>{t("nav.documentaries")}</a>
+      <a href={hrefFor("/series")} on:click|preventDefault={() => go("/series")}>{t("nav.series")}</a>
+      <a href={hrefFor("/services")} on:click|preventDefault={() => go("/services")}>{t("nav.services")}</a>
+      <a href={hrefFor("/contact")} on:click|preventDefault={() => go("/contact")}>{t("nav.contact")}</a>
     </nav>
 
     <!-- Desktop right (language only) -->
@@ -176,12 +178,12 @@
     </button>
 
     <nav class="mobile-links" aria-label="Mobile navigation">
-      <button on:click={() => go("/about")}>{t("nav.about")}</button>
-      <button on:click={() => go("/films")}>{t("nav.films")}</button>
-      <button on:click={() => go("/documentaries")}>{t("nav.documentaries")}</button>
-      <button on:click={() => go("/series")}>{t("nav.series")}</button>
-      <button on:click={() => go("/services")}>{t("nav.services")}</button>
-      <button on:click={() => go("/contact")}>{t("nav.contact")}</button>
+      <a href={hrefFor("/about")} on:click|preventDefault={() => go("/about")}>{t("nav.about")}</a>
+      <a href={hrefFor("/films")} on:click|preventDefault={() => go("/films")}>{t("nav.films")}</a>
+      <a href={hrefFor("/documentaries")} on:click|preventDefault={() => go("/documentaries")}>{t("nav.documentaries")}</a>
+      <a href={hrefFor("/series")} on:click|preventDefault={() => go("/series")}>{t("nav.series")}</a>
+      <a href={hrefFor("/services")} on:click|preventDefault={() => go("/services")}>{t("nav.services")}</a>
+      <a href={hrefFor("/contact")} on:click|preventDefault={() => go("/contact")}>{t("nav.contact")}</a>
     </nav>
 
     <div class="mobile-lang">
@@ -375,7 +377,18 @@
   gap: 1.8rem;
 }
 
-.nav-links button {
+.nav-links a,
+.mobile-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+
+.nav-links a {
   background: none;
   border: none;
   color: var(--text-main);
@@ -387,7 +400,7 @@
   position: relative;
 }
 
-.nav-links button::after {
+.nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -399,7 +412,7 @@
   transition: width 160ms ease;
 }
 
-.nav-links button:hover::after {
+.nav-links a:hover::after {
   width: 100%;
 }
 
@@ -514,6 +527,11 @@
     text-align: center;
     margin-top: 4rem;
   }
+
+  .mobile-links a {
+    text-decoration: none;
+  }
+
 
   .mobile-lang {
     display: flex;

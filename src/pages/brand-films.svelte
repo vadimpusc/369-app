@@ -92,7 +92,7 @@
   </header>
 
   {#if page?.packages?.[loc]}
-    <section class="brand-loc is-visible" role="tabpanel" aria-label={`${get(page, `toggle.${loc}`, loc)} pricing`}>
+    <section class="brand-loc is-visible" aria-label={`${get(page, `toggle.${loc}`, loc)} pricing`}>
       <div class="brand-grid">
         {#each packageOrder as tier, index}
           <article class="pkg-card" class:pkg-featured={tier === "crew"} aria-label={tier === "crew" ? "Featured package" : undefined}>

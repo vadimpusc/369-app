@@ -1,23 +1,26 @@
 <script>
-  import { navigate } from "../router";
-  export let service;
-  export let layout = "card"; // "card" or "row"
-  export let linkType = "detail"; // "detail" or "order"
+  import { navigate, hrefFor } from "../router";
 
-  function handleClick() {
-    if (linkType === "detail") {
-      navigate(`/service/${service.slug}`);
-    } else {
-      window.open(service.orderUrl, "_blank", "noopener");
-    }
+  export let service;
+  export let layout = "card";
+  export let linkType = "detail";
+
+  $: isExternal = linkType === "order" && !!service?.orderUrl;
+  $: href = isExternal ? service.orderUrl : hrefFor(`/service/${service.slug}`);
+
+  function handleClick(event) {
+    if (isExternal) return;
+    event.preventDefault();
+    navigate(`/service/${service.slug}`);
   }
 </script>
 
-<article
+<a
   class={`service-card service-card--${layout}`}
+  href={href}
   on:click={handleClick}
-  role="button"
-  tabindex="0"
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noopener" : undefined}
 >
   <div class="service-card-media">
     <img src={service.image} alt={service.title} loading="lazy" />
@@ -34,7 +37,7 @@
       <p class="service-tagline">{service.tagline}</p>
     {/if}
   </div>
-</article>
+</a>
 
 <style>
   .service-card {
@@ -49,6 +52,8 @@
 
     cursor: pointer;
     transition: transform 0.15s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
   }
 
   .service-card:hover {
@@ -83,7 +88,6 @@
     margin-bottom: 1rem;
   }
 
-  /* row layout if ever used */
   .service-card--row {
     flex-direction: column;
   }

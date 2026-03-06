@@ -2,7 +2,7 @@
   import { onDestroy } from "svelte";
   import { loadCollection } from "../lib/content";
   import { t } from "../lib/i18n";
-  import { navigate, currentLocale } from "../router";
+  import { navigate, currentLocale, hrefFor } from "../router";
 
   import { loadPageContent } from "../lib/pageContent";
   import { setSeo } from "../lib/seo";
@@ -64,10 +64,10 @@
   onDestroy(() => clearInterval(interval));
 </script>
 
-<section class="hero" on:mouseenter={stopAutoplay} on:mouseleave={startAutoplay}>
+<section class="hero" role="region" aria-label="Featured films" on:mouseenter={stopAutoplay} on:mouseleave={startAutoplay}>
   {#each slides as slide, i}
     <div class:active={i === index} class="hero-slide">
-      <img src={slide.image} alt={slide.title} loading="lazy" />
+      <img src={slide.image} alt={slide.title} loading={i === 0 ? "eager" : "lazy"} />
       <div class="hero-overlay">
         <div class="container hero-content">
           <div>
@@ -75,9 +75,9 @@
             <h1>{slide.title}</h1>
             <p class="logline">{slide.logline}</p>
             <div class="hero-actions">
-              <button class="btn-primary" on:click={() => navigate(`/films/${slide.slug}`)}>
+              <a class="btn-primary" href={hrefFor(`/films/${slide.slug}`)} on:click|preventDefault={() => navigate(`/films/${slide.slug}`)}>
                 {page?.hero?.learnMore ?? "Learn More"}
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -112,9 +112,9 @@
   <h2 class="section-title">{t("home.productionPartnerTitle")}</h2>
   <p class="section-subtitle-main">{t("home.productionPartnerText")}</p>
 
-  <button class="btn-primary" on:click={() => navigate("/services")}>
+  <a class="btn-primary" href={hrefFor("/services")} on:click|preventDefault={() => navigate("/services")}>
     {t("nav.services")}
-  </button>
+  </a>
 </section>
 
 <section class="container section">
@@ -123,12 +123,12 @@
 
   <div class="film-strip">
     {#each films.slice(0, 6) as film}
-      <div class="film-strip-item" on:click={() => navigate(`/films/${film.slug}`)}>
+      <a class="film-strip-item" href={hrefFor(`/films/${film.slug}`)} on:click|preventDefault={() => navigate(`/films/${film.slug}`)}>
         <div class="poster-frame">
           <img src={film.poster} alt={film.title} loading="lazy" />
         </div>
         <p class="film-title">{film.title}</p>
-      </div>
+      </a>
     {/each}
   </div>
 </section>
@@ -268,6 +268,8 @@
     gap: 1.4rem;
   }
   .film-strip-item {
+    text-decoration: none;
+    color: inherit;
     cursor: pointer;
   }
   .film-title {

@@ -1,5 +1,5 @@
 <script>
-  import { navigate, currentLocale } from "../router";
+  import { navigate, currentLocale , hrefFor } from "../router";
   import { loadCollection } from "../lib/content";
 
   import { loadPageContent } from "../lib/pageContent";
@@ -22,10 +22,10 @@
   <div class="container">
     <div class="titles-grid">
       {#each films as film}
-        <button
-          type="button"
+        <a
           class="title-card"
-          on:click={() => openFilm(film.slug)}
+          href={hrefFor(`/films/${film.slug}`)}
+          on:click|preventDefault={() => openFilm(film.slug)}
         >
           <div class="poster-shell">
             <img
@@ -34,7 +34,7 @@
               loading="lazy"
             />
           </div>
-        </button>
+        </a>
       {/each}
     </div>
   </div>
@@ -96,6 +96,8 @@
   }
 
   .title-card {
+    text-decoration: none;
+    color: inherit;
     display: block;
     width: 100%;
     border: none;
@@ -108,6 +110,8 @@
 
   @media (max-width: 768px) {
     .title-card {
+    text-decoration: none;
+    color: inherit;
       width: 90%;
       margin: 0 auto;
     }

@@ -1,5 +1,5 @@
 <script>
-  import { navigate, currentLocale } from "../router";
+  import { navigate, currentLocale, hrefFor } from "../router";
   import { loadCollection } from "../lib/content";
 
   import { loadPageContent } from "../lib/pageContent";
@@ -22,12 +22,12 @@
 
   <div class="jobs-list">
     {#each jobs as job}
-      <article class="job-card" on:click={() => navigate(`/jobs/${job.slug}`)}>
+      <a class="job-card" href={hrefFor(`/jobs/${job.slug}`)} on:click|preventDefault={() => navigate(`/jobs/${job.slug}`)}>
         <h2>{job.title}</h2>
         <p class="job-meta">{job.type} · {job.location}</p>
         <p class="job-intro">{job.shortIntro}</p>
-        <button class="job-btn">{page?.labels?.moreDetails ?? "More Details"}</button>
-      </article>
+        <span class="job-btn">{page?.labels?.moreDetails ?? "More Details"}</span>
+      </a>
     {/each}
   </div>
 </section>
@@ -63,6 +63,8 @@
     gap: 1.8rem;
   }
   .job-card {
+    text-decoration: none;
+    color: inherit;
     border-radius: var(--radius-xl);
     padding: 1.8rem 2rem;
     background: radial-gradient(circle at top left, #16233b, #060912);

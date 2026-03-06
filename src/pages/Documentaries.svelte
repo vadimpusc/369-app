@@ -1,5 +1,5 @@
 <script>
-  import { navigate, currentLocale } from "../router";
+  import { navigate, currentLocale , hrefFor } from "../router";
   import { loadCollection } from "../lib/content";
 
   import { loadPageContent } from "../lib/pageContent";
@@ -24,10 +24,10 @@
   <div class="container">
     <div class="titles-grid">
       {#each documentaries as doc}
-        <button
-          type="button"
+        <a
           class="title-card"
-          on:click={() => openDoc(doc.slug)}
+          href={hrefFor(`/documentaries/${doc.slug}`)}
+          on:click|preventDefault={() => openDoc(doc.slug)}
         >
           <div class="poster-shell">
             <img
@@ -42,7 +42,7 @@
               {(doc.genres?.join(", ") || "").toUpperCase()} · {doc.year}
             </p>
           </div>
-        </button>
+        </a>
       {/each}
     </div>
   </div>
@@ -51,7 +51,7 @@
 
 <div style="max-width: 800px; margin: 40px auto 0; text-align: center; font-weight: 600; font-size: 1.1rem;">
   {page?.cta?.textBeforeLink ?? ""}
-  <a href="https://sanrokuku.com/submit-your-film" style="text-decoration: underline;">
+  <a href={hrefFor("/submit-your-film")} style="text-decoration: underline;">
     {page?.cta?.linkText ?? ""}
   </a>
   {page?.cta?.textAfterLink ?? ""}
@@ -113,6 +113,8 @@
   }
 
   .title-card {
+    text-decoration: none;
+    color: inherit;
     display: block;
     width: 100%;
     border: none;
