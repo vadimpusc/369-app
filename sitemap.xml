@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://sanrokuku.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/ja/</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/" />
@@ -19,114 +11,570 @@
 
   <url>
     <loc>https://sanrokuku.com/en/about</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/about" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/about" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/about" />
   </url>
 
   <url>
-    <loc>https://sanrokuku.com/ja/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/about" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/about" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/about" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/en/films</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/ja/films</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/en/series</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/series" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/series" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/series" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/ja/series</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/series" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/series" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/series" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/en/documentaries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/documentaries" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/documentaries" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/documentaries" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/ja/documentaries</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/documentaries" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/documentaries" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/documentaries" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/en/services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/services" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/services" />
-  </url>
-
-  <url>
-    <loc>https://sanrokuku.com/ja/services</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/services" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/services" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/services" />
+    <loc>https://sanrokuku.com/en/brand-films</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/brand-films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/brand-films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/brand-films" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/contact</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/contact" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/contact" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/contact" />
   </url>
 
   <url>
-    <loc>https://sanrokuku.com/ja/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/contact" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/contact" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/contact" />
+    <loc>https://sanrokuku.com/en/documentaries</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/documentaries" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/documentaries" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/documentaries" />
   </url>
 
   <url>
-    <loc>https://sanrokuku.com/en/service/poster-design</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/poster-design" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/poster-design" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/poster-design" />
+    <loc>https://sanrokuku.com/en/films</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films" />
   </url>
 
   <url>
-    <loc>https://sanrokuku.com/ja/service/poster-design</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/poster-design" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/poster-design" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/poster-design" />
+    <loc>https://sanrokuku.com/en/films/across-two-skies</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/across-two-skies" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/across-two-skies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/across-two-skies" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/despair</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/despair" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/despair" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/despair" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/exposure</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/exposure" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/exposure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/exposure" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/following</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/following" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/following" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/following" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/hone-and-wine</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/hone-and-wine" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/hone-and-wine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/hone-and-wine" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/i-see-darkness</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/i-see-darkness" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/i-see-darkness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/i-see-darkness" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/love-by-chance</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/love-by-chance" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/love-by-chance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/love-by-chance" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/love-in-the-city</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/love-in-the-city" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/love-in-the-city" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/love-in-the-city" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/man-of-the-cosmos</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/man-of-the-cosmos" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/man-of-the-cosmos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/man-of-the-cosmos" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/napoleons-table</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/napoleons-table" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/napoleons-table" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/napoleons-table" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/osaka</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/osaka" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/osaka" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/osaka" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/outsiders</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/outsiders" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/outsiders" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/outsiders" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/spooked</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/spooked" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/spooked" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/spooked" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/the-job</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-job" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-job" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-job" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/the-man</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-man" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-man" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-man" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/the-ritual</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-ritual" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-ritual" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-ritual" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/films/the-river</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-river" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-river" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-river" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/jobs</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/jobs" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/jobs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/jobs" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/jobs/freelance-video-editor</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/jobs/freelance-video-editor" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/jobs/freelance-video-editor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/jobs/freelance-video-editor" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/privacy-policy</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/privacy-policy" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/refund-policy</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/refund-policy" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/series</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/series" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/series" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/series" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/service</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service" />
   </url>
 
   <url>
     <loc>https://sanrokuku.com/en/service/filmhub-graphics-design</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/filmhub-graphics-design" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
   </url>
 
   <url>
+    <loc>https://sanrokuku.com/en/service/poster-design</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/poster-design" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/services</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/services" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/strategy</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/strategy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/strategy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/strategy" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/submit-your-film</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/submit-your-film" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/submit-your-film" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/submit-your-film" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/terms-and-conditions</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/terms-and-conditions" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/en/wedding-films</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/wedding-films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/wedding-films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/wedding-films" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/about</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/about" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/brand-films</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/brand-films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/brand-films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/brand-films" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/contact</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/contact" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/documentaries</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/documentaries" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/documentaries" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/documentaries" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/across-two-skies</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/across-two-skies" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/across-two-skies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/across-two-skies" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/despair</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/despair" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/despair" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/despair" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/exposure</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/exposure" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/exposure" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/exposure" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/following</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/following" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/following" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/following" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/hone-and-wine</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/hone-and-wine" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/hone-and-wine" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/hone-and-wine" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/i-see-darkness</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/i-see-darkness" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/i-see-darkness" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/i-see-darkness" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/love-by-chance</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/love-by-chance" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/love-by-chance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/love-by-chance" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/love-in-the-city</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/love-in-the-city" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/love-in-the-city" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/love-in-the-city" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/man-of-the-cosmos</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/man-of-the-cosmos" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/man-of-the-cosmos" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/man-of-the-cosmos" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/napoleons-table</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/napoleons-table" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/napoleons-table" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/napoleons-table" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/osaka</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/osaka" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/osaka" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/osaka" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/outsiders</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/outsiders" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/outsiders" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/outsiders" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/spooked</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/spooked" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/spooked" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/spooked" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/the-job</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-job" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-job" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-job" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/the-man</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-man" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-man" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-man" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/the-ritual</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-ritual" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-ritual" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-ritual" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/films/the-river</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/films/the-river" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/films/the-river" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/films/the-river" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/jobs</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/jobs" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/jobs" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/jobs" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/jobs/freelance-video-editor</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/jobs/freelance-video-editor" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/jobs/freelance-video-editor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/jobs/freelance-video-editor" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/privacy-policy</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/privacy-policy" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/refund-policy</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/refund-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/refund-policy" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/series</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/series" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/series" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/series" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/service</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service" />
+  </url>
+
+  <url>
     <loc>https://sanrokuku.com/ja/service/filmhub-graphics-design</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
     <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/filmhub-graphics-design" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/filmhub-graphics-design" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/service/poster-design</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/service/poster-design" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/service/poster-design" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/services</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/services" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/services" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/strategy</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/strategy" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/strategy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/strategy" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/submit-your-film</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/submit-your-film" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/submit-your-film" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/submit-your-film" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/terms-and-conditions</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/terms-and-conditions" />
+  </url>
+
+  <url>
+    <loc>https://sanrokuku.com/ja/wedding-films</loc>
+    <lastmod>2026-03-06T12:22:37.013Z</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sanrokuku.com/en/wedding-films" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sanrokuku.com/ja/wedding-films" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sanrokuku.com/en/wedding-films" />
   </url>
 
 </urlset>
