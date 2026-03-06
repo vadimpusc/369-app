@@ -3,28 +3,56 @@
   import { loadPageContent } from "../lib/pageContent";
   import { setSeo } from "../lib/seo";
 
-  let loc = "uk"; // "uk" | "jp"
+  let loc = "uk";
 
   const emailBase =
     "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20Request&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20a%20wedding%20film.%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%2D%20Package%20interest%3A%0A%0AThank%20you%2C";
 
-  const emailUKEssential =
-    "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(UK)%20-%20Essential&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Essential%20package%20(UK).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
+  const packageEmails = {
+    uk: {
+      essential:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(UK)%20-%20Essential&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Essential%20package%20(UK).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      signature:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(UK)%20-%20Signature&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Signature%20package%20(UK).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      directors:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(UK)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(UK).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C"
+    },
+    usa: {
+      essential:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(USA)%20-%20Essential&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Essential%20package%20(USA).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      signature:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(USA)%20-%20Signature&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Signature%20package%20(USA).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      directors:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(USA)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(USA).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C"
+    },
+    eu: {
+      essential:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Europe)%20-%20Essential&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Essential%20package%20(Europe).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      signature:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Europe)%20-%20Signature&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Signature%20package%20(Europe).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      directors:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Europe)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(Europe).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C"
+    },
+    jp: {
+      essential:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Essential&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Essential%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      signature:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Signature&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Signature%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C",
+      directors:
+        "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C"
+    }
+  };
 
-  const emailUKSignature =
-    "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(UK)%20-%20Signature&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Signature%20package%20(UK).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
+  const packageOrder = ["essential", "signature", "directors"];
+  const locationOrder = ["uk", "usa", "eu", "jp"];
 
-  const emailUKDirectors =
-    "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(UK)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(UK).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
-
-  const emailJPEssential =
-    "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Essential&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Essential%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
-
-  const emailJPSignature =
-    "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Signature&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Signature%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
-
-  const emailJPDirectors =
-    "mailto:newbusiness@sanrokuku.com?subject=Wedding%20Film%20Availability%20(Japan)%20-%20Director%27s%20Cut&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20to%20check%20availability%20for%20the%20Director%27s%20Cut%20package%20(Japan).%0A%0A%2D%20Date%3A%0A%2D%20Location%3A%0A%2D%20Venue%3A%0A%2D%20Coverage%20hours%3A%0A%0AThank%20you%2C";
+  const get = (obj, path, fallback = "") => {
+    try {
+      return path.split(".").reduce((acc, key) => acc?.[key], obj) ?? fallback;
+    } catch {
+      return fallback;
+    }
+  };
 
   $: page =
     loadPageContent("wedding-films", $currentLocale) ||
@@ -32,221 +60,104 @@
 
   $: if (page?.seo) setSeo(page.seo);
 
-  $: hero = page?.hero || {};
-  $: common = page?.common || {};
-  $: pkgs = page?.packages || {};
+  $: availableLocations = locationOrder.filter((key) => page?.toggle?.[key]);
+
+  $: if (page && !availableLocations.includes(loc) && availableLocations.length) {
+    loc = availableLocations[0];
+  }
+
+  function getPackageEmail(location, tier) {
+    return packageEmails[location]?.[tier] || emailBase;
+  }
 </script>
 
 <section class="container wedding-page">
   <header class="wedding-header">
-    <p class="wedding-kicker">{hero.kicker ?? ""}</p>
-    <h1>{hero.title ?? ""}</h1>
-    <p class="wedding-subtitle">{hero.subtitle ?? ""}</p>
+    <p class="wedding-kicker">{get(page, "hero.kicker", "")}</p>
+    <h1>{get(page, "hero.title", "")}</h1>
+    <p class="wedding-subtitle">{get(page, "hero.subtitle", "")}</p>
 
     <div class="wedding-toggle" role="tablist" aria-label="Location toggle">
-      <button
-        class="toggle-btn"
-        class:is-active={loc === "uk"}
-        type="button"
-        aria-selected={loc === "uk"}
-        on:click={() => (loc = "uk")}
-      >
-        {hero.toggleUk ?? "United Kingdom"}
-      </button>
-
-      <button
-        class="toggle-btn"
-        class:is-active={loc === "jp"}
-        type="button"
-        aria-selected={loc === "jp"}
-        on:click={() => (loc = "jp")}
-      >
-        {hero.toggleJp ?? "Japan"}
-      </button>
+      {#each availableLocations as key}
+        <button
+          class="toggle-btn"
+          class:is-active={loc === key}
+          type="button"
+          role="tab"
+          aria-selected={loc === key}
+          on:click={() => (loc = key)}
+        >
+          {get(page, `toggle.${key}`, key)}
+        </button>
+      {/each}
     </div>
 
     <div class="wedding-cta-row">
-      <p class="wedding-cta-note">{hero.note ?? ""}</p>
+      <p class="wedding-cta-note">{get(page, "hero.note", "")}</p>
     </div>
   </header>
 
-  {#if loc === "uk"}
-    <section class="wedding-loc is-visible" role="tabpanel" aria-label="United Kingdom pricing">
-      <div class="wedding-grid">
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{pkgs?.essential?.name ?? "Essential"}</h2>
-            <p class="pkg-price">
-              <span class="from">{common.from ?? "From"}</span>
-              <span class="money">{pkgs?.essential?.ukPrice ?? "£1,450"}</span>
-            </p>
-          </div>
-          <ul class="pkg-list">
-            {#each pkgs?.essential?.bullets ?? [] as b}
-              <li>{b}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKEssential}>
-              {common.checkAvailability ?? "Check Availability"}
-            </a>
-          </div>
-        </article>
+  <section class="wedding-loc is-visible" role="tabpanel" aria-label={`${get(page, `toggle.${loc}`, loc)} pricing`}>
+    <div class="wedding-grid">
+      {#each packageOrder as tier}
+        <article class="pkg-card" class:pkg-featured={tier === "signature"} aria-label={tier === "signature" ? "Featured package" : undefined}>
+          {#if tier === "signature"}
+            <div class="pkg-badge">{get(page, `packages.${tier}.badge`, "Most Popular")}</div>
+          {/if}
 
-        <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">{pkgs?.signature?.badge ?? "Most Popular"}</div>
           <div class="pkg-top">
-            <h2 class="pkg-name">{pkgs?.signature?.name ?? "Signature"}</h2>
+            <h2 class="pkg-name">{get(page, `packages.${tier}.name`, "")}</h2>
             <p class="pkg-price">
-              <span class="from">{common.from ?? "From"}</span>
-              <span class="money">{pkgs?.signature?.ukPrice ?? "£1,950"}</span>
+              <span class="from">{get(page, "common.from", "From")}</span>
+              <span class="money">{get(page, `packages.${tier}.prices.${loc}`, "")}</span>
             </p>
           </div>
-          <ul class="pkg-list">
-            {#each pkgs?.signature?.bullets ?? [] as b}
-              <li>{b}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailUKSignature}>
-              {common.checkAvailability ?? "Check Availability"}
-            </a>
-          </div>
-        </article>
 
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{pkgs?.directors?.name ?? "Director’s Cut"}</h2>
-            <p class="pkg-price">
-              <span class="from">{common.from ?? "From"}</span>
-              <span class="money">{pkgs?.directors?.ukPrice ?? "£2,600"}</span>
-            </p>
-          </div>
           <ul class="pkg-list">
-            {#each pkgs?.directors?.bullets ?? [] as b}
+            {#each get(page, `packages.${tier}.bullets`, []) as b}
               <li>{b}</li>
             {/each}
           </ul>
+
           <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKDirectors}>
-              {common.checkAvailability ?? "Check Availability"}
+            <a
+              class="srk-btn"
+              class:srk-btn-primary={tier === "signature"}
+              class:srk-btn-ghost={tier !== "signature"}
+              href={getPackageEmail(loc, tier)}
+            >
+              {get(page, "common.checkAvailability", "Check Availability")}
             </a>
           </div>
         </article>
+      {/each}
+    </div>
+
+    <section class="wedding-addons">
+      <div class="addons-card">
+        <h3>{get(page, "common.addonsTitle", "Add-ons")}</h3>
+        <ul>
+          {#each get(page, "addons", []) as a}
+            <li>{a}</li>
+          {/each}
+        </ul>
       </div>
 
-      <section class="wedding-addons">
-        <div class="addons-card">
-          <h3>{common.addonsTitle ?? "Add-ons"}</h3>
-          <ul>
-            {#each page?.addons ?? [] as a}
-              <li>{a}</li>
-            {/each}
-          </ul>
-        </div>
-
-        <div class="addons-card">
-          <h3>{common.expectTitle ?? "What to expect"}</h3>
-          <ul>
-            {#each page?.expect ?? [] as e}
-              <li>{e}</li>
-            {/each}
-          </ul>
-        </div>
-      </section>
-    </section>
-  {:else}
-    <section class="wedding-loc is-visible" role="tabpanel" aria-label="Japan pricing">
-      <div class="wedding-grid">
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{pkgs?.essential?.name ?? "Essential"}</h2>
-            <p class="pkg-price">
-              <span class="from">{common.from ?? "From"}</span>
-              <span class="money">{pkgs?.essential?.jpPrice ?? "¥220,000"}</span>
-            </p>
-          </div>
-          <ul class="pkg-list">
-            {#each pkgs?.essential?.bullets ?? [] as b}
-              <li>{b}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPEssential}>
-              {common.checkAvailability ?? "Check Availability"}
-            </a>
-          </div>
-        </article>
-
-        <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">{pkgs?.signature?.badge ?? "Most Popular"}</div>
-          <div class="pkg-top">
-            <h2 class="pkg-name">{pkgs?.signature?.name ?? "Signature"}</h2>
-            <p class="pkg-price">
-              <span class="from">{common.from ?? "From"}</span>
-              <span class="money">{pkgs?.signature?.jpPrice ?? "¥290,000"}</span>
-            </p>
-          </div>
-          <ul class="pkg-list">
-            {#each pkgs?.signature?.bullets ?? [] as b}
-              <li>{b}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailJPSignature}>
-              {common.checkAvailability ?? "Check Availability"}
-            </a>
-          </div>
-        </article>
-
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{pkgs?.directors?.name ?? "Director’s Cut"}</h2>
-            <p class="pkg-price">
-              <span class="from">{common.from ?? "From"}</span>
-              <span class="money">{pkgs?.directors?.jpPrice ?? "¥380,000"}</span>
-            </p>
-          </div>
-          <ul class="pkg-list">
-            {#each pkgs?.directors?.bullets ?? [] as b}
-              <li>{b}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPDirectors}>
-              {common.checkAvailability ?? "Check Availability"}
-            </a>
-          </div>
-        </article>
+      <div class="addons-card">
+        <h3>{get(page, "common.expectTitle", "What to expect")}</h3>
+        <ul>
+          {#each get(page, "expect", []) as e}
+            <li>{e}</li>
+          {/each}
+        </ul>
       </div>
-
-      <section class="wedding-addons">
-        <div class="addons-card">
-          <h3>{common.addonsTitle ?? "Add-ons"}</h3>
-          <ul>
-            {#each page?.addons ?? [] as a}
-              <li>{a}</li>
-            {/each}
-          </ul>
-        </div>
-
-        <div class="addons-card">
-          <h3>{common.expectTitle ?? "What to expect"}</h3>
-          <ul>
-            {#each page?.expect ?? [] as e}
-              <li>{e}</li>
-            {/each}
-          </ul>
-        </div>
-      </section>
     </section>
-  {/if}
+  </section>
 
-  <p class="wedding-note">{page?.finalNote ?? ""}</p>
+  <p class="wedding-note">{get(page, "finalNote", "")}</p>
 </section>
 
 <style>
-  /* your CSS stays exactly the same */
   .wedding-page {
     padding: 3.8rem 0 4.2rem;
   }
@@ -283,38 +194,44 @@
   .wedding-toggle {
     margin: 1.6rem auto 0;
     display: inline-flex;
-    gap: 8px;
-    padding: 8px;
+    align-items: center;
+    gap: 6px;
+    padding: 7px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
     border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .toggle-btn {
     border: 0;
     cursor: pointer;
     border-radius: 999px;
-    padding: 10px 16px;
+    padding: 12px 18px;
+    min-height: 44px;
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.78);
     background: transparent;
-    transition: 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     outline: none;
     user-select: none;
+    white-space: nowrap;
   }
 
   .toggle-btn:hover {
     background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.96);
   }
 
   .toggle-btn.is-active {
-    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
     border: 1px solid rgba(255, 255, 255, 0.14);
     color: #fff;
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 20px rgba(0, 0, 0, 0.25);
   }
 
   .wedding-cta-row {
@@ -434,7 +351,6 @@
   .addons-card h3 {
     margin: 0 0 0.6rem;
     font-size: 1.15rem;
-    text-align: left;
     text-align: center;
   }
 
@@ -485,5 +401,21 @@
   .srk-btn-ghost {
     background: rgba(255, 255, 255, 0.05);
     margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .wedding-toggle {
+      width: 100%;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-radius: 24px;
+    }
+
+    .toggle-btn {
+      width: 100%;
+      justify-self: stretch;
+      text-align: center;
+    }
   }
 </style>

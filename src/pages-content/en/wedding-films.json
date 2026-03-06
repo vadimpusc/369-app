@@ -1,16 +1,20 @@
 {
   "seo": {
     "title": "Wedding Films | San Roku Ku",
-    "description": "Cinematic wedding films in the UK and Japan. Director-led, intimate storytelling with clear packages.",
+    "description": "Cinematic wedding films in the United Kingdom, USA, Europe, and Japan. Director-led, intimate storytelling with clear packages.",
     "ogImage": ""
   },
   "hero": {
     "kicker": "Wedding Films",
     "title": "Cinematic. Intimate. Timeless.",
     "subtitle": "A boutique, director-led approach. One filmmaker, one camera, focused storytelling. Choose your location to view pricing and availability.",
-    "toggleUk": "United Kingdom",
-    "toggleJp": "Japan",
     "note": "Limited bookings each year to maintain creative focus."
+  },
+  "toggle": {
+    "uk": "United Kingdom",
+    "usa": "USA",
+    "eu": "Europe",
+    "jp": "Japan"
   },
   "common": {
     "from": "From",
@@ -21,8 +25,12 @@
   "packages": {
     "essential": {
       "name": "Essential",
-      "ukPrice": "£1,450",
-      "jpPrice": "¥220,000",
+      "prices": {
+        "uk": "£1,450",
+        "usa": "$1,850",
+        "eu": "€1,650",
+        "jp": "¥220,000"
+      },
       "bullets": [
         "Up to 8 hours coverage",
         "One filmmaker, one camera",
@@ -34,8 +42,12 @@
     "signature": {
       "name": "Signature",
       "badge": "Most Popular",
-      "ukPrice": "£1,950",
-      "jpPrice": "¥290,000",
+      "prices": {
+        "uk": "£1,950",
+        "usa": "$2,450",
+        "eu": "€2,200",
+        "jp": "¥290,000"
+      },
       "bullets": [
         "Up to 10 hours coverage",
         "One filmmaker, one camera",
@@ -47,8 +59,12 @@
     },
     "directors": {
       "name": "Director’s Cut",
-      "ukPrice": "£2,600",
-      "jpPrice": "¥380,000",
+      "prices": {
+        "uk": "£2,600",
+        "usa": "$3,250",
+        "eu": "€2,950",
+        "jp": "¥380,000"
+      },
       "bullets": [
         "Full day coverage",
         "One filmmaker, one camera",
@@ -70,9 +86,9 @@
   ],
   "expect": [
     "Calm, unobtrusive filming style",
-    "Clean audio priorities (vows and speeches)",
-    "Natural colour, cinematic contrast, timeless edit",
+    "Clean audio priorities for vows and speeches",
+    "Natural colour, cinematic contrast, timeless editing",
     "Clear communication and a simple process"
   ],
-  "finalNote": "Venue restrictions can affect filming access, we’ll confirm this with you in advance."
+  "finalNote": "Venue restrictions can affect filming access, and we’ll confirm this with you in advance."
 }

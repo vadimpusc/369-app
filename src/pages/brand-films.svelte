@@ -3,41 +3,43 @@
   import { loadPageContent } from "../lib/pageContent";
   import { setSeo } from "../lib/seo";
 
-  let loc = "uk"; // "uk" | "jp"
+  let loc = "uk";
 
-  // Load page JSON (locale first, fallback to EN)
   $: page =
     loadPageContent("brand-films", $currentLocale) ||
     loadPageContent("brand-films", "en");
 
-  // Apply SEO (title + meta description + optional og:image)
   $: if (page?.seo) setSeo(page.seo);
 
-  // Email links (keep as logic, copy can come from JSON)
   const emailBase =
     "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20a%20brand%20or%20corporate%20film.%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%20(16%3A9%2C%209%3A16%2C%201%3A1)%3A%0A%2D%20Estimated%20budget%3A%0A%0AThank%20you%2C";
 
-  // UK
-  const emailUKSolo =
-    "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(UK)%20-%20Solo&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Solo%20package%20(UK).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
+  const packageEmails = {
+    uk: {
+      solo: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(UK)%20-%20Solo&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Solo%20package%20(UK).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      crew: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(UK)%20-%20Crew&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Crew%20package%20(UK).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      production: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(UK)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(UK).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C"
+    },
+    usa: {
+      solo: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(USA)%20-%20Solo&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Solo%20package%20(USA).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      crew: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(USA)%20-%20Crew&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Crew%20package%20(USA).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      production: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(USA)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(USA).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C"
+    },
+    eu: {
+      solo: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Europe)%20-%20Solo&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Solo%20package%20(Europe).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      crew: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Europe)%20-%20Crew&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Crew%20package%20(Europe).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      production: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Europe)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(Europe).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C"
+    },
+    jp: {
+      solo: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Solo&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Solo%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      crew: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Crew&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Crew%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C",
+      production: "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C"
+    }
+  };
 
-  const emailUKCrew =
-    "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(UK)%20-%20Crew&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Crew%20package%20(UK).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
+  const packageOrder = ["solo", "crew", "production"];
+  const locationOrder = ["uk", "usa", "eu", "jp"];
 
-  const emailUKProduction =
-    "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(UK)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(UK).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
-
-  // JP
-  const emailJPSolo =
-    "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Solo&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Solo%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
-
-  const emailJPCrew =
-    "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Crew&body=Hi%20San%20Roku%20Ku%2C%0A%0A%27d%20like%20a%20quote%20for%20the%20Crew%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
-
-  const emailJPProduction =
-    "mailto:newbusiness@sanrokuku.com?subject=Brand%20Film%20Enquiry%20(Japan)%20-%20Production&body=Hi%20San%20Roku%20Ku%2C%0A%0AI%27d%20like%20a%20quote%20for%20the%20Production%20package%20(Japan).%0A%0A%2D%20Company%3A%0A%2D%20Project%20goal%3A%0A%2D%20Shoot%20date(s)%3A%0A%2D%20Location%3A%0A%2D%20Deliverables%3A%0A%0AThank%20you%2C";
-
-  // Helper for text with safe defaults
   const get = (obj, path, fallback = "") => {
     try {
       return path.split(".").reduce((acc, key) => acc?.[key], obj) ?? fallback;
@@ -45,6 +47,22 @@
       return fallback;
     }
   };
+
+  $: availableLocations = locationOrder.filter((key) => page?.toggle?.[key] && page?.packages?.[key]);
+
+  $: if (page && !availableLocations.includes(loc) && availableLocations.length) {
+    loc = availableLocations[0];
+  }
+
+  function getPackageEmail(location, tier) {
+    return packageEmails[location]?.[tier] || emailBase;
+  }
+
+  function getCtaLabel() {
+    return loc === "jp"
+      ? get(page, "labels.checkAvailability", "Check Availability")
+      : get(page, "labels.requestQuote", "Request a Quote");
+  }
 </script>
 
 <section class="container brand-page">
@@ -54,25 +72,18 @@
     <p class="brand-subtitle">{get(page, "hero.subtitle", "")}</p>
 
     <div class="brand-toggle" role="tablist" aria-label="Location toggle">
-      <button
-        class="toggle-btn"
-        class:is-active={loc === "uk"}
-        type="button"
-        aria-selected={loc === "uk"}
-        on:click={() => (loc = "uk")}
-      >
-        {get(page, "toggle.uk", "United Kingdom")}
-      </button>
-
-      <button
-        class="toggle-btn"
-        class:is-active={loc === "jp"}
-        type="button"
-        aria-selected={loc === "jp"}
-        on:click={() => (loc = "jp")}
-      >
-        {get(page, "toggle.jp", "Japan")}
-      </button>
+      {#each availableLocations as key}
+        <button
+          class="toggle-btn"
+          class:is-active={loc === key}
+          type="button"
+          role="tab"
+          aria-selected={loc === key}
+          on:click={() => (loc = key)}
+        >
+          {get(page, `toggle.${key}`, key)}
+        </button>
+      {/each}
     </div>
 
     <div class="brand-cta-row">
@@ -80,160 +91,42 @@
     </div>
   </header>
 
-  {#if loc === "uk"}
-    <section class="brand-loc is-visible" role="tabpanel" aria-label="United Kingdom pricing">
+  {#if page?.packages?.[loc]}
+    <section class="brand-loc is-visible" role="tabpanel" aria-label={`${get(page, `toggle.${loc}`, loc)} pricing`}>
       <div class="brand-grid">
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{get(page, "packages.uk.solo.name", "Solo")}</h2>
-            <p class="pkg-price">
-              <span class="from">{get(page, "labels.from", "From")}</span>
-              <span class="money">{get(page, "packages.uk.solo.price", "£950")}</span>
-            </p>
-            <p class="pkg-meta">{get(page, "packages.uk.solo.meta", "")}</p>
-          </div>
-          <ul class="pkg-list">
-            {#each get(page, "packages.uk.solo.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKSolo}>
-              {get(page, "labels.requestQuote", "Request a Quote")}
-            </a>
-          </div>
-        </article>
+        {#each packageOrder as tier, index}
+          <article class="pkg-card" class:pkg-featured={tier === "crew"} aria-label={tier === "crew" ? "Featured package" : undefined}>
+            {#if tier === "crew"}
+              <div class="pkg-badge">{get(page, "labels.bestValue", "Best Value")}</div>
+            {/if}
 
-        <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">{get(page, "labels.bestValue", "Best Value")}</div>
-          <div class="pkg-top">
-            <h2 class="pkg-name">{get(page, "packages.uk.crew.name", "Crew")}</h2>
-            <p class="pkg-price">
-              <span class="from">{get(page, "labels.from", "From")}</span>
-              <span class="money">{get(page, "packages.uk.crew.price", "£2,750")}</span>
-            </p>
-            <p class="pkg-meta">{get(page, "packages.uk.crew.meta", "")}</p>
-          </div>
-          <ul class="pkg-list">
-            {#each get(page, "packages.uk.crew.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailUKCrew}>
-              {get(page, "labels.requestQuote", "Request a Quote")}
-            </a>
-          </div>
-        </article>
+            <div class="pkg-top">
+              <h2 class="pkg-name">{get(page, `packages.${loc}.${tier}.name`, "")}</h2>
+              <p class="pkg-price">
+                <span class="from">{get(page, "labels.from", "From")}</span>
+                <span class="money">{get(page, `packages.${loc}.${tier}.price`, "")}</span>
+              </p>
+              <p class="pkg-meta">{get(page, `packages.${loc}.${tier}.meta`, "")}</p>
+            </div>
 
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{get(page, "packages.uk.production.name", "Production")}</h2>
-            <p class="pkg-price">
-              <span class="from">{get(page, "labels.from", "From")}</span>
-              <span class="money">{get(page, "packages.uk.production.price", "£6,900")}</span>
-            </p>
-            <p class="pkg-meta">{get(page, "packages.uk.production.meta", "")}</p>
-          </div>
-          <ul class="pkg-list">
-            {#each get(page, "packages.uk.production.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailUKProduction}>
-              {get(page, "labels.requestQuote", "Request a Quote")}
-            </a>
-          </div>
-        </article>
-      </div>
+            <ul class="pkg-list">
+              {#each get(page, `packages.${loc}.${tier}.items`, []) as item}
+                <li>{item}</li>
+              {/each}
+            </ul>
 
-      <section class="brand-addons">
-        <div class="addons-card">
-          <h3>{get(page, "addons.title", "Add-ons")}</h3>
-          <ul>
-            {#each get(page, "addons.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-        </div>
-
-        <div class="addons-card">
-          <h3>{get(page, "included.title", "What’s included")}</h3>
-          <ul>
-            {#each get(page, "included.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-        </div>
-      </section>
-    </section>
-  {:else}
-    <section class="brand-loc is-visible" role="tabpanel" aria-label="Japan pricing">
-      <div class="brand-grid">
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{get(page, "packages.jp.solo.name", "Solo")}</h2>
-            <p class="pkg-price">
-              <span class="from">{get(page, "labels.from", "From")}</span>
-              <span class="money">{get(page, "packages.jp.solo.price", "¥150,000")}</span>
-            </p>
-            <p class="pkg-meta">{get(page, "packages.jp.solo.meta", "")}</p>
-          </div>
-          <ul class="pkg-list">
-            {#each get(page, "packages.jp.solo.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPSolo}>
-              {get(page, "labels.checkAvailability", "Check Availability")}
-            </a>
-          </div>
-        </article>
-
-        <article class="pkg-card pkg-featured" aria-label="Featured package">
-          <div class="pkg-badge">{get(page, "labels.bestValue", "Best Value")}</div>
-          <div class="pkg-top">
-            <h2 class="pkg-name">{get(page, "packages.jp.crew.name", "Crew")}</h2>
-            <p class="pkg-price">
-              <span class="from">{get(page, "labels.from", "From")}</span>
-              <span class="money">{get(page, "packages.jp.crew.price", "¥420,000")}</span>
-            </p>
-            <p class="pkg-meta">{get(page, "packages.jp.crew.meta", "")}</p>
-          </div>
-          <ul class="pkg-list">
-            {#each get(page, "packages.jp.crew.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-primary" href={emailJPCrew}>
-              {get(page, "labels.checkAvailability", "Check Availability")}
-            </a>
-          </div>
-        </article>
-
-        <article class="pkg-card">
-          <div class="pkg-top">
-            <h2 class="pkg-name">{get(page, "packages.jp.production.name", "Production")}</h2>
-            <p class="pkg-price">
-              <span class="from">{get(page, "labels.from", "From")}</span>
-              <span class="money">{get(page, "packages.jp.production.price", "¥980,000")}</span>
-            </p>
-            <p class="pkg-meta">{get(page, "packages.jp.production.meta", "")}</p>
-          </div>
-          <ul class="pkg-list">
-            {#each get(page, "packages.jp.production.items", []) as item}
-              <li>{item}</li>
-            {/each}
-          </ul>
-          <div class="pkg-bottom">
-            <a class="srk-btn srk-btn-ghost" href={emailJPProduction}>
-              {get(page, "labels.checkAvailability", "Check Availability")}
-            </a>
-          </div>
-        </article>
+            <div class="pkg-bottom">
+              <a
+                class="srk-btn"
+                class:srk-btn-primary={tier === "crew"}
+                class:srk-btn-ghost={tier !== "crew"}
+                href={getPackageEmail(loc, tier)}
+              >
+                {getCtaLabel()}
+              </a>
+            </div>
+          </article>
+        {/each}
       </div>
 
       <section class="brand-addons">
@@ -300,38 +193,44 @@
   .brand-toggle {
     margin: 1.6rem auto 0;
     display: inline-flex;
-    gap: 8px;
-    padding: 8px;
+    align-items: center;
+    gap: 6px;
+    padding: 7px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.06);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
     border: 1px solid rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .toggle-btn {
     border: 0;
     cursor: pointer;
     border-radius: 999px;
-    padding: 10px 16px;
+    padding: 12px 18px;
+    min-height: 44px;
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.78);
     background: transparent;
-    transition: 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
     outline: none;
     user-select: none;
+    white-space: nowrap;
   }
 
   .toggle-btn:hover {
     background: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.96);
   }
 
   .toggle-btn.is-active {
-    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.06));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.08));
     border: 1px solid rgba(255, 255, 255, 0.14);
     color: #fff;
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 20px rgba(0, 0, 0, 0.25);
   }
 
   .brand-cta-row {
@@ -507,5 +406,21 @@
   .srk-btn-ghost {
     background: rgba(255, 255, 255, 0.05);
     margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .brand-toggle {
+      width: 100%;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      border-radius: 24px;
+    }
+
+    .toggle-btn {
+      width: 100%;
+      justify-self: stretch;
+      text-align: center;
+    }
   }
 </style>
