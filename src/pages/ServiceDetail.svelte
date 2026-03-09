@@ -2,13 +2,19 @@
   import { loadCollection } from "../lib/content";
   import { navigate, currentLocale } from "../router";
   import { setSeo } from "../lib/seo";
+  import {
+    clearSchema,
+    injectSchema,
+    serviceSchema,
+    faqSchema,
+    breadcrumbSchema
+  } from "../lib/schema";
 
   export let slug;
 
   $: services = loadCollection("services", $currentLocale);
   $: item = services.find((s) => s.slug === slug);
 
-  // Locale-aware UI labels (no dependency on t() keys)
   $: labels =
     $currentLocale === "ja"
       ? {
@@ -28,16 +34,29 @@
           orderDefault: "Order"
         };
 
-  // Safe, dynamic SEO (won't crash if setSeo is missing fields)
   $: if (item) {
     setSeo({
       title: `${item.title} | San Roku Ku`,
       description: item.tagline || item.description || "",
       ogImage: item.image || ""
     });
+
+    clearSchema();
+
+    injectSchema(serviceSchema(item));
+    injectSchema(
+      breadcrumbSchema([
+        { name: "Home", url: `https://sanrokuku.com/${$currentLocale}` },
+        { name: "Services", url: `https://sanrokuku.com/${$currentLocale}/service` },
+        { name: item.title, url: `https://sanrokuku.com${window.location.pathname}` }
+      ])
+    );
+
+    if (item.qa?.length) {
+      injectSchema(faqSchema(item.qa));
+    }
   }
 
-  // accordion state for Q&A
   let openIndex = -1;
 
   function toggleQA(index) {
@@ -53,7 +72,6 @@
     </button>
   </section>
 {:else}
-  <!-- Main service section -->
   <section class="section service-detail">
     <div class="container service-detail-inner">
       <div class="service-detail-media">
@@ -143,7 +161,6 @@
       </div>
 
       <style>
-        /* HOW IT WORKS (premium) */
         .howitworks { padding: clamp(56px, 8vw, 120px) 0; }
 
         .howitworks-inner {
@@ -293,7 +310,6 @@
     </div>
   {/if}
 
-  <!-- Q&A section underneath, centered -->
   {#if item.qa && item.qa.length > 0}
     <section class="section service-qa">
       <div class="container">

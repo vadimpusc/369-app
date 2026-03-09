@@ -3,6 +3,13 @@
   import TitleDetail from "../components/TitleDetail.svelte";
   import { navigate, currentLocale } from "../router";
   import { setSeo } from "../lib/seo";
+  import {
+    clearSchema,
+    injectSchema,
+    movieSchema,
+    breadcrumbSchema,
+    toEmbed
+  } from "../lib/schema";
 
   export let slug;
 
@@ -13,7 +20,6 @@
     navigate("/films");
   }
 
-  // Locale-aware UI labels
   $: labels =
     $currentLocale === "ja"
       ? {
@@ -27,31 +33,23 @@
           trailer: "Trailer"
         };
 
-  // Dynamic SEO per film
   $: if (item) {
     setSeo({
       title: `${item.title} | Film | San Roku Ku`,
       description: item.logline || item.description || "",
       ogImage: item.poster || ""
     });
-  }
 
-  // Converts any YouTube URL into an embed URL
-  function toEmbed(url) {
-    if (!url) return null;
+    clearSchema();
 
-    let x = url.trim();
-
-    // Standard watch URL
-    x = x.replace("watch?v=", "embed/");
-
-    // Short youtu.be links
-    if (x.includes("youtu.be/")) {
-      const id = x.split("youtu.be/")[1].split(/[?&]/)[0];
-      x = `https://www.youtube.com/embed/${id}`;
-    }
-
-    return x;
+    injectSchema(movieSchema(item));
+    injectSchema(
+      breadcrumbSchema([
+        { name: "Home", url: `https://sanrokuku.com/${$currentLocale}` },
+        { name: "Films", url: `https://sanrokuku.com/${$currentLocale}/films` },
+        { name: item.title, url: `https://sanrokuku.com${window.location.pathname}` }
+      ])
+    );
   }
 </script>
 
@@ -63,10 +61,8 @@
     </button>
   </section>
 {:else}
-  <!-- Your existing film layout -->
   <TitleDetail item={item} kind="Film" />
 
-  <!-- Trailer under the details -->
   {#if item.trailer}
     <section class="film-trailer">
       <h2>{labels.trailer}</h2>

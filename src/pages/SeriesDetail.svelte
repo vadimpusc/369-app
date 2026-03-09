@@ -3,13 +3,23 @@
   import TitleDetail from "../components/TitleDetail.svelte";
   import { navigate, currentLocale } from "../router";
   import { setSeo } from "../lib/seo";
+  import {
+    clearSchema,
+    injectSchema,
+    tvSeriesSchema,
+    breadcrumbSchema,
+    toEmbed
+  } from "../lib/schema";
 
   export let slug;
 
   $: series = loadCollection("series", $currentLocale);
   $: item = series.find((s) => s.slug === slug);
 
-  // Locale-aware UI labels
+  function goBack() {
+    navigate("/series");
+  }
+
   $: labels =
     $currentLocale === "ja"
       ? {
@@ -23,38 +33,30 @@
           trailer: "Trailer"
         };
 
-  // Dynamic SEO per series
   $: if (item) {
     setSeo({
       title: `${item.title} | Series | San Roku Ku`,
       description: item.logline || item.description || "",
       ogImage: item.poster || ""
     });
-  }
 
-  // Convert YouTube URL to embed
-  function toEmbed(url) {
-    if (!url) return null;
+    clearSchema();
 
-    let x = url.trim();
-
-    // Standard watch URL
-    x = x.replace("watch?v=", "embed/");
-
-    // Short youtu.be link
-    if (x.includes("youtu.be/")) {
-      const id = x.split("youtu.be/")[1].split(/[?&]/)[0];
-      x = `https://www.youtube.com/embed/${id}`;
-    }
-
-    return x;
+    injectSchema(tvSeriesSchema(item));
+    injectSchema(
+      breadcrumbSchema([
+        { name: "Home", url: `https://sanrokuku.com/${$currentLocale}` },
+        { name: "Series", url: `https://sanrokuku.com/${$currentLocale}/series` },
+        { name: item.title, url: `https://sanrokuku.com${window.location.pathname}` }
+      ])
+    );
   }
 </script>
 
 {#if !item}
   <section class="container" style="padding: 4rem 0;">
     <h1>{labels.notFound}</h1>
-    <button class="btn-primary" on:click={() => navigate("/series")}>
+    <button class="btn-primary" on:click={goBack}>
       {labels.back}
     </button>
   </section>

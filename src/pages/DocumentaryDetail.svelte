@@ -3,13 +3,23 @@
   import TitleDetail from "../components/TitleDetail.svelte";
   import { navigate, currentLocale } from "../router";
   import { setSeo } from "../lib/seo";
+  import {
+    clearSchema,
+    injectSchema,
+    movieSchema,
+    breadcrumbSchema,
+    toEmbed
+  } from "../lib/schema";
 
   export let slug;
 
   $: documentaries = loadCollection("documentaries", $currentLocale);
   $: item = documentaries.find((d) => d.slug === slug);
 
-  // Locale-aware UI labels
+  function goBack() {
+    navigate("/documentaries");
+  }
+
   $: labels =
     $currentLocale === "ja"
       ? {
@@ -23,44 +33,39 @@
           trailer: "Trailer"
         };
 
-  // Dynamic SEO per documentary
   $: if (item) {
     setSeo({
       title: `${item.title} | Documentary | San Roku Ku`,
       description: item.logline || item.description || "",
       ogImage: item.poster || ""
     });
-  }
 
-  // Convert normal YouTube URL into embed URL
-  function toEmbed(url) {
-    if (!url) return null;
+    clearSchema();
 
-    let x = url.trim();
-
-    x = x.replace("watch?v=", "embed/");
-
-    if (x.includes("youtu.be/")) {
-      const id = x.split("youtu.be/")[1].split(/[?&]/)[0];
-      x = `https://www.youtube.com/embed/${id}`;
-    }
-
-    return x;
+    injectSchema(movieSchema(item));
+    injectSchema(
+      breadcrumbSchema([
+        { name: "Home", url: `https://sanrokuku.com/${$currentLocale}` },
+        {
+          name: "Documentaries",
+          url: `https://sanrokuku.com/${$currentLocale}/documentaries`
+        },
+        { name: item.title, url: `https://sanrokuku.com${window.location.pathname}` }
+      ])
+    );
   }
 </script>
 
 {#if !item}
   <section class="container" style="padding: 4rem 0;">
     <h1>{labels.notFound}</h1>
-    <button class="btn-primary" on:click={() => navigate("/documentaries")}>
+    <button class="btn-primary" on:click={goBack}>
       {labels.back}
     </button>
   </section>
 {:else}
-  <!-- Detail Layout -->
   <TitleDetail item={item} kind="Documentary" />
 
-  <!-- Trailer Section -->
   {#if item.trailer}
     <section class="doc-trailer">
       <h2>{labels.trailer}</h2>
