@@ -1,191 +1,190 @@
 [
   {
     "slug": "poster-design",
-    "title": "Movie Poster Design",
-    "category": "Graphic Design",
-    "tagline": "Your film deserves a poster that makes people stop and watch.",
-    "description": "JA. We design cinematic posters specifically for independent films, streaming platforms, and film festivals. We understand how posters need to communicate tone, genre, and emotion instantly. Every poster is crafted to capture attention, build credibility, and help your film stand out in crowded marketplaces, festivals, and streaming services.",
-     "bannerTitle": "Professional Movie Posters Designed by Filmmakers",
-     "longer-description": "We design cinematic posters specifically for independent films, streaming releases, and film festivals. Unlike generic design platforms, San Roku Ku is an active production company with real filmmaking experience. We understand each film’s requirements, streaming platform standards, and how posters appear as thumbnails where the decision to watch is made in seconds. Every poster is crafted to communicate your film’s tone, attract attention, and help your project compete with professional releases. This is poster design built for filmmakers who want their work to stand out and be taken seriously.",
+    "title": "映画ポスターデザイン",
+    "category": "グラフィックデザイン",
+    "tagline": "あなたの映画には、思わず足を止めて見たくなるポスターが必要です。",
+    "description": "私たちはインディペンデント映画、配信プラットフォーム、映画祭向けのシネマティックな映画ポスターをデザインしています。ポスターは一瞬で作品のトーン、ジャンル、感情を伝える必要があります。私たちはその重要性を理解しています。すべてのポスターは観客の注意を引き、作品の信頼性を高め、映画祭、ストリーミングサービス、競争の激しいマーケットの中であなたの映画が際立つよう設計されています。",
+    "bannerTitle": "映画制作者によるプロフェッショナル映画ポスター",
+    "longer-description": "私たちはインディペンデント映画、配信作品、映画祭向けにシネマティックな映画ポスターを制作しています。一般的なデザインサービスとは異なり、San Roku Ku は実際に映画制作を行うプロダクション会社です。私たちは映画制作の要件、配信プラットフォームの基準、そしてポスターがサムネイルとして表示される際に、数秒で視聴判断が行われることを理解しています。すべてのポスターは作品のトーンを的確に伝え、観客の注意を引き、プロフェッショナル作品と並んでも競争できるよう設計されています。本サービスは、自分の作品を際立たせ、本格的に見せたい映画制作者のためのポスターデザインです。",
     "bannerImage": "/assets/services/poster-banner.png",
     "howItWorks": {
-  "kicker": "Easy Process",
-  "title": "How it works",
-  "subtitle": "A simple, structured workflow from order to final delivery.",
-  "steps": [
-    {
-      "number": "01",
-      "title": "Place your order",
-      "description": "Choose your package and submit your details. During checkout you will be asked to provide your title, credits, images, references, and creative direction."
+      "kicker": "簡単なプロセス",
+      "title": "ご利用の流れ",
+      "subtitle": "注文から最終納品までのシンプルで明確なワークフローです。",
+      "steps": [
+        {
+          "number": "01",
+          "title": "ご注文",
+          "description": "ご希望のパッケージを選択し、必要情報を送信してください。チェックアウト時に作品タイトル、クレジット、画像、参考資料、クリエイティブの方向性をご入力いただきます。"
+        },
+        {
+          "number": "02",
+          "title": "確認と修正",
+          "description": "合意したスケジュール内に最初のデザイン案をお送りします。選択されたパッケージに含まれる回数まで修正をご依頼いただけます。"
+        },
+        {
+          "number": "03",
+          "title": "最終納品",
+          "description": "デザインが承認されると、印刷およびデジタル利用に対応した高解像度の最終データを納品します。"
+        }
+      ]
     },
-    {
-      "number": "02",
-      "title": "Review and approve revisions",
-      "description": "You will receive your first draft within the agreed timeframe. You may request revisions according to the number included in your selected package."
-    },
-    {
-      "number": "03",
-      "title": "Final delivery",
-      "description": "Once approved, you will receive your final high-resolution delivery files, ready for print and digital use."
-    }
-  ]
-},
-"serviceBannerImage1": "/assets/services/369-1.jpg",
-"serviceBannerImage2": "/assets/services/369-2.jpg",
-"serviceBannerImage3": "",
-"serviceBannerImage4": "",
-"serviceBannerImage5": "",
+    "serviceBannerImage1": "/assets/services/369-1.jpg",
+    "serviceBannerImage2": "/assets/services/369-2.jpg",
+    "serviceBannerImage3": "",
+    "serviceBannerImage4": "",
+    "serviceBannerImage5": "",
     "image": "/assets/services/369.png",
-    "ctaLabel": "Order Poster",
+    "ctaLabel": "ポスターを注文",
     "orderUrl": "https://tally.so/r/EkqPDr",
     "viewWorkUrl": "/work/posters",
     "featured": true,
-"qa": [
-  {
-    "question": "In what format will I receive the files?",
-    "answer": "All packages include high-resolution JPG files ready for streaming platforms, film festivals, and social media. Premium also includes layered editable source files (PSD). Source files can be added to Basic or Standard if needed."
+    "qa": [
+      {
+        "question": "納品ファイルの形式は何ですか？",
+        "answer": "すべてのパッケージには、配信プラットフォーム、映画祭、SNSで使用できる高解像度JPGファイルが含まれます。Premiumではレイヤー付き編集可能PSDファイルも含まれます。BasicやStandardでも追加オプションとしてソースファイルを提供できます。"
+      },
+      {
+        "question": "制作期間はどれくらいですか？",
+        "answer": "BasicおよびStandardは約4〜5日、Premiumは約2〜3日です。急ぎの場合は24時間のエクスプレス納品にも対応しています。"
+      },
+      {
+        "question": "承認期間について",
+        "answer": "修正案送付後48時間以内にフィードバックをいただけない場合、注文は自動的に納品および承認済みとして処理されます。"
+      },
+      {
+        "question": "納品条件について",
+        "answer": "承認後、納品データはすべて最終版とみなされます。最終ファイルはパッケージ仕様に基づいた高解像度で提供されます。"
+      },
+      {
+        "question": "修正回数は何回まで可能ですか？",
+        "answer": "Basicは1回、Standardは2回、Premiumは最大5回まで修正が含まれます。公開に向けて最適な仕上がりになるようサポートします。"
+      },
+      {
+        "question": "編集可能なソースファイルは含まれますか？",
+        "answer": "Premiumには編集可能なPSDソースファイルが含まれます。BasicやStandardでも追加オプションとして提供可能です。"
+      },
+      {
+        "question": "使用権は含まれていますか？",
+        "answer": "はい。最終デザインが納品・承認された後、配信プラットフォーム、映画祭、マーケティング、ウェブサイト、SNSなどで使用できる完全な使用権が付与されます。"
+      },
+      {
+        "question": "制作開始に必要なものは何ですか？",
+        "answer": "映画タイトル、画像またはスチル、ジャンル、作品のトーン、タグライン（あれば）、参考資料などをご提供ください。不明な場合はこちらで制作プロセスをご案内します。"
+      },
+      {
+        "question": "スチル画像しかない場合でもポスターは制作できますか？",
+        "answer": "はい。多くのインディペンデント映画制作者は作品のスチルを提供しています。それらの画像を使用してプロフェッショナルな映画ポスターを制作できます。"
+      },
+      {
+        "question": "どのパッケージを選べばよいかわからない場合は？",
+        "answer": "newbusiness@sanrokuku.com までご連絡ください。映画の内容や目的に応じて最適なプランをご提案します。"
+      },
+      {
+        "question": "支払い方法について",
+        "answer": "制作開始前に全額のお支払いが必要です。すべての決済はStripe Checkoutを通じて安全に処理されます。当社がカード情報を保存・取得することはありません。"
+      },
+      {
+        "question": "返金ポリシーについて",
+        "answer": "すべてのポスターは作品ごとにカスタム制作されるため、制作開始後の返金はできません。ただしパッケージに含まれる修正対応により、最終結果にご満足いただけるよう対応します。"
+      }
+    ]
   },
   {
-    "question": "How long does it take?",
-    "answer": "Basic and Standard approximately 4–5 days. Premium: approximately 2–3 days. Express delivery (24-hour turnaround) is available if you have an urgent deadline."
-  },
-    {
-  "question": "Approval Window",
-  "answer": "If we do not receive feedback within 48 hours after a revision is sent for approval, the order will be automatically marked as delivered and approved."
-},
-  {
-  "question": "Delivery Terms",
-  "answer": "All delivery files are considered final upon approval. Final files are provided in high resolution according to the package specifications. "
-},
-  {
-    "question": "How many revisions are included?",
-    "answer": "Basic includes 1 revision, Standard includes 2 revisions, and Premium includes up to 5 revisions. Our goal is to ensure your poster looks exactly right and is ready for release."
-  },
-  {
-    "question": "Are editable source files included?",
-    "answer": "Premium includes editable source files (PSD). These can also be added to Basic or Standard if you would like full flexibility for future edits."
-  },
-  {
-    "question": "Do I receive full usage rights?",
-    "answer": "Yes. Once the final design is delivered and approved, you receive full usage rights for your poster across streaming platforms, film festivals, marketing, websites, and social media."
-  },
-  {
-    "question": "What do you need from me to begin?",
-    "answer": "Please provide your film title, images or stills, genre, tone, tagline (if available), and any references you like. If you are unsure, we can guide you through the process."
-  },
-  {
-    "question": "Can you design a poster if I only have still frames?",
-    "answer": "Yes. Most independent filmmakers provide still frames from their film. We can create a professional cinematic poster using those images."
-  },
-  {
-    "question": "What if I am not sure which package to choose?",
-    "answer": "You can contact us at newbusiness@sanrokuku.com and we will recommend the best option based on your film and goals."
-  },
-{
-  "question": "How does payment work?",
-  "answer": "Full payment is required before work begins to secure your project in our production schedule. All transactions are processed securely through Stripe Checkout. We do not store, collect, or have access to your card or payment details."
-},
-  {
-  "question": "What is your refund policy?",
-  "answer": "Because each poster is custom designed specifically for your film, refunds are not available once design work has begun. However, revisions are included in your package to ensure you are happy with the final result."
-}
-]
-  },
-  {
-  "slug": "filmhub-graphics-design",
-  "title": "Filmhub Graphics Design",
-  "category": "Graphic Design",
-  "tagline": "Professional Filmhub and streaming graphics designed to make your film look professional and ready for distribution.",
-  "description": "Filmhub and streaming platforms require multiple artwork formats with specific sizes and layouts. Incorrect graphics can lead to rejection, delays, or your film looking unprofessional in the catalog. We prepare and optimize your graphics to meet Filmhub requirements and ensure your film presents correctly across streaming platforms. This includes properly formatted key art, thumbnails, banners, and platform-ready versions designed to improve visibility and attract viewers.",
-  "bannerTitle": "Filmhub-Ready Graphics Designed for Streaming Platforms",
-    "longer-description": "We create compliant, professional graphics formatted specifically for Filmhub and digital streaming platforms. Incorrect artwork can lead to rejection, delays, or poor visibility. We handle all required sizes, ratios, and platform-ready formats so your film presents correctly, looks professional, and stands out in crowded catalogs. Our goal is to ensure your film is ready for distribution and positioned to attract viewers.",
+    "slug": "filmhub-graphics-design",
+    "title": "Filmhub配信グラフィックデザイン",
+    "category": "グラフィックデザイン",
+    "tagline": "Filmhubや配信プラットフォーム向けに、プロフェッショナルな配信グラフィックを制作します。",
+    "description": "Filmhubやストリーミングプラットフォームでは、特定サイズとレイアウトに対応した複数のアートワークが必要です。不適切なグラフィックは審査の却下や公開の遅延、またはカタログ内で作品がプロフェッショナルに見えない原因になります。私たちはFilmhubの仕様に合わせてグラフィックを最適化し、あなたの映画が配信プラットフォーム上で正しく表示されるよう準備します。",
+    "bannerTitle": "配信プラットフォーム向けFilmhub対応グラフィック",
+    "longer-description": "Filmhubおよびデジタル配信プラットフォーム向けに、仕様に準拠したプロフェッショナルなグラフィックを制作します。不適切なアートワークは却下や公開遅延、視認性低下の原因となる可能性があります。私たちは必要なサイズ、比率、配信対応フォーマットをすべて準備し、作品が正しく表示され、プロフェッショナルに見え、競争の激しいカタログの中でも際立つようにします。",
     "bannerImage": "/assets/services/filmh.jpg",
     "howItWorks": {
-  "kicker": "Easy Process",
-  "title": "How it works",
-  "subtitle": "A simple, structured workflow from order to final delivery.",
-  "steps": [
-    {
-      "number": "01",
-      "title": "Place your order",
-      "description": "Choose your package and submit your details. During checkout you will be asked to provide your title, credits, images, references, and creative direction."
+      "kicker": "簡単なプロセス",
+      "title": "ご利用の流れ",
+      "subtitle": "注文から最終納品までのシンプルで明確なワークフローです。",
+      "steps": [
+        {
+          "number": "01",
+          "title": "ご注文",
+          "description": "ご希望のパッケージを選択し、必要情報を送信してください。チェックアウト時にタイトル、クレジット、画像、参考資料、クリエイティブの方向性をご入力いただきます。"
+        },
+        {
+          "number": "02",
+          "title": "確認と修正",
+          "description": "合意したスケジュール内に最初のデザイン案をお送りします。パッケージに含まれる回数まで修正をご依頼いただけます。"
+        },
+        {
+          "number": "03",
+          "title": "最終納品",
+          "description": "承認後、印刷およびデジタル利用に対応した高解像度の最終ファイルを納品します。"
+        }
+      ]
     },
-    {
-      "number": "02",
-      "title": "Review and approve revisions",
-      "description": "You will receive your first draft within the agreed timeframe. You may request revisions according to the number included in your selected package."
-    },
-    {
-      "number": "03",
-      "title": "Final delivery",
-      "description": "Once approved, you will receive your final high-resolution delivery files, ready for print and digital use."
-    }
-  ]
-},
-"serviceBannerImage1": "/assets/services/filmh-1.jpg",
-"serviceBannerImage2": "",
-"serviceBannerImage3": "",
-"serviceBannerImage4": "",
-"serviceBannerImage5": "",
-  "image": "/assets/services/369.png",
-  "ctaLabel": "Order Filmhub Graphics",
-  "orderUrl": "https://tally.so/r/81qkVl",
+    "serviceBannerImage1": "/assets/services/filmh-1.jpg",
+    "serviceBannerImage2": "",
+    "serviceBannerImage3": "",
+    "serviceBannerImage4": "",
+    "serviceBannerImage5": "",
+    "image": "/assets/services/369.png",
+    "ctaLabel": "Filmhubグラフィックを注文",
+    "orderUrl": "https://tally.so/r/81qkVl",
     "viewWorkUrl": "/work/filmhub",
-  "featured": true,
-"qa": [
-  {
-    "question": "What is included in the Filmhub Graphics service?",
-    "answer": "We resize and optimize your poster artwork to meet Filmhub and streaming platform requirements. Depending on your package, this includes vertical key art, banners, square versions, thumbnails, and platform-ready formats designed to ensure compliance and improve visibility."
-  },
-  {
-    "question": "In what format will I receive the files?",
-    "answer": "Final files are delivered in high-quality JPG format, fully optimized for Filmhub and streaming platforms. Editable source files (PSD) are included in Premium or available as an add-on."
-  },
-  {
-    "question": "How long does it take?",
-    "answer": "Basic and Standard orders are typically completed within 3–5 days after receiving your assets. Premium orders are prioritized and delivered within 2–3 days. Express delivery is available if needed."
-  },
-    {
-  "question": "Approval Window",
-  "answer": "If we do not receive feedback within 48 hours after a revision is sent for approval, the order will be automatically marked as delivered and approved."
-},
-  {
-  "question": "Delivery Terms",
-  "answer": "All delivery files are considered final upon approval. Final files are provided in high resolution according to the package specifications. "
-},
-  {
-    "question": "How many revisions are included?",
-    "answer": "Basic includes 1 revision, Standard includes up to 2 revisions, and Premium includes up to 5 revisions. We work with you to ensure everything is correct and ready for submission."
-  },
-  {
-    "question": "Can you design a poster if I don't have one?",
-    "answer": "Yes. Full poster design from scratch is included in the Premium package. Basic and Standard focus on optimizing and formatting existing artwork."
-  },
-  {
-    "question": "Will my graphics meet Filmhub requirements?",
-    "answer": "Yes. All graphics are prepared to meet Filmhub specifications and streaming platform standards, ensuring your film is ready for submission and professional presentation."
-  },
-  {
-    "question": "Do I receive full usage rights?",
-    "answer": "Yes. Once complete, you receive full usage rights for distribution platforms, marketing, and promotional use."
-  },
-  {
-    "question": "What do you need from me?",
-    "answer": "Please provide your existing poster or artwork, film title, and any platform requirements if known. If you are unsure, we can guide you."
-  },
-  {
-    "question": "How do I place an order?",
-    "answer": "Click the Order Filmhub Graphics button and submit your project details. You can also contact us at newbusiness@sanrokuku.com if you have questions."
-  },
-  {
-  "question": "How does payment work?",
-  "answer": "Full payment is required before work begins to secure your project in our production schedule. All transactions are processed securely through Stripe Checkout. We do not store, collect, or have access to your card or payment details."
-},
-  {
-    "question": "What is your refund policy?",
-    "answer": "Because all work is custom created for your film, refunds are not available once production begins. Revisions are included to ensure your graphics meet your expectations."
+    "featured": true,
+    "qa": [
+      {
+        "question": "Filmhubグラフィックサービスには何が含まれますか？",
+        "answer": "ポスターアートワークをFilmhubおよび配信プラットフォームの仕様に合わせてリサイズ・最適化します。パッケージに応じて、縦型キービジュアル、バナー、スクエア版、サムネイル、配信対応フォーマットなどが含まれます。"
+      },
+      {
+        "question": "納品ファイルの形式は何ですか？",
+        "answer": "最終ファイルはFilmhubおよび配信プラットフォーム用に最適化された高品質JPG形式で納品されます。PremiumではPSDソースファイルも含まれます。"
+      },
+      {
+        "question": "制作期間はどれくらいですか？",
+        "answer": "BasicおよびStandardは通常3〜5日、Premiumは2〜3日以内に納品されます。急ぎの場合はエクスプレス対応も可能です。"
+      },
+      {
+        "question": "承認期間について",
+        "answer": "修正案送付後48時間以内にフィードバックをいただけない場合、注文は自動的に納品および承認済みとして処理されます。"
+      },
+      {
+        "question": "納品条件について",
+        "answer": "承認後、納品ファイルはすべて最終版とみなされます。最終ファイルはパッケージ仕様に基づいた高解像度で提供されます。"
+      },
+      {
+        "question": "修正回数は何回まで可能ですか？",
+        "answer": "Basicは1回、Standardは最大2回、Premiumは最大5回まで修正が含まれます。配信提出前に最適な状態に仕上げます。"
+      },
+      {
+        "question": "ポスターがない場合でも制作できますか？",
+        "answer": "はい。Premiumパッケージにはポスターの新規デザイン制作が含まれます。BasicおよびStandardは既存アートワークの最適化を中心としたサービスです。"
+      },
+      {
+        "question": "Filmhubの仕様に対応していますか？",
+        "answer": "はい。すべてのグラフィックはFilmhubおよび主要配信プラットフォームの仕様に準拠して制作されます。"
+      },
+      {
+        "question": "使用権は含まれますか？",
+        "answer": "はい。完成後、配信プラットフォーム、マーケティング、宣伝用途で使用できる完全な使用権が付与されます。"
+      },
+      {
+        "question": "制作開始に必要なものは何ですか？",
+        "answer": "既存ポスターまたはアートワーク、映画タイトル、プラットフォーム要件（分かる場合）をご提供ください。不明な場合はこちらでサポートします。"
+      },
+      {
+        "question": "注文方法は？",
+        "answer": "Order Filmhub Graphics ボタンをクリックし、プロジェクト情報を送信してください。質問がある場合は newbusiness@sanrokuku.com までご連絡ください。"
+      },
+      {
+        "question": "支払い方法について",
+        "answer": "制作開始前に全額のお支払いが必要です。すべての決済はStripe Checkoutを通じて安全に処理されます。当社がカード情報を保存・取得することはありません。"
+      },
+      {
+        "question": "返金ポリシーについて",
+        "answer": "すべての作業は作品ごとにカスタム制作されるため、制作開始後の返金はできません。ただし修正対応により、ご希望に沿った仕上がりになるよう対応します。"
+      }
+    ]
   }
-]
-}
-
 ]

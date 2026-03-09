@@ -7,27 +7,25 @@
     "series": "Series",
     "services": "Our Services"
   },
-"footer": {
-  "catalogue": "Catalogue",
-  "filmCatalogue": "Film Catalogue",
-  "seriesCatalogue": "Series Catalogue",
-  "documentaryCatalogue": "Documentary Catalogue",
-  "submit": "Submit for Distribution",
-  "development": "Development Slate",
-
-  "studio": "Studio",
-  "about": "About Us",
-  "servicesForProducers": "Services For Producers",
-  "weddingFilms": "Wedding Films",
-  "brandFilms": "Brand Films",
-  "workOpportunities": "Work Opportunities",
-  "contact": "Contact Us",
-
-  "legal": "Legal",
-  "terms": "Terms and Conditions",
-  "refund": "Refund Policy",
-  "privacy": "Privacy Policy"
-},
+  "footer": {
+    "catalogue": "Catalogue",
+    "filmCatalogue": "Film Catalogue",
+    "seriesCatalogue": "Series Catalogue",
+    "documentaryCatalogue": "Documentary Catalogue",
+    "submit": "Submit for Distribution",
+    "development": "Development Slate",
+    "studio": "Studio",
+    "about": "About Us",
+    "servicesForProducers": "Services For Producers",
+    "weddingFilms": "Wedding Films",
+    "brandFilms": "Brand Films",
+    "workOpportunities": "Work Opportunities",
+    "contact": "Contact Us",
+    "legal": "Legal",
+    "terms": "Terms and Conditions",
+    "refund": "Refund Policy",
+    "privacy": "Privacy Policy"
+  },
   "home": {
     "productionPartnerTitle": "Your Production Partner",
     "productionPartnerText": "San Roku Ku produces and distributes independent films, series, and documentaries, and supports creators with premium post and marketing services.",
@@ -41,5 +39,33 @@
   "language": {
     "en": "EN",
     "ja": "JP"
+  },
+  "detail": {
+    "fields": {
+      "title": "Title",
+      "trailer": "Trailer",
+      "type": "Type",
+      "year": "Year",
+      "countries": "Countries",
+      "genres": "Genres",
+      "duration": "Duration",
+      "logline": "Logline",
+      "director": "Director",
+      "producer": "Producer",
+      "starring": "Starring",
+      "creator": "Creator",
+      "showrunner": "Showrunner"
+    },
+    "kinds": {
+      "film": "Film",
+      "series": "Series",
+      "documentary": "Documentary"
+    },
+    "units": {
+      "minutes": "min",
+      "season": "season",
+      "seasons": "seasons",
+      "episodes": "eps"
+    }
   }
 }

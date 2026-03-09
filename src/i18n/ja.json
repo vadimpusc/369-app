@@ -7,27 +7,25 @@
     "series": "シリーズ",
     "services": "サービス"
   },
- "footer": {
-  "catalogue": "カタログ",
-  "filmCatalogue": "映画一覧",
-  "seriesCatalogue": "シリーズ一覧",
-  "documentaryCatalogue": "ドキュメンタリー一覧",
-  "submit": "配給の応募",
-  "development": "開発スレート",
-
-  "studio": "スタジオ",
-  "about": "会社概要",
-  "servicesForProducers": "制作サービス",
-  "weddingFilms": "ウェディング",
-  "brandFilms": "ブランド映像",
-  "workOpportunities": "求人",
-  "contact": "お問い合わせ",
-
-   "legal": "法務",
-  "terms": "利用規約",
-  "refund": "返金ポリシー",
-  "privacy": "プライバシーポリシー"
-},
+  "footer": {
+    "catalogue": "カタログ",
+    "filmCatalogue": "映画一覧",
+    "seriesCatalogue": "シリーズ一覧",
+    "documentaryCatalogue": "ドキュメンタリー一覧",
+    "submit": "配給の応募",
+    "development": "開発スレート",
+    "studio": "スタジオ",
+    "about": "会社概要",
+    "servicesForProducers": "制作サービス",
+    "weddingFilms": "ウェディング",
+    "brandFilms": "ブランド映像",
+    "workOpportunities": "求人",
+    "contact": "お問い合わせ",
+    "legal": "法務",
+    "terms": "利用規約",
+    "refund": "返金ポリシー",
+    "privacy": "プライバシーポリシー"
+  },
   "home": {
     "productionPartnerTitle": "あなたの制作パートナー",
     "productionPartnerText": "San Roku Ku は映画、シリーズ、ドキュメンタリーの制作と配給を行い、ポストプロダクションやマーケティングのサービスでクリエイターを支援します。",
@@ -41,5 +39,33 @@
   "language": {
     "en": "EN",
     "ja": "JP"
+  },
+  "detail": {
+    "fields": {
+      "title": "タイトル",
+      "trailer": "予告編",
+      "type": "作品種別",
+      "year": "公開年",
+      "countries": "製作国",
+      "genres": "ジャンル",
+      "duration": "上映時間",
+      "logline": "ログライン",
+      "director": "監督",
+      "producer": "プロデューサー",
+      "starring": "出演",
+      "creator": "原案",
+      "showrunner": "ショーランナー"
+    },
+    "kinds": {
+      "film": "映画",
+      "series": "シリーズ",
+      "documentary": "ドキュメンタリー"
+    },
+    "units": {
+      "minutes": "分",
+      "season": "シーズン",
+      "seasons": "シーズン",
+      "episodes": "話"
+    }
   }
 }

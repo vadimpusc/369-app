@@ -1,135 +1,135 @@
 {
   "posters": {
-    "title": "Poster Examples",
-    "intro": "JA.A selection of poster work designed to match tone, genre, and market positioning. We prioritize clarity, strong hierarchy, and standout thumbnails for crowded marketplaces.",
-    "processTitle": "Our Design Process",
-    "processText": "JA. We start with your logline, comps, and target audience. Then we explore multiple directions, refine the strongest concept, and deliver print and web ready files with clean, consistent branding.",
+    "title": "ポスター制作実績",
+    "intro": "作品のトーン、ジャンル、市場でのポジショニングに合わせて設計したポスター作品の一例です。競争の激しいマーケットプレイスでも埋もれないよう、明確さ、強い情報の階層設計、そして目を引くサムネイル表現を重視しています。",
+    "processTitle": "デザインプロセス",
+    "processText": "まず、ログライン、参考ビジュアル、想定オーディエンスをもとに方向性を整理します。その後、複数のデザイン案を検討し、最も強いコンセプトを磨き上げ、印刷用とウェブ用の両方に対応した、統一感のあるブランドデータとして納品します。",
     "layout": "grid",
     "items": [
-       {
+      {
         "thumb": "/assets/work/posters/the-river.png",
         "full": "/assets/work/posters/the-river.png",
-       "alt": "The River We Cannot Leave, official film poster."
+        "alt": "『The River We Cannot Leave』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/honey.jpg",
         "full": "/assets/work/posters/honey.jpg",
-       "alt": "Honey and Wine, official film poster."
+        "alt": "『Honey and Wine』公式映画ポスター"
       },
       {
         "thumb": "/assets/work/posters/despair.jpg",
         "full": "/assets/work/posters/despair.jpg",
-       "alt": "Despair, official film poster."
+        "alt": "『Despair』公式映画ポスター"
       },
       {
         "thumb": "/assets/work/posters/exposure.jpg",
         "full": "/assets/work/posters/exposure.jpg",
-        "alt": "Exposure, official film poster."
+        "alt": "『Exposure』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/job.jpg",
         "full": "/assets/work/posters/job.jpg",
-        "alt": "The Job, official film poster."
+        "alt": "『The Job』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/spooked.png",
         "full": "/assets/work/posters/spooked.png",
-       "alt": "Spooked, official film poster."
+        "alt": "『Spooked』公式映画ポスター"
       },
       {
         "thumb": "/assets/work/posters/outsiders.jpg",
         "full": "/assets/work/posters/outsiders.jpg",
-        "alt": "Outsiders, official film poster."
+        "alt": "『Outsiders』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/man.png",
         "full": "/assets/work/posters/man.png",
-        "alt": "The Man, official film poster."
+        "alt": "『The Man』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/across.jpg",
         "full": "/assets/work/posters/across.jpg",
-        "alt": "Across Two Skies, official film poster."
+        "alt": "『Across Two Skies』公式映画ポスター"
       },
-          {
+      {
         "thumb": "/assets/work/posters/cosmos.jpg",
         "full": "/assets/work/posters/cosmos.jpg",
-        "alt": "Man of the Cosmos, official film poster."
+        "alt": "『Man of the Cosmos』公式映画ポスター"
       },
       {
         "thumb": "/assets/work/posters/following.jpg",
         "full": "/assets/work/posters/following.jpg",
-       "alt": "Following, official film poster."
+        "alt": "『Following』公式映画ポスター"
       },
       {
         "thumb": "/assets/work/posters/love.jpg",
         "full": "/assets/work/posters/love.jpg",
-        "alt": "Love in the City, official film poster."
+        "alt": "『Love in the City』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/napoleon.jpg",
         "full": "/assets/work/posters/napoleon.jpg",
-        "alt": "Napoleon's Table, official film poster."
+        "alt": "『Napoleon's Table』公式映画ポスター"
       },
-          {
+      {
         "thumb": "/assets/work/posters/osaka.jpg",
         "full": "/assets/work/posters/osaka.jpg",
-        "alt": "Osaka, official film poster."
+        "alt": "『Osaka』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/chance.jpg",
         "full": "/assets/work/posters/chance.jpg",
-        "alt": "Love by Chance Again, official film poster."
+        "alt": "『Love by Chance Again』公式映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/darkness.jpg",
         "full": "/assets/work/posters/darkness.jpg",
-        "alt": "I See Darkness, film poster."
+        "alt": "『I See Darkness』映画ポスター"
       },
-       {
+      {
         "thumb": "/assets/work/posters/ritual.jpg",
         "full": "/assets/work/posters/ritual.jpg",
-        "alt": "The Ritual, official film poster."
+        "alt": "『The Ritual』公式映画ポスター"
       }
     ]
   },
 
   "filmhub": {
-    "title": "JA. Filmhub Examples",
-    "intro": "Artwork optimized for delivery specs and storefront performance. Mixed aspect ratios, consistent brand language, and readable typography at small sizes.",
-    "processTitle": "How We Build Deliverables",
-"processText": "We design strictly to platform specifications. Many distribution platforms allow only the official film title, and reject artwork containing additional text such as taglines, festival laurels, or credits. We ensure your artwork is compliant, visually strong, and optimized for storefront performance across all major platforms.",
+    "title": "Filmhub制作実績",
+    "intro": "納品仕様とストア掲載時の見え方を考慮して最適化したアートワークです。異なるアスペクト比への対応、統一感のあるブランド表現、小さな表示サイズでも読みやすいタイポグラフィを重視しています。",
+    "processTitle": "納品データ制作の流れ",
+    "processText": "各プラットフォームの仕様に厳密に準拠してデザインを行います。多くの配信プラットフォームでは公式映画タイトルのみ使用が認められており、タグライン、映画祭ローレル、クレジットなどの追加テキストを含むアートワークは却下されることがあります。私たちは、仕様に適合しながらも視覚的に強く、主要プラットフォームのストアで効果的に機能するアートワークを制作します。",
     "layout": "masonry",
     "items": [
       {
         "thumb": "/assets/work/filmh/1.jpg",
         "full": "/assets/work/filmh/1.jpg",
-        "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+        "alt": "『Across Two Skies』、監督 Hank Orion、配信プラットフォーム向けFilmhubキービジュアル"
       },
       {
         "thumb": "/assets/work/filmh/2.jpg",
         "full": "/assets/work/filmh/2.jpg",
-         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+        "alt": "『Across Two Skies』、監督 Hank Orion、配信プラットフォーム向けFilmhubキービジュアル"
       },
-         {
+      {
         "thumb": "/assets/work/filmh/3.jpg",
         "full": "/assets/work/filmh/3.jpg",
-         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+        "alt": "『Across Two Skies』、監督 Hank Orion、配信プラットフォーム向けFilmhubキービジュアル"
       },
-            {
+      {
         "thumb": "/assets/work/filmh/4.jpg",
         "full": "/assets/work/filmh/4.jpg",
-         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+        "alt": "『Across Two Skies』、監督 Hank Orion、配信プラットフォーム向けFilmhubキービジュアル"
       },
-            {
+      {
         "thumb": "/assets/work/filmh/5.jpg",
         "full": "/assets/work/filmh/5.jpg",
-         "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+        "alt": "『Across Two Skies』、監督 Hank Orion、配信プラットフォーム向けFilmhubキービジュアル"
       },
-            {
+      {
         "thumb": "/assets/work/filmh/6.jpg",
         "full": "/assets/work/filmh/6.jpg",
-        "alt": "Across Two Skies, director Hank Orion. Filmhub key art for streaming platforms."
+        "alt": "『Across Two Skies』、監督 Hank Orion、配信プラットフォーム向けFilmhubキービジュアル"
       }
     ]
   }
