@@ -32,13 +32,17 @@
         "Additional revisions beyond the included package allowance may incur additional fees."
       ]
     },
-    {
-      "heading": "4. Approval Window",
-      "type": "paragraphs",
-      "items": [
-        "If feedback is not received within 48 hours after a revision is delivered for approval, the order will be automatically marked as delivered and approved. Further changes after approval may be treated as a new revision or new order."
-      ]
-    },
+{
+  "heading": "4. Approvals, Client Response Time, and Project Inactivity",
+  "type": "paragraphs",
+  "items": [
+    "To ensure projects progress efficiently, clients are expected to review and respond to revision previews, approval requests, or information requests within a reasonable timeframe.",
+    "If feedback is not received within 72 hours after a revision preview has been delivered, San Roku Ku reserves the right to proceed with the project.",
+    "For services involving digital deliverables, if the client does not respond to preview, approval, or delivery communications within 7 working days, the order will be considered automatically approved and delivered.",
+    "Delivery is considered completed once files, download links, transfer links, or access credentials have been sent to the client using the contact information provided at the time of purchase or during the project.",
+    "Requests for additional revisions, changes, or updates after approval or automatic delivery may be treated as a new revision round, add-on service, or new order."
+  ]
+},
     {
       "heading": "5. Delivery Terms",
       "type": "paragraphs",
